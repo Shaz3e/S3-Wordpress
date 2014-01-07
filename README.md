@@ -1,3 +1,6 @@
+## Do Not Download
+Currently under development
+
 ## S3 Responsive Template System for Wordpress - V 1.0
 
 S3 Responsive Framework for Wordpress intigrated with Bootstrap Responsive Images and Less
