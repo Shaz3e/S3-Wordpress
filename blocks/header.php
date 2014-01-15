@@ -13,8 +13,19 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
+?>
+<?php
+	if (is_active_sidebar('header-1')){
+		$headers["header1"] = dynamic_sidebar('header-1');
+	}
+	if (is_active_sidebar('header-2')){
+		$headers["header2"] = dynamic_sidebar('header-2');
+	}
+	if (is_active_sidebar('header-3')){
+		$headers["header3"] = dynamic_sidebar('header-3');
+	}
+	if (is_active_sidebar('header-4')){
+		$headers["header4"] = dynamic_sidebar('header-4');
+	}
 
-get_header(); ?>
-
-
-<?php get_footer(); ?>
+?>

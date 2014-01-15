@@ -1,4 +1,5 @@
 <?php
+
 /*======================================================================*\
 || #################################################################### ||
 || # Package - Wordpress Template based on Shaz3e S3 Framework          ||
@@ -14,7 +15,7 @@
 || #################################################################### ||
 \*======================================================================*/
 
-
+get_template_part('s3tools/s3','blocks');
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>
@@ -51,7 +52,8 @@
 // $lessFile = get_template_directory_uri() . '/themes/style1/style.less';
 // $compiledFile = get_template_directory_uri() . '/compile/style.css';
 */
-include(TEMPLATEPATH .'/s3tools/lessc.inc.php');
+//include(TEMPLATEPATH .'/s3tools/less-css.php');
+get_template_part('s3tools/less','css');
 $less = new lessc;
 $less->setFormatter("compressed");
 // $less->checkedCompile($lessFile , $compiledFile);
@@ -70,6 +72,48 @@ $less->checkedCompile('wp-content/themes/s3-wordpress/themes/style1/style.less',
 <?php wp_head(); ?>
 </head>
 <body class="dc-wrapper">
+
+<section class="dc-header">
+	<div id="dc-header">
+    	<div class="dc-modules">
+        	<div id="dc-modules">
+                <div class="dc-clear"></div>
+                	<div class="dc-logo">
+                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                        	<img src="<?php echo get_template_directory_uri(); ?>/themes/style1/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <?php include(TEMPLATEPATH . '/blocks/header.php'); ?>
+                <div class="dc-clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dc-menu">
+	<div id="dc-menu">
+    	<div class="dc-modules">
+        	<div id="dc-modules">
+                <div class="dc-clear"></div>
+                	
+                <div class="dc-clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php 
-echo basename(basename(getcwd())); 
+if (is_active_sidebar('slideshow-1') || is_active_sidebar('slideshow-2') || is_active_sidebar('slideshow-3') || is_active_sidebar('slideshow-4') || is_active_sidebar('slideshow-5') || is_active_sidebar('slideshow-6')) : 
 ?>
+<section class="dc-slideshow">
+	<div id="dc-slideshow">
+    	<div class="dc-modules">
+        	<div id="dc-modules">
+                <div class="dc-clear"></div>
+                	<?php include(TEMPLATEPATH . '/blocks/slideshow.php'); ?>
+                <div class="dc-clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
