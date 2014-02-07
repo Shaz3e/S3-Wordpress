@@ -30,7 +30,7 @@ $sitetitle = htmlspecialchars($this->params->get('sitetitle'));
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.css');
-$doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap-responsive.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap-theme.css');
 
 // Add Javascripts
 // $doc->addScript($dcTemplatePath.'/js/jquery.min.js', 'text/javascript');
