@@ -2,7 +2,7 @@
 
 | Current Version | Compatibility | Build Status  | Download S3 |
 |:---------------:|:-------------:|:-------------:|:------------|
-|1.0 (Under Development)|Wordpress|[![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)|
+|v0.1 Build v.2.3 (Under Development)|Wordpress|[![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)|[Download Now](http://shaz3e.com/downloads)|
 
 S3 Responsive Theme Framework for Wordpress integrated with Bootstrap 3 Responsive Images and Less
 
