@@ -1,5 +1,4 @@
 <?php
-
 /*======================================================================*\
 || #################################################################### ||
 || # Package - Wordpress Template based on Shaz3e S3 Framework          ||
@@ -14,132 +13,17 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
-
-if (is_active_sidebar('slideshow-1') 
-&& !is_active_sidebar('slideshow-2') 
-&& !is_active_sidebar('slideshow-3') 
-&& !is_active_sidebar('slideshow-4') 
-&& !is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
 ?>
-
-	<div class="dc-modules1">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
+<?php if(is_active_sidebar('slideshow')): ?>
+<section class="dc-slideshow">
+	<div id="dc-slideshow">
+    	<div class="dc-modules">
+        	<div id="dc-modules">
+                <div class="dc-clear"></div>
+                	<?php dynamic_sidebar('slideshow');?>
+                <div class="dc-clear"></div>
+            </div>
+        </div>
     </div>
-
-<?php endif; ?>
-<?php
-if (is_active_sidebar('slideshow-1') 
-&& is_active_sidebar('slideshow-2') 
-&& !is_active_sidebar('slideshow-3') 
-&& !is_active_sidebar('slideshow-4') 
-&& !is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
-?>
-
-	<div class="dc-modules2">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
-    </div>
-	<div class="dc-modules2">
-    	<?php dynamic_sidebar('slideshow-2'); ?>
-    </div>
-
-<?php endif; ?>
-<?php
-if (is_active_sidebar('slideshow-1') 
-&& is_active_sidebar('slideshow-2') 
-&& is_active_sidebar('slideshow-3') 
-&& !is_active_sidebar('slideshow-4') 
-&& !is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
-?>
-
-	<div class="dc-modules3">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
-    </div>
-	<div class="dc-modules3">
-    	<?php dynamic_sidebar('slideshow-2'); ?>
-    </div>
-	<div class="dc-modules3">
-    	<?php dynamic_sidebar('slideshow-3'); ?>
-    </div>
-
-<?php endif; ?>
-<?php
-if (is_active_sidebar('slideshow-1') 
-&& is_active_sidebar('slideshow-2') 
-&& is_active_sidebar('slideshow-3') 
-&& is_active_sidebar('slideshow-4') 
-&& !is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
-?>
-
-	<div class="dc-modules4">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
-    </div>
-	<div class="dc-modules4">
-    	<?php dynamic_sidebar('slideshow-2'); ?>
-    </div>
-	<div class="dc-modules4">
-    	<?php dynamic_sidebar('slideshow-3'); ?>
-    </div>
-	<div class="dc-modules4">
-    	<?php dynamic_sidebar('slideshow-4'); ?>
-    </div>
-
-<?php endif; ?>
-<?php
-if (is_active_sidebar('slideshow-1') 
-&& is_active_sidebar('slideshow-2') 
-&& is_active_sidebar('slideshow-3') 
-&& is_active_sidebar('slideshow-4') 
-&& is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
-?>
-
-	<div class="dc-modules5">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
-    </div>
-	<div class="dc-modules5">
-    	<?php dynamic_sidebar('slideshow-2'); ?>
-    </div>
-	<div class="dc-modules5">
-    	<?php dynamic_sidebar('slideshow-3'); ?>
-    </div>
-	<div class="dc-modules5">
-    	<?php dynamic_sidebar('slideshow-4'); ?>
-    </div>
-	<div class="dc-modules5">
-    	<?php dynamic_sidebar('slideshow-5'); ?>
-    </div>
-
-<?php endif; ?>
-<?php
-if (is_active_sidebar('slideshow-1') 
-&& is_active_sidebar('slideshow-2') 
-&& is_active_sidebar('slideshow-3') 
-&& is_active_sidebar('slideshow-4') 
-&& is_active_sidebar('slideshow-5') 
-&& !is_active_sidebar('slideshow-6')):
-?>
-
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-1'); ?>
-    </div>
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-2'); ?>
-    </div>
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-3'); ?>
-    </div>
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-4'); ?>
-    </div>
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-5'); ?>
-    </div>
-	<div class="dc-modules6">
-    	<?php dynamic_sidebar('slideshow-6'); ?>
-    </div>
-
+</section>
 <?php endif; ?>

@@ -1,5 +1,4 @@
 <?php
-
 /*======================================================================*\
 || #################################################################### ||
 || # Package - Wordpress Template based on Shaz3e S3 Framework          ||
@@ -15,63 +14,64 @@
 || #################################################################### ||
 \*======================================================================*/
 
-get_template_part('s3tools/s3','blocks');
+
 ?>
-<!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width, intial-scale=1, maximum-scale=1, user-scaleable=no">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php require_once("s3tools/s3_tools.php"); ?>
+<body <?php body_class('dc-wrapper' ); ?>>
 
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/bootstrap-responsive.css">
+<?php if(is_active_sidebar('top-left-panel')) :?>
+    <div class="top-left-panel">
+        <div id="top-left-panel">
+	    	<?php dynamic_sidebar('top-left-panel'); ?>
+        </div>
+    </div>
+<?php endif; ?>
 
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery-noconflict.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/scripts.js"></script>
+<?php if(is_active_sidebar('top-right-panel')) :?>
+    <div class="top-right-panel">
+        <div id="top-right-panel">
+            <?php dynamic_sidebar('top-right-panel'); ?>
+        </div>
+    </div>
+<?php endif; ?>
 
+<?php if(is_active_sidebar('left-panel')) :?>
+	<div class="left-panel">
+    	<div id="left-panel">
+            <?php dynamic_sidebar('left-panel'); ?>
+		</div>
+	</div>
+<?php endif; ?>
 
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/style1/style.less">
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/less.js"></script>
+<?php if(is_active_sidebar('right-panel')) :?>
+    <div class="right-panel">
+        <div id="right-panel">
+            <?php dynamic_sidebar('right-panel'); ?>
+        </div>
+    </div>
+<?php endif; ?>
+
+<?php if(is_active_sidebar('bottom-left-panel')) :?>
+	<div class="bottom-left-panel">
+    	<div id="bottom-left-panel">
+            <?php dynamic_sidebar('bottom-left-panel'); ?>
+		</div>
+	</div>
+<?php endif; ?>
+
+<?php if(is_active_sidebar('bottom-right-panel')) :?>
+    <div class="bottom-right-panel">
+        <div id="bottom-right-panel">
+            <?php dynamic_sidebar('bottom-right-panel'); ?>
+        </div>
+    </div>
+<?php endif; ?>
+
 
 <?php
-
-/****************************************************************************************************
-// $lessFile = get_template_directory_uri() . '/themes/style1/style.less';
-// $compiledFile = get_template_directory_uri() . '/compile/style.css';
-*/
-//include(TEMPLATEPATH .'/s3tools/less-css.php');
-get_template_part('s3tools/less','css');
-$less = new lessc;
-$less->setFormatter("compressed");
-// $less->checkedCompile($lessFile , $compiledFile);
-$less->checkedCompile('wp-content/themes/s3-wordpress/themes/style1/style.less', 'wp-content/themes/s3-wordpress/compile/style.css');
-/****************************************************************************************************/
-// get_template_part('s3tools/s3','tool');
-
+	include_once("blocks/topleftright.php");
+	include_once("blocks/top.php");
 ?>
-
-
-<script type="text/javascript">
-	less.env = "development";
-	less.watch();
-</script>
-
-<?php wp_head(); ?>
-</head>
-<body class="dc-wrapper">
 
 <section class="dc-header">
 	<div id="dc-header">
@@ -79,41 +79,79 @@ $less->checkedCompile('wp-content/themes/s3-wordpress/themes/style1/style.less',
         	<div id="dc-modules">
                 <div class="dc-clear"></div>
                 	<div class="dc-logo">
-                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-                        	<img src="<?php echo get_template_directory_uri(); ?>/themes/style1/images/logo.png" alt="">
+                    	<a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
+                        	<img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
                         </a>
                     </div>
-                    <?php include(TEMPLATEPATH . '/blocks/header.php'); ?>
+                    <?php include_once("blocks/header.php"); ?>
+                    <?php // include_once(""); ?>
                 <div class="dc-clear"></div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="dc-menu">
-	<div id="dc-menu">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	
-                <div class="dc-clear"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php 
-if (is_active_sidebar('slideshow-1') || is_active_sidebar('slideshow-2') || is_active_sidebar('slideshow-3') || is_active_sidebar('slideshow-4') || is_active_sidebar('slideshow-5') || is_active_sidebar('slideshow-6')) : 
+<?php
+	include_once("blocks/menu.php");
+	include_once("blocks/breadcrumb.php");
+	include_once("blocks/slideshow.php");
+	include_once("blocks/showcase.php");
+	include_once("blocks/feature.php");
 ?>
-<section class="dc-slideshow">
-	<div id="dc-slideshow">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php include(TEMPLATEPATH . '/blocks/slideshow.php'); ?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<?php endif; ?>
+
+<section class="dc-container">
+<div class="dc-clear"></div>
+	<div id="dc-container">
+    <div class="dc-clear"></div>
+
+
+		<?php
+			// call left sidebar if left-sidebar is enabled but template page is not active
+			if(!is_page_template('layouts/full-width.php') && !is_page_template('layouts/2-columns-right-sidebar.php')){
+				include_once("blocks/left.php");
+			}
+		?>
+        
+	<?php
+		// If page template is called do the trick
+		if(is_page_template('layouts/3-columns.php')):
+			echo '<section class="dc-componentLeftRight">';
+			
+			elseif(is_page_template('layouts/2-columns-left-sidebar.php')):
+				echo '<section class="dc-componentLeft">';
+				
+				elseif(is_page_template('layouts/2-columns-right-sidebar.php')):
+					echo '<section class="dc-componentLeft">';
+					
+					elseif(is_page_template('layouts/full-width.php')):
+						echo '<section class="dc-componentFull">';
+						
+						else:
+	?>
+        
+		<?php
+			if(is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar') && 
+				!is_page_template('layouts/full-width.php')){
+				
+				echo '<section class="dc-componentLeftRight">';
+				
+			}elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
+				
+				echo '<section class="dc-componentLeft">';
+				
+			}elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
+					
+				echo '<section class="dc-componentRight">';
+				
+			}else{
+				echo '<section class="dc-componentFull">';
+			}
+		?>
+	<?php endif; // if(is_page_template()) ?>
+        
+        <div id="dc-component">
+            <article>
+				<?php
+					// content top sidebar if enabled
+                	include_once("blocks/contentTop.php");
+				?>

@@ -13,19 +13,21 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
-?>
-<?php
-	if (is_active_sidebar('header-1')){
-		$headers["header1"] = dynamic_sidebar('header-1');
-	}
-	if (is_active_sidebar('header-2')){
-		$headers["header2"] = dynamic_sidebar('header-2');
-	}
-	if (is_active_sidebar('header-3')){
-		$headers["header3"] = dynamic_sidebar('header-3');
-	}
-	if (is_active_sidebar('header-4')){
-		$headers["header4"] = dynamic_sidebar('header-4');
-	}
+
 
 ?>
+<?php if(is_active_sidebar('header-1')): ?>
+	<div class="dc-header1"><?php dynamic_sidebar( 'header-1' ); ?></div>
+<?php endif; ?>
+
+<?php if(is_active_sidebar('header-2')): ?>
+	<div class="dc-header2"><?php dynamic_sidebar( 'header-2' ); ?></div>
+<?php endif; ?>
+
+<?php if(is_active_sidebar('header-3')): ?>
+	<div class="dc-header3"><?php dynamic_sidebar( 'header-3' ); ?></div>
+<?php endif; ?>
+
+<?php if(is_active_sidebar('header-4')): ?>
+	<div class="dc-header4"><?php dynamic_sidebar( 'header-4' ); ?></div>
+<?php endif; ?>

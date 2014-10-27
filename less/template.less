@@ -1,3 +1,18 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on Shaz3e S3 Framework             ||
+|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
+|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of shaz3e.com                         ||
+|| # for more information visit http://www.shaz3e.com/                  ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
+|| # A project of DiligentCreators - Construcing Ideas...               ||
+|| #################################################################### ||
+\*======================================================================*/
+
 .dc-wrapper{position:relative;.dc-less-wrapper;}
 
 /* IE Warning */
@@ -6,7 +21,7 @@
 .dc-modules{}
 #dc-modules,article{}
 .dc-modules1,.dc-modules2,.dc-modules3,.dc-modules4,.dc-modules5,.dc-modules6,
-.dc-block.mod1,.dc-block.mod2,.dc-block.mod3,.dc-block.mod4,.dc-block.mod5,.dc-block.mod6{float:left;margin:0.5%;}
+.dc-block.mod1,.dc-block.mod2,.dc-block.mod3,.dc-block.mod4,.dc-block.mod5,.dc-block.mod6{float:left;margin:0 0.5%;}
 
 div.dc-block{.dc-less-block;}
 
@@ -83,6 +98,9 @@ div#dc-container,
 .dc-top{.dc-less-top;}
 #dc-top{#dc-less-top;}
 
+/* Fixed Header which works on scroll up/down */
+.dc-fixed-header{.dc-less-fixed-header;}
+
 /* Header Module 6 grid */
 .dc-header{.dc-less-header;}
 #dc-header{#dc-less-header;}
@@ -130,6 +148,7 @@ div#dc-container,
 /* Breadcrumb Module 6 grid */
 .dc-breadcrumb{.dc-less-breadcrumb;}
 #dc-breadcrumb{#dc-less-breadcrumb;}
+.dc-breadcrumb .breadcrumb{margin:0 !important;}
 
 /* Main Container compoenent 3 grid */
 .dc-container{.dc-less-container;}
@@ -199,6 +218,7 @@ div#dc-container,
 /* Powered by DiligentCreators */
 .DiligentCreators{
 	padding:0.5% 0 0.5% 0;
+	margin:0;
 	.DiligentCreators-less;
 }
 #DiligentCreators{
@@ -221,6 +241,25 @@ a.shaz3e{
 }
 a.shaz3e:hover{background-position:bottom center;}
 
+.dc-StyleSwitcher{
+	text-align:center;
+	.dc-less-StyleSwitcher;
+}
+#dc-StyleSwitcher{
+	#dc-less-StyleSwitcher;
+	// main theme color of selected style
+	a{
+		//height:5px;
+		//width:5px;
+		padding:0.3em;
+		display:inline-block;
+		span{} // display:none; if you don't want the text to be appeared i.e. style 1, style 2, style 3
+	}
+	a.dc-style-0{}
+	a.dc-style-1{}
+	a.dc-style-2{}
+}
+
 /* Media Queries
 *********************************************/
 /* Retina */
@@ -239,29 +278,13 @@ a.shaz3e:hover{background-position:bottom center;}
 	.dc-modules4,.dc-block.mod4,
 	.dc-modules5,.dc-block.mod5,
 	.dc-modules6,.dc-block.mod6{width:99%;}
-
-	.dc-left,.dc-right{float:none;text-align:center;}
-  
-	.dc-logo{text-align:center;}
-	.dc-logo img{}
-	.dc-logo img:hover{}
-	.dc-header1,.dc-header2,.dc-header3,.dc-header4{
-		float:none;
-		width:100%;
-		margin:0;
-	}
-	
-	.dc-header1{}
-	.dc-header2{}
-	.dc-header3{}
-	.dc-header4{}
 	
 	.dc-componentLeftRight{width:100%;}
 	.dc-componentRight,.dc-componentLeft{width:100%;}
 	.dc-componentLeft{}
 	.dc-componentRight{}
 	.dc-componentFull{width:100%;}
-	#dc-component{}
+	#dc-component{margin:0 0.5%; width:99%;}
 	article{margin-bottom:10px;}
 	
 	/* Content Top Module 3 grid */	
@@ -270,9 +293,7 @@ a.shaz3e:hover{background-position:bottom center;}
 	/* Content Bottom Module 3 grid */
 	.dc-content-bottom{margin: 0 -0.5%;}
 		
-	.dc-right-sidebar,.dc-left-sidebar{
-		width:100%;
-	}
+	.dc-right-sidebar,.dc-left-sidebar{width:99%;margin:0 0.5%;}
 	.dc-right-sidebar{margin-top:1em;}
 	#dc-right-sidebar{}
 	
@@ -293,26 +314,14 @@ a.shaz3e:hover{background-position:bottom center;}
 	.dc-modules5{width:99%;}
 	.dc-modules6{width:32.33333333333333%;}
 	
-	.dc-block.mod1,.dc-block.mod2,.dc-block.mod3,.dc-block.mod4,.dc-block.mod5,.dc-block.mod6{width:99%;}
-	  
-	.dc-left,.dc-right{float:none;text-align:center;}
-	
-	.dc-logo{text-align:center;}
-	.dc-logo img{}
-	.dc-logo img:hover{}
-	
-	.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
-	.dc-header1{}
-	.dc-header2{}
-	.dc-header3{}
-	.dc-header4{}
+	.dc-block.mod1,.dc-block.mod2,.dc-block.mod3,.dc-block.mod4,.dc-block.mod5,.dc-block.mod6{width:99%;}	
 	
 	.dc-componentLeftRight{width:99%;}
 	.dc-componentRight,.dc-componentLeft{width:99%;}
 	.dc-componentLeft{}
 	.dc-componentRight{}
 	.dc-componentFull{width:99%;}
-	#dc-component{margin:0 0.5%;width:96.2%;}
+	#dc-component{width:100%;margin:0 0.5%;}
 	article{margin-bottom:10px;}
 	
 	
@@ -322,15 +331,12 @@ a.shaz3e:hover{background-position:bottom center;}
 	/* Content Bottom Module 3 grid */
 	.dc-content-bottom{width:101% !important;display:block;margin:0;}
 	
-	.dc-right-sidebar,.dc-left-sidebar{
-		width:99%;
-		margin:0 0.5%;
-	}
+	.dc-right-sidebar,.dc-left-sidebar{width:99%;margin:0 0.5%;}
 	
-	.dc-right-sidebar{}
+	.dc-right-sidebar{margin-top:1em;}
 	#dc-right-sidebar{}
 	
-	.dc-left-sidebar{}
+	.dc-left-sidebar{margin-bottom:1em;}
 	#dc-left-sidebar{}
   
     /* Powered by DiligentCreators */
@@ -339,8 +345,33 @@ a.shaz3e:hover{background-position:bottom center;}
 	
 }
 /* Large desktop */
-@media (min-width: 980px) {
+@media (max-width: 980px) {
+	.dc-left,.dc-right{float:none;text-align:center;}
 	
+	.dc-header{
+		display:block;
+		height:100%;
+	}
+	
+	.dc-logo{text-align:center;}
+	.dc-logo img{}
+	.dc-logo img:hover{}
+	
+	.dc-header1,.dc-header2,.dc-header3,.dc-header4{
+		display:inline-block;
+		float:none;
+		position:static;
+		width:99%;
+		margin:0 0.5%;
+		text-align:center;
+	}
+	.dc-header1{}
+	.dc-header2{}
+	.dc-header3{}
+	.dc-header4{}
+}
+@media (min-width: 980px) {
+
 	.dc-modules1{width:99%;}
 	.dc-modules2{width:49%;}
 	.dc-modules3{width:32.33333333333333%;}
@@ -375,17 +406,32 @@ a.shaz3e:hover{background-position:bottom center;}
 	#DiligentCreators{
 		max-width:1200px;
 	}
-
-	.dc-logo{float:left;}
+	
+	.dc-header{
+		display:block;
+		height:100%;
+	}
+	
+	.dc-logo{float:left;margin:0 0 0 0.5%;}
 	.dc-logo img{}
 	.dc-logo img:hover{}
   
 	.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
   
-	.dc-header1{float:right;}
-	.dc-header2{}
-	.dc-header3{}
-	.dc-header4{}
+	.dc-header1{
+		float:right;
+	}
+	.dc-header2{
+		float:right;
+	}
+	.dc-header3{
+		float:right;
+	}
+	.dc-header4{
+		position:absolute;
+		bottom:0;
+		right:0;
+	}
   
 	.dc-componentLeftRight{width:49%;margin:0 0.5%;}
 	.dc-componentRight,.dc-componentLeft{width:74%;margin:0 0.5%;}
@@ -409,8 +455,8 @@ a.shaz3e:hover{background-position:bottom center;}
 	#dc-left-sidebar{}
     
 	/* Powered by DiligentCreators */
-	.dc-copyright{float:left;margin-left:0.5%;}
-	.dc-credits{float:right;margin-right:0.5%;}
+	.dc-copyright{float:left;margin:0 0.5%;width:49%;}
+	.dc-credits{float:right;margin:0 0.5%;width:49%;text-align:right;}
 	
 }
 
