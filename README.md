@@ -18,10 +18,12 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Full extensible framework architecture
 
 ### Features
- - [x]6 Columns Grid System
- - 150+ Sidebar Positions
- - Suitable with any design
- - IE7 and IE8 Supported
+ - [x] 6 Columns Grid System
+ - [x] 150+ Sidebar Positions
+ - [ ] Suitable with any design
+ - [x] IE7 and IE8 Supported
+ 
+### Features
  - Template Manager
  - Custom Sitename
  - Custom Logo
