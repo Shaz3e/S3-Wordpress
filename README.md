@@ -1,8 +1,8 @@
 ## S3 Framework - Responsive Theme Framework for Wordpress
 
-| Current Version | Compatibility | Build Status  | Download S3 |
-|:---------------:|:-------------:|:-------------:|:------------|
-|v0.1 Build v.2.3 (Under Development)|Wordpress|[![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)|[Download Now](http://shaz3e.com/downloads)|
+| Current Version | Build Status  | Download S3 |
+|:---------------:|:-------------:|:------------|
+|v1 Build v.3.3 (Stable)|[![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)|[Download Now](http://shaz3e.com/downloads)|
 
 S3 Responsive Theme Framework for Wordpress integrated with Bootstrap 3 Responsive Images and Less
 
@@ -18,7 +18,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Full extensible framework architecture
 
 ### Features
- - 6 Columns Grid System
+ - [x]6 Columns Grid System
  - 150+ Sidebar Positions
  - Suitable with any design
  - IE7 and IE8 Supported
