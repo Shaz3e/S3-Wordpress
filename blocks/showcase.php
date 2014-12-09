@@ -15,15 +15,9 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('showcase')): ?>
-<section class="dc-showcase">
-	<div id="dc-showcase">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php dynamic_sidebar('showcase'); ?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<section class="dc-showcase dc-clear" id="dc-showcase">
+	<div class="row">
+    <?php dynamic_sidebar('showcase');?>
     </div>
 </section>
 <?php endif; ?>

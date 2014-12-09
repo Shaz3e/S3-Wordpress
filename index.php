@@ -1,22 +1,25 @@
 <?php
-/*======================================================================*\
-|| #################################################################### ||
-|| # Package - Wordpress Template based on Shaz3e S3 Framework          ||
-|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
-|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
-|| # license - PHP files are licensed under  GNU/GPL V2                 ||
-|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
-|| # bound by Proprietary License of shaz3e.com                         ||
-|| # for more information visit http://www.shaz3e.com/                  ||
-|| # Redistribution and  modification of this software                  ||
-|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
-|| # A project of DiligentCreators - Construcing Ideas...               ||
-|| #################################################################### ||
-\*======================================================================*/
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme and one
+ * of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query,
+ * e.g., it puts together the home page when no home.php file exists.
+ *
+ * @link http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage S3Wordpress
+ * @since S3 Framework 1.0
+ */
 
 // Wordpress Header
 	get_header();
+?>
 
+
+<?php
 // Wordpress Footer
 	get_footer();
 ?>

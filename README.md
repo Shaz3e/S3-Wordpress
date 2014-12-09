@@ -1,4 +1,4 @@
-## S3 Framework - Responsive Theme Framework for Wordpress
+## S3 Responsive Theme System for Wordpress
 
 | Current Version | Build Status  | Download S3 |
 |:---------------:|:-------------:|:------------|
@@ -25,7 +25,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - [x] Layout: Left Sidebar (Left Sidebar + Post/Page Area)
  - [x] Custom Page Templates
  - [x] 6 Columns Grid System
- - [x] 150+ Sidebar Positions
+ - [x] 300+ Sidebar Positions
  - [x] Suitable with any design
  - [x] IE7 and IE8 Supported
  - [ ] Template Manager
@@ -36,7 +36,6 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - [ ] Show or hide component area on front page
  - [ ] Show or hide main body container
  - [ ] Custom theme's module styles with themes/style1/theme_modules.less file
- - [x] s3-elements folder contains s3-button.less s3-typography.less, s3-form-elements.less (where you can update your own customize styles)
  - [ ] Less Development Mode Enable / Disable
  - [ ] Use Google Analytics Code
  - [ ] Show or Hide Copyright

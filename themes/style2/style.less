@@ -1,6 +1,18 @@
-@import "../../less/default.less";
-@import "variables-mixin.less";
-@import "theme_modules.less";
+@import "defaults.less";
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on Shaz3e S3 Framework             ||
+|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
+|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of shaz3e.com                         ||
+|| # for more information visit http://www.shaz3e.com/                  ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
+|| # A project of DiligentCreators - Construcing Ideas...               ||
+|| #################################################################### ||
+\*======================================================================*/
 *{}
 html{}
 body{}
@@ -12,12 +24,12 @@ h1,h2,h3,h4,h5,h6{}
 /**********************************************
 Default Wrapper
 ***********************************************/
-.dc-less-wrapper{}
+.dc-wrapper{}
 
 /**********************************************
 IE Warnings
 ***********************************************/
-.dc-less-broswer-alert{
+.dc-broswer-alert{
 	p{
 		a{}
 		a:hover{}
@@ -27,7 +39,7 @@ IE Warnings
 /**********************************************
 Module Default Styles
 ***********************************************/
-.dc-less-block{
+.block{
 	h3{
 		span{
 		}
@@ -78,232 +90,153 @@ Module Default Styles
 /**********************************************
 Relative Default Style Modules
 ***********************************************/
-.right-panel{}
-.left-panel{}
-.top-left-panel{}
-.top-right-panel{}
-.bottom-left-panel{}
+.right-panel,
+.left-panel,
+.top-left-panel,
+.top-right-panel,
+.bottom-left-panel,
 .bottom-right-panel{}
+
+
+.right-panel{
+	#right-panel{}
+}
+
+.left-panel{
+	#left-panel{}
+}
+
+.top-left-panel{
+	#top-left-panel{}
+}
+
+.top-right-panel{
+	#top-right-panel{}
+}
+
+.bottom-left-panel{
+	#bottom-left-panel{}
+}
+
+.bottom-right-panel{
+	#bottom-right-panel{}
+}
 
 /**********************************************
 Margin or Padding for to each grid 
 i.e. top margin or bottom margin for each grid
-.dc-less-left-right,
-.dc-less-top,
-.dc-less-header,
-.dc-less-menu,
-.dc-less-slideshow,
-.dc-less-showcase,
-.dc-less-feature,
-.dc-less-breadcrumb,
-.dc-less-container,
-.dc-less-utility,
-.dc-less-scroller,
-.dc-less-extension,
-.dc-less-bottom,
-.dc-less-footer{}
 ***********************************************/
-.dc-less-grids{margin:0;}
-
-/**********************************************
-Default Grid IDs
-#dc-less-left-right,
-#dc-less-top,
-#dc-less-header,
-#dc-less-menu,
-#dc-less-slideshow,
-#dc-less-showcase,
-#dc-less-feature,
-#dc-less-breadcrumb,
-#dc-less-container,
-#dc-less-utility,
-#dc-less-scroller,
-#dc-less-extension,
-#dc-less-bottom,
-#dc-less-footer{}
-***********************************************/
-#dc-less-grids{}
-
-/****************************************************
-Top Left or Right Module Default Styles 2 columns
-*****************************************************/
-.dc-less-left-right{
-	.left-right-style;
-	.left-right-colors;
+.dc-top,
+.dc-header,
+.dc-menu,
+.dc-breadcrumb,
+.dc-slideshow,
+.dc-showcase,
+.dc-feature,
+.dc-container,
+.dc-utility,
+.dc-scroller,
+.dc-extension,
+.dc-bottom,
+.dc-footer{
+	/* margin-top:@gutter * 2; */ /* top margin 10px as block has gutter */
 }
-#dc-less-left-right{}
-.dc-less-left{}
-.dc-less-right{}
 
-/* Top Module 2 grid */
-.dc-less-top{
-	.top-style;
-	.top-colors;
-}
-#dc-less-top{}
+/* Top Modules */
+.dc-top{}
 
 /* Fixed Header which works on scroll up/down */
-.dc-less-fixed-header{}
+.dc-fixed-header{}
 .dc-fixed{}
 
-/* Header Module 6 grid */
-.dc-less-header{
-	.header-style;
-	.header-colors;
-}
-#dc-less-header{}
+/* Header Modules */
+.dc-header{}
 
 /* Header Module Static 4 */
-.dc-less-header1,.dc-less-header2,.dc-less-header3,.dc-less-header4{}
+.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
 
-.dc-less-header1{}
-.dc-less-header2{}
-.dc-less-header3{}
-.dc-less-header4{}
+.dc-header1{}
+.dc-header2{}
+.dc-header3{}
+.dc-header4{}
 
 /* Logo */
-.dc-less-logo{
+.dc-logo{
 	img{}
 	img:hover{}
 }
 
-/* Menu Module 6 grid */
-.dc-less-menu{
-	.menu-style;
-	.menu-colors;
+/* Menu Modules */
+.dc-menu{}
+
+/* Breadcrumb Modules */
+.dc-breadcrumb{}
+
+/* Slideshow Modules */
+.dc-slideshow{}
+
+/* Showcase Modules */
+.dc-showcase{}
+
+/* Feature Modules */
+.dc-feature{}
+
+/* Main Container  */
+.dc-container{}
+
+/* Component Area */
+.dc-component{
+	article{}
 }
-#dc-less-menu{}
-
-/* Breadcrumb Module 6 grid */
-.dc-less-breadcrumb{
-	.breadcrumb-style;
-	.breadcrumb-colors;
-}
-#dc-less-breadcrumb{}
-
-/* Slideshow Module 6 grid */
-.dc-less-slideshow{
-	.slideshow-style;
-	.slideshow-colors
-}
-#dc-less-slideshow{}
-
-/* Showcase Module 6 grid */
-.dc-less-showcase{
-	.showcase-style;
-	.showcase-colors;
-}
-#dc-less-showcase{}
-
-/* Feature Module 6 grid */
-.dc-less-feature{
-	.feature-style;
-	.feature-colors;
-}
-#dc-less-feature{}
-
-/* Main Container compoenent 3 grid */
-.dc-less-container{}
-#dc-less-container{}
-
-/**********************************************
-component + left/right sidebar
-.dc-less-componentLeftRight,
-.dc-less-componentLeft,
-.dc-less-componentRight,
-.dc-less-componentFull,
-.dc-less-right-sidebar,
-.dc-less-left-sidebar{}
-***********************************************/
-.dc-less-componentarea{}
-
-.dc-less-componentLeftRight{}
-.dc-less-componentRight{}
-.dc-less-componentLeft{}
-.dc-less-componentFull{}
-
-#dc-less-component{}
 
 /* Sidebar (left+right) */
-.dc-less-sidebar{
-	.dc-block{
-		// sidebar module bottom margin
-		margin:0 0 1em 0 !important;
+.dc-sidebar{}
+
+/* left Sidebar */
+.dc-left-sidebar{
+	#dc-left-sidebar{
+		.dc-sidebar{}
 	}
 }
 
-/* left Sidebar */
-.dc-less-left-sidebar{}
-#dc-less-left-sidebar{}
-
 /* right Sidebar */
-.dc-less-right-sidebar{}
-#dc-less-right-sidebar{}
-
-/* Content Top Module 3 grid */
-.dc-less-content-top{}
-#dc-less-content-top{}
-
-/* Content Bottom Module 3 grid */
-.dc-less-content-bottom{}
-#dc-less-content-bottom{}
-
-/* Utility Module 6 grid */
-.dc-less-utility{
-	.utility-style;
-	.utility-colors;
+.dc-right-sidebar{
+	#dc-right-sidebar{
+		.dc-sidebar{}
+	}
 }
-#dc-less-utility{}
 
-/* Scroller Module 6 grid */
-.dc-less-scroller{
-	.scroller-style;
-	.scroller-colors;
-}
-#dc-less-scroller{}
+/* Content Top Modules */
+.dc-content-top{}
 
-/* Extension Module 6 grid */
-.dc-less-extension{
-	.extension-style;
-	.extension-colors;
-}
-#dc-less-extension{}
+/* Content Bottom Modules */
+.dc-content-bottom{}
 
-/* Bottom Module 6 grid */
-.dc-less-bottom{
-	.bottom-style;
-	.bottom-colors;
-}
-#dc-less-bottom{}
+/* Utility Modules */
+.dc-utility{}
 
-/* Footer Module 6 grid */
-.dc-less-footer{
-	.footer-style;
-	.footer-colors;
-}
-#dc-less-footer{}
+/* Scroller Modules */
+.dc-scroller{}
+
+/* Extension Modules */
+.dc-extension{}
+
+/* Bottom Modules */
+.dc-bottom{}
+
+/* Footer Modules */
+.dc-footer{}
 
 /* Powered by DiligentCreators */
-.DiligentCreators-less{
-	.DiligentCreators-style;
-	.DiligentCreators-colors;
-}
-#DiligentCreators-less{}
-#dc-less-copyright,
-#dc-less-credits{}
+.DiligentCreators{}
 
-.dc-less-copyright{}
-#dc-less-copyright{}
-.dc-less-credits{}
-#dc-less-credits{}
-
-/**********************************************
-      Style Switcher Theme's Styles
-***********************************************/
-.dc-less-StyleSwitcher{}
-#dc-less-StyleSwitcher{
-	a.dc-style-0{}
+.dc-copyright{}
+.dc-credits{}
+/* Shaz3e logo */
+.shaz3e{
+	img{}
 }
+
 
 /**********************************************
          Template Color Variant Styles
@@ -312,18 +245,20 @@ component + left/right sidebar
 /* Media Queries
 *********************************************/
 /* Retina */
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-  
-}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {}
+
 /* Landscape phones and down */
 @media (max-width: 480px) {}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {}
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {}
-/* desktop */
-@media (max-width: 979px) {}
+
+/* old desktop */
 @media (min-width: 980px){}
+
 /* Large desktop */
-@media (min-width: 1200px) {}
+@media (min-width: 1024px) {}
 

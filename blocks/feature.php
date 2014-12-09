@@ -14,19 +14,10 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('feature') || is_active_sidebar('bottom-feature')): ?>
-<section class="dc-feature">
-	<div id="dc-feature">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php
-                    	dynamic_sidebar('feature');
-                    	dynamic_sidebar('bottom-feature');
-					?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<?php if(is_active_sidebar('feature')): ?>
+<section class="dc-feature dc-clear" id="dc-feature">
+	<div class="row">
+    <?php dynamic_sidebar('feature');?>
     </div>
 </section>
 <?php endif; ?>

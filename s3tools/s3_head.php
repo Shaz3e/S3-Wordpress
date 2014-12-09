@@ -22,20 +22,52 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     
     <?php wp_head(); ?>
-    
-    <!--<script src="<?php echo $dcTemplate; ?>/js/jquery.min.js"></script> -->
-    
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap-theme.css">
-    
-    <?php require_once("s3_styles.php"); ?>
-    
+
     <script src="<?php echo $dcTemplate; ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo $dcTemplate; ?>/js/jquery-noconflict.js"></script>
     <script src="<?php echo $dcTemplate; ?>/js/scripts.js"></script>
     
+    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/fonts/fonts.css">
+
+
+<?php
+// if development mode is off script will generate css file instead less
+/**
+if($this->params->get('developmentMode') != 1){
+	// less compiler
+	require "lessc.inc.php";
+	
+	$inputFile = $dcTemplate . "/themes/style1/style.less";
+	$outputFile = $dcTemplate . "/themes/style1/style.css";
+	
+	$less = new lessc;
+	$less->setFormatter("compressed");
+	$cache = $less->cachedCompile($inputFile);
+	
+	file_put_contents($outputFile, $cache["compiled"]);
+	
+	$last_updated = $cache["updated"];
+	$cache = $less->cachedCompile($cache);
+		if ($cache["updated"] > $last_updated) {
+			file_put_contents($outputFile, $cache["compiled"]);
+		}
+
+	// compiled css file 
+	<link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style1/style.css">
+}
+*/
+?>
+	
+    
+    <link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style1/style.less">
+    <script src="<?php echo $dcTemplate; ?>/js/less.js"></script>
+	
+    
     <!--[if lt IE 9]>
+    	<link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/ie.css">
         <script src="<?php echo dcTemplate; ?>/js/html5.js"></script>
         <script src="<?php echo dcTemplate; ?>/js/respond.js"></script>
     <![endif]-->

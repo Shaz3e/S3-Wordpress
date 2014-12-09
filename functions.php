@@ -1,19 +1,22 @@
 <?php
-/*======================================================================*\
-|| #################################################################### ||
-|| # Package - Wordpress Template based on Shaz3e S3 Framework          ||
-|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
-|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
-|| # license - PHP files are licensed under  GNU/GPL V2                 ||
-|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
-|| # bound by Proprietary License of shaz3e.com                         ||
-|| # for more information visit http://www.shaz3e.com/                  ||
-|| # Redistribution and  modification of this software                  ||
-|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
-|| # A project of DiligentCreators - Construcing Ideas...               ||
-|| #################################################################### ||
-\*======================================================================*/
+/**
+ * S3 Wordpress functions and definitions
+ *
+ * all function file created separately to enhance in future if required
+ * 
+ * @package WordPress
+ * @subpackage S3Wordpress
+ * @since S3 Framework 1.0
+ */
+ 
 
+include_once("functions/s3_title.php");
+include_once("functions/s3_sidebars.php");
+include_once("functions/s3_wordpress.php");
 include_once("s3tools/s3_theme_options.php");
-include_once("functions/sidebars.php");
+
+
+
+
+
 ?>

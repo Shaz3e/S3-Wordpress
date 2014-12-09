@@ -15,15 +15,9 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('top')): ?>
-<section class="dc-top">
-	<div id="dc-top">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php dynamic_sidebar('top'); ?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<section class="dc-top dc-clear" id="dc-top">
+	<div class="row">
+    <?php dynamic_sidebar('top');?>
     </div>
 </section>
 <?php endif; ?>

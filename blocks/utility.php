@@ -15,15 +15,9 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('utility')): ?>
-<section class="dc-utility">
-	<div id="dc-utility">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-            	<div class="dc-clear"></div>
-                	<?php dynamic_sidebar('utility'); ?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<section class="dc-utility dc-clear" id="dc-utility">
+	<div class="row">
+    <?php dynamic_sidebar('utility');?>
     </div>
 </section>
 <?php endif; ?>

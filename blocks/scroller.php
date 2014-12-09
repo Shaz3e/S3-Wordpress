@@ -15,15 +15,9 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('scroller')): ?>
-<section class="dc-scroller">
-	<div id="dc-scroller">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-            	<div class="dc-clear"></div>
-                	<?php dynamic_sidebar('scroller'); ?>
-            	<div class="dc-clear"></div>
-            </div>
-        </div>
+<section class="dc-scroller dc-clear" id="dc-scroller">
+	<div class="row">
+    <?php dynamic_sidebar('scroller');?>
     </div>
 </section>
 <?php endif; ?>

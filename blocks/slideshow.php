@@ -15,15 +15,9 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('slideshow')): ?>
-<section class="dc-slideshow">
-	<div id="dc-slideshow">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php dynamic_sidebar('slideshow');?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<section class="dc-slideshow dc-clear" id="dc-slideshow">
+	<div class="row">
+    <?php dynamic_sidebar('slideshow');?>
     </div>
 </section>
 <?php endif; ?>

@@ -14,16 +14,10 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('menu')):?>
-<section class="dc-menu">
-	<div id="dc-menu">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<?php dynamic_sidebar('menu');?>                    
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<?php if(is_active_sidebar('menu')): ?>
+<section class="dc-menu dc-clear" id="dc-menu">
+	<div class="row">
+    <?php dynamic_sidebar('menu');?>
     </div>
 </section>
 <?php endif; ?>

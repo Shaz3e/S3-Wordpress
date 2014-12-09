@@ -1,22 +1,22 @@
 <?php
-/*======================================================================*\
-|| #################################################################### ||
-|| # Package - Wordpress Template based on Shaz3e S3 Framework          ||
-|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
-|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
-|| # license - PHP files are licensed under  GNU/GPL V2                 ||
-|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
-|| # bound by Proprietary License of shaz3e.com                         ||
-|| # for more information visit http://www.shaz3e.com/                  ||
-|| # Redistribution and  modification of this software                  ||
-|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
-|| # A project of DiligentCreators - Construcing Ideas...               ||
-|| #################################################################### ||
-\*======================================================================*/
+/**
+ * The Header for our theme
+ *
+ * Displays all the necessary sections and sidebars before page/post container
+ *
+ * @package WordPress
+ * @subpackage S3Wordpress
+ * @since S3 Framework 1.0
+ */
+ 
 
-
+/**
+ * DOCTYPE and s3_head.php for header
+ * @since S3 Wordperss 1.0
+ */
+require_once("s3tools/s3_tools.php");
 ?>
-<?php require_once("s3tools/s3_tools.php"); ?>
+
 <body <?php body_class('dc-wrapper' ); ?>>
 
 <?php if(is_active_sidebar('top-left-panel')) :?>
@@ -69,89 +69,111 @@
 
 
 <?php
-	include_once("blocks/topleftright.php");
 	include_once("blocks/top.php");
 ?>
 
-<section class="dc-header">
-	<div id="dc-header">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-                <div class="dc-clear"></div>
-                	<div class="dc-logo">
-                    	<a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
-                        	<img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
-                        </a>
-                    </div>
-                    <?php include_once("blocks/header.php"); ?>
-                    <?php // include_once(""); ?>
-                <div class="dc-clear"></div>
-            </div>
+<div class="dc-fixed-header">
+<section class="dc-header dc-clear" id="dc-header">
+	<div class="row">
+        <div class="dc-logo">
+            <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
+                <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
+            </a>
         </div>
+            <?php include_once("blocks/header.php"); ?>
     </div>
 </section>
 
+	<?php
+		/**
+		 *
+		 */
+    	include_once("blocks/menu.php");
+	?>
+
+</div>
+
 <?php
-	include_once("blocks/menu.php");
+	/**
+	 * all sidebars before post/page container
+	 * @since S3 Framework 1.0
+	 */
 	include_once("blocks/breadcrumb.php");
 	include_once("blocks/slideshow.php");
 	include_once("blocks/showcase.php");
 	include_once("blocks/feature.php");
 ?>
 
-<section class="dc-container">
-<div class="dc-clear"></div>
-	<div id="dc-container">
-    <div class="dc-clear"></div>
 
-
-		<?php
-			// call left sidebar if left-sidebar is enabled but template page is not active
-			if(!is_page_template('layouts/full-width.php') && !is_page_template('layouts/2-columns-right-sidebar.php')){
-				include_once("blocks/left.php");
-			}
-		?>
-        
+<section class="dc-container dc-clear" id="container">
+	<div class="row">
 	<?php
-		// If page template is called do the trick
-		if(is_page_template('layouts/3-columns.php')):
-			echo '<section class="dc-componentLeftRight">';
+	/**
+	 * call left sidebar if left-sidebar is enabled but template page is not active
+	 * @since S3 Wordperss 1.0
+	 */
+    if(!is_page_template('layouts/full-width.php') && !is_page_template('layouts/2-columns-right-sidebar.php')){
+
+		/**
+		 * left sidebar
+		 * @since S3 Wordperss 1.0
+		 */
+		include_once("blocks/left.php");
+	}
+    
+    
+        /**
+		 * If page template is called do the trick
+		 * @since S3 Framework 1.0
+		 */
+        if(is_page_template('layouts/3-columns.php')):
+            echo '<div class="grid-6">';
+		
+		elseif(is_page_template('layouts/2-columns-left-sidebar.php')):
+			echo '<div class="grid-9">';
+		
+		elseif(is_page_template('layouts/2-columns-right-sidebar.php')):
+			echo '<div class="grid-9">';
+		
+		elseif(is_page_template('layouts/full-width.php')):
+			echo '<div class="grid-12">';
 			
-			elseif(is_page_template('layouts/2-columns-left-sidebar.php')):
-				echo '<section class="dc-componentLeft">';
-				
-				elseif(is_page_template('layouts/2-columns-right-sidebar.php')):
-					echo '<section class="dc-componentLeft">';
-					
-					elseif(is_page_template('layouts/full-width.php')):
-						echo '<section class="dc-componentFull">';
-						
-						else:
-	?>
+		else:
+                        
+        /**
+		 * if sidebar is enabled
+		 * @since S3 Framework 1.0
+		 */
+        if(is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar') && !is_page_template('layouts/full-width.php')){
+			/**
+			 * 3 column page
+			 * @since S3 Framework 1.0
+			 */
+            echo '<div class="grid-6">';
+        }elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
+			/**
+			 * 2 column with left sidebar
+			 * @since S3 Framework 1.0
+			 */
+            echo '<div class="grid-9">';
+        }elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
+			/**
+			 * 2 column with right sidebar
+			 * @since S3 Framework 1.0
+			 */
+            echo '<div class="grid-9">';
+        }else{
+            echo '<div class="grid-12">';
+        }
         
-		<?php
-			if(is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar') && 
-				!is_page_template('layouts/full-width.php')){
-				
-				echo '<section class="dc-componentLeftRight">';
-				
-			}elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
-				
-				echo '<section class="dc-componentLeft">';
-				
-			}elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
-					
-				echo '<section class="dc-componentRight">';
-				
-			}else{
-				echo '<section class="dc-componentFull">';
-			}
-		?>
-	<?php endif; // if(is_page_template()) ?>
-        
-        <div id="dc-component">
-            <article>
-				<?php
-					// content top sidebar if enabled
-                	include_once("blocks/contentTop.php");
-				?>
+    endif; // if(is_page_template()) 
+	
+	/**
+	 * content top sidebar if enabled
+	 * @since S3 Framework 1.0
+	 */
+	include_once("blocks/contentTop.php");
+	
+	
+	echo '<div id="page-content" class="block dc-page-content">';
+		echo '<article>';

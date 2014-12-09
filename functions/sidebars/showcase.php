@@ -19,8 +19,8 @@ function dc_showcase_init() {
 		'name' =>	__( 'Showcase', 'shaz3e' ),
 		'id' => 'showcase',
 		'description' => __( 'Description', 'shaz3e' ),
-		'before_widget' => '<div id="%1$s" class="dc-block %2$s">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div id="%1$s" class="block %2$s">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));

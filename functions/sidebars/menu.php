@@ -19,9 +19,9 @@ function dc_menu_init() {
 		'name' =>	__( 'Menu', 'shaz3e' ),
 		'id' => 'menu',
 		'description' => __( 'Description', 'shaz3e' ),
-		'before_widget' => '<div id="%1$s" class="dc-block %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
+		'before_widget' => '<div id="%1$s" class="block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="dc-hidden">',
 		'after_title' => '</h3>',
 	));
 }

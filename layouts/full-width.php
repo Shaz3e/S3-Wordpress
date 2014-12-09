@@ -1,21 +1,26 @@
 <?php
-	/* Template Name: Layout: Full Width
-/*======================================================================*\
-|| #################################################################### ||
-|| # Package - Wordpress Template based on Shaz3e S3 Framework          ||
-|| # Copyright (C) 2010  shaz3e.com. All Rights Reserved.               ||
-|| # Authors - Shahrukh A. Khan (Shaz3e) and DiligentCreators           ||
-|| # license - PHP files are licensed under  GNU/GPL V2                 ||
-|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
-|| # bound by Proprietary License of shaz3e.com                         ||
-|| # for more information visit http://www.shaz3e.com/                  ||
-|| # Redistribution and  modification of this software                  ||
-|| # is bounded by its licenses websites - http://www.shaz3e.com        ||
-|| # A project of DiligentCreators - Construcing Ideas...               ||
-|| #################################################################### ||
-\*======================================================================*/
 
-get_header(); ?>
+/**
+ * Template Name: Layout: Full Width
+ * @since S3 Framework 1.0
+ */
 
+// Wordpress Header
+	get_header();
 
-<?php get_footer(); ?>
+while ( have_posts() ) : the_post();
+
+	// Include the page content template.
+	get_template_part( 'content', 'page' );
+	
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+					
+
+endwhile;
+
+// Wordpress Footer
+	get_footer();
+?>

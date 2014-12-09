@@ -14,16 +14,10 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('breadcrumb-1')): ?>
-<section class="dc-breadcrumb">
-	<div id="dc-breadcrumb">
-    	<div class="dc-modules">
-        	<div id="dc-modules">
-            	<div class="dc-clear"></div>
-                	<?php dynamic_sidebar('breadcrumb'); ?>
-                <div class="dc-clear"></div>
-            </div>
-        </div>
+<?php if(is_active_sidebar('breadcrumb')): ?>
+<section class="dc-breadcrumb dc-clear" id="dc-breadcrumb">
+	<div class="row">
+    <?php dynamic_sidebar('breadcrumb');?>
     </div>
 </section>
 <?php endif; ?>

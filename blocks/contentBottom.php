@@ -15,13 +15,7 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('content-bottom')): ?>
-<section class="dc-content-bottom">
-	<div id="dc-content-bottom">
-    	<div id="dc-modules">
-        	<div class="dc-clear"></div>
-            	<?php dynamic_sidebar('content-bottom'); ?>
-			<div class="dc-clear"></div>
-		</div>
-	</div>
+<section class="dc-content-bottom" id="dc-content-bottom">
+	<?php dynamic_sidebar('content-bottom'); ?>
 </section>
 <?php endif; ?>

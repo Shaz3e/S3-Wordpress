@@ -16,17 +16,11 @@
 ?>
 
 <?php if(is_active_sidebar('left-sidebar')): ?>
-<aside class="dc-left-sidebar">
+<aside class="grid-3 dc-left-sidebar dc-clear">
 	<div id="dc-left-sidebar">
-		<div class="dc-modules">
-			<div id="dc-modules">
-				<div class="dc-clear"></div>
-	                <div class="dc-sidebar">
-                    	<?php dynamic_sidebar('left-sidebar'); ?>
-					</div>
-                <div class="dc-clear"></div>
-			</div>
-		</div>
+    	<div class="dc-sidebar">
+        	<?php dynamic_sidebar('left-sidebar'); ?>
+        </div>
 	</div>
 </aside>
 <?php endif; ?>
