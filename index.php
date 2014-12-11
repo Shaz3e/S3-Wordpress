@@ -18,7 +18,6 @@
 get_header();
 
 
-
 // Wordpress Footer
 get_footer();
 ?>
