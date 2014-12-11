@@ -15,11 +15,10 @@
  */
 
 // Wordpress Header
-	get_header();
-?>
+get_header();
 
 
-<?php
+
 // Wordpress Footer
-	get_footer();
+get_footer();
 ?>

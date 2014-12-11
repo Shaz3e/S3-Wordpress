@@ -8,28 +8,18 @@
  */
 
 // Wordpress Header
-	get_header();
-?>
+get_header();
 
-<?php if ( have_posts() ) : ?>
-
-    	<div class="page-header">
-			<h1>
-				<?php if ( is_single() ): ?>
-                		the_title();
-				<?php else: ?>
-                	<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-                <?php endif; ?>
-            </h1>
-        </div>
-        
-        <?php the_content(); ?>
-        
-
-
-<?php endif; ?>
-
-<?php
+	// Start the Loop.
+	while ( have_posts() ) : the_post();
+		get_template_part( 'content', 'page' );
+		
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+	endwhile;
+	
 // Wordpress Footer
 	get_footer();
 ?>
