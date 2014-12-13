@@ -17,7 +17,9 @@
 ::selection{}
 ::-moz-selection{}
 
-
+.dc-hidden{display:none;}
+.dc-clear:before,.dc-clear:after{display:table;content:" ";}
+.dc-clear:after{clear: both;}
 
 .s3-transition{
     transition:All 0.5s ease-in-out;
@@ -36,10 +38,6 @@
 /* Don't touch below until you know what you are doing */
 a:link,a:visited{text-decoration:none;}
 a:hover{}
-
-.dc-hidden{display:none;}
-.dc-clear:before,.dc-clear:after{display:table;content:" ";}
-.dc-clear:after{clear: both;}
 
 /**********************************************
 Default Wrapper
@@ -111,22 +109,11 @@ i.e. top margin or bottom margin for each grid
 	.block{margin-bottom:0;} /* hide block margin after menu */
 }
 
-/* component block background */
-.block.dc-page-content{
-  background:none !important;
-}
 
 /* Powered by DiligentCreators */
 .DiligentCreators{
 	p{padding:0;margin:0;} /* hide paragraph padding/margin coming from bootstrap */
 }
-
-.dc-copyright,.dc-credits{
-	.block{
-		background:none !important;
-	}
-}
-
 
 .dc-copyright{}
 .dc-credits{text-align:right;}
@@ -140,7 +127,9 @@ i.e. top margin or bottom margin for each grid
 
 /* Shaz3e logo */
 .shaz3e{
-	text-align:center;display:block;width:50px;margin:auto;		
+	text-align:center;
+	display:block;
+		
 	img{
 		text-align:center;
 		width:auto;

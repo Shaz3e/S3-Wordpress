@@ -62,8 +62,8 @@ if ( post_password_required() ) {
 
 	<?php endif; // have_comments() ?>
 	<hr />
-	<?php //comment_form(); ?>
-    <hr />
+	<?php comment_form(); ?>
+    
     
     
     

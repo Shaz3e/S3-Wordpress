@@ -43,7 +43,6 @@ function dc_sidebar_params($dc_params) {
 
 	if (
 		$dc_sidebar_id == 'top' || 
-		$dc_sidebar_id == 'menu' || 
 		$dc_sidebar_id == 'breadcrumb' || 
 		$dc_sidebar_id == 'slideshow' || 
 		$dc_sidebar_id == 'showcase' || 
@@ -122,7 +121,6 @@ if ( function_exists('register_sidebar') ) {
 	require_once("sidebars/panels.php");
 	require_once("sidebars/top.php");
 	require_once("sidebars/header.php");
-	require_once("sidebars/menu.php");
 	require_once("sidebars/breadcrumb.php");
 	require_once("sidebars/slideshow.php");
 	require_once("sidebars/showcase.php");

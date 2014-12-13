@@ -83,12 +83,12 @@ require_once("s3tools/s3_tools.php");
             <?php include_once("blocks/header.php"); ?>
     </div>
 </section>
-
 	<?php
 		/**
-		 *
+		 * Main Menu Location
+		 * @since S3 Framework 1.0
 		 */
-    	include_once("blocks/menu.php");
+		include_once("blocks/menu.php");
 	?>
 
 </div>

@@ -14,20 +14,35 @@
 || #################################################################### ||
 \*======================================================================*/
 
-/*
+/**
  * default Wordpress function enhance here
  * 
  * @since S3 Framework 1.0
  */
  
  
+/**
+ * Navigations
+ * @since S3 Framework 1.0
+ * @var array
+ */
+function register_s3_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+      'header-menu' => __( 'Header Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_s3_menus' );
+
  
 /**
  * Custom length for excerpt
+ * @link reference: http://codex.wordpress.org/Function_Reference/the_excerpt
  * @since S3 Framework 1.0
- *
- * int return
- * reference: http://codex.wordpress.org/Function_Reference/the_excerpt
+ * @param string
+ * @return int
  */
 
 function s3_excerpt_length( $length ) {
@@ -43,8 +58,10 @@ add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
 
 /*
  * excerpt with read more link
+ *
+ * @link reference: http://codex.wordpress.org/Function_Reference/the_excerpt
  * @since S3 Framework 1.0
- * reference: http://codex.wordpress.org/Function_Reference/the_excerpt
+ * @param string
  */
 function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';

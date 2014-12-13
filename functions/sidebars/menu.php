@@ -13,7 +13,7 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
-	
+
 function dc_menu_init() {
 	register_sidebar( array(
 		'name' =>	__( 'Menu', 'shaz3e' ),

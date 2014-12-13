@@ -18,6 +18,23 @@
 get_header();
 
 
+if(is_home() || is_front_page()){
+	echo 'your latest post <br>';
+}
+
+if(is_home()){
+	echo 'is_home (static page but only post-page selected)<br>';
+}
+
+if(is_front_page()){
+	echo 'is_front_page() <br>';
+}
+
+if(is_front_page() && is_home()){
+	echo 'is_front_page(), is_home()';
+}
+
+
 // Wordpress Footer
 get_footer();
 ?>

@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 
-
 ?>
+
+
+<?php 
+/**
+ * header menu next to logo float to right
+ * @since S3 Framework 1.0
+ */
+ 
+if( has_nav_menu ('header-menu') ): ?>
+	<div class="dc-header1">
+    	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+    </div>
+<?php endif; ?>
+
 <?php if(is_active_sidebar('header-1')): ?>
 	<div class="dc-header1"><?php dynamic_sidebar( 'header-1' ); ?></div>
 <?php endif; ?>

@@ -14,10 +14,12 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('menu')): ?>
+
+
+<?php if( has_nav_menu ('main-menu') ): ?>
 <section class="dc-menu dc-clear" id="dc-menu">
 	<div class="row">
-    <?php dynamic_sidebar('menu');?>
+    	<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
     </div>
 </section>
 <?php endif; ?>
