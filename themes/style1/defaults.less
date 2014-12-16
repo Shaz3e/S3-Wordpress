@@ -82,7 +82,13 @@ i.e. top margin or bottom margin for each grid
 .dc-fixed-header{}
 .dc-fixed{}
 .dc-header{}
-.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
+.dc-header1,.dc-header2,.dc-header3,.dc-header4{
+	& > .block{
+		z-index:99999;
+		margin:0;
+		padding:0;
+	}
+}
 .dc-header1{float:right;}
 .dc-header2{float:right;}
 .dc-header3{float:right;}
