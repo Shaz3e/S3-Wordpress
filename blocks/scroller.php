@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('scroller')): ?>
 <section class="dc-scroller dc-clear" id="dc-scroller">
 	<div class="row">
-    <?php dynamic_sidebar('scroller');?>
+	    <?php dynamic_sidebar('scroller');?>
     </div>
 </section>
 <?php endif; ?>

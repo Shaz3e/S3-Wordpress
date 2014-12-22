@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('bottom')): ?>
 <section class="dc-bottom dc-clear" id="dc-bottom">
 	<div class="row">
-    <?php dynamic_sidebar('bottom');?>
+	    <?php dynamic_sidebar('bottom');?>
     </div>
 </section>
 <?php endif; ?>

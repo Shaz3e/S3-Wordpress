@@ -14,10 +14,13 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('footer')): ?>
+<?php if(is_active_sidebar('footer') || is_active_sidebar('bottom-footer')): ?>
 <section class="dc-footer dc-clear" id="dc-footer">
 	<div class="row">
-    <?php dynamic_sidebar('footer');?>
+    	<?php
+    		dynamic_sidebar('footer');
+    		dynamic_sidebar('bottom-footer');
+    	?>
     </div>
 </section>
 <?php endif; ?>

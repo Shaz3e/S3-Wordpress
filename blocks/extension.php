@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('extension')): ?>
 <section class="dc-extension dc-clear" id="dc-extension">
 	<div class="row">
-    <?php dynamic_sidebar('extension');?>
+    	<?php dynamic_sidebar('extension');?>
     </div>
 </section>
 <?php endif; ?>

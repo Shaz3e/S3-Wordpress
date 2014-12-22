@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('breadcrumb')): ?>
 <section class="dc-breadcrumb dc-clear" id="dc-breadcrumb">
 	<div class="row">
-    <?php dynamic_sidebar('breadcrumb');?>
+	    <?php dynamic_sidebar('breadcrumb');?>
     </div>
 </section>
 <?php endif; ?>

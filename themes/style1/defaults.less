@@ -105,7 +105,9 @@ i.e. top margin or bottom margin for each grid
 	display:inline-block;
 	img{}
 	img:hover{}
-	
+	@media(min-width:769px){
+		margin-left:@gutter; // block gutter for grid/cols
+	}
 	@media(max-width:768px){
 		display:block;
 		text-align:center;
