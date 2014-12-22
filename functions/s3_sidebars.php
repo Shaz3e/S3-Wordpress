@@ -118,15 +118,6 @@ add_filter('dynamic_sidebar_params','dc_sidebar_params');
  */
 
 if ( function_exists('register_sidebar') ) {
-	require_once("sidebars/panels.php");
-	require_once("sidebars/top.php");
-	require_once("sidebars/header.php");
-	require_once("sidebars/breadcrumb.php");
-	require_once("sidebars/slideshow.php");
-	require_once("sidebars/showcase.php");
-	require_once("sidebars/feature.php");
-	
-	require_once("sidebars/contentTop.php");
 	
 	register_sidebar( array(
 		'name' => __( 'Left Sidebar', 'shaz3e' ),
@@ -148,12 +139,95 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h3>',
 	) );
 	
+	/**
+	 * 6 Sidebars with h3 heading hidden
+	 * Positions: Abolsute of the page
+	 * Top sidebars left/right
+	 * Center of page left/right
+	 * Bottom sidebars left/right
+	 * 
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/panels.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/top.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/header.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/breadcrumb.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/slideshow.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/showcase.php");
+	
+	/**
+	 * 24 Sidebars
+	 * Sidebar Names: feature and bottom-feature
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/feature.php");
+	
+	/**
+	 * 3 Sidebars before post-content
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/contentTop.php");	
+	
+	/**
+	 * 3 Sidebars after post-content
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/contentBottom.php");
 	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/utility.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/scroller.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/extension.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/bottom.php");
+	
+	/**
+	 * 24 Sidebars
+	 * Sidebar Names: footer and bottom-footer
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/footer.php");
 }
 ?>

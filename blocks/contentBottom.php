@@ -13,17 +13,9 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
-	
-function dc_content_bottom_init() {
-	register_sidebar( array(
-		'name' =>	__( 'Content Bottom', 'shaz3e' ),
-		'id' => 'content-bottom',
-		'description' => __( 'Description', 'shaz3e' ),
-		'before_widget' => '<div id="%1$s" class="block %2$s">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
-}
-add_action( 'widgets_init', 'dc_content_bottom_init' );
 ?>
+<?php if(is_active_sidebar('content-bottom')): ?>
+<section class="dc-content-bottom" id="dc-content-bottom">
+	<?php dynamic_sidebar('content-bottom'); ?>
+</section>
+<?php endif; ?>
