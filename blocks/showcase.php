@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('showcase')): ?>
 <section class="dc-showcase dc-clear" id="dc-showcase">
 	<div class="row">
-	    <?php dynamic_sidebar('showcase');?>
+    <?php dynamic_sidebar('showcase');?>
     </div>
 </section>
 <?php endif; ?>

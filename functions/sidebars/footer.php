@@ -16,7 +16,7 @@
 	
 function dc_footer_init() {
 	register_sidebar( array(
-		'name' =>	__( 'footer', 'shaz3e' ),
+		'name' =>	__( 'Footer', 'shaz3e' ),
 		'id' => 'footer',
 		'description' => __( 'Description', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',

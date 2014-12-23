@@ -17,7 +17,7 @@
 <?php if(is_active_sidebar('slideshow')): ?>
 <section class="dc-slideshow dc-clear" id="dc-slideshow">
 	<div class="row">
-	    <?php dynamic_sidebar('slideshow');?>
+    <?php dynamic_sidebar('slideshow');?>
     </div>
 </section>
 <?php endif; ?>

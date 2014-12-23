@@ -16,7 +16,6 @@
 
 ?>
 
-
 <?php 
 /**
  * header menu next to logo float to right
@@ -24,14 +23,16 @@
  */
  
 if( has_nav_menu ('header-menu') ): ?>
-	<div class="dc-header1">
+	<div class="header-menu">
     	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 <?php endif; ?>
 
+
 <?php if(is_active_sidebar('header-1')): ?>
 	<div class="dc-header1"><?php dynamic_sidebar( 'header-1' ); ?></div>
 <?php endif; ?>
+
 
 <?php if(is_active_sidebar('header-2')): ?>
 	<div class="dc-header2"><?php dynamic_sidebar( 'header-2' ); ?></div>

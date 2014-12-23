@@ -166,6 +166,12 @@ if ( function_exists('register_sidebar') ) {
 	 * 12 Sidebars
 	 * @since S3 Framework 1.0
 	 */
+	require_once("sidebars/menu.php");
+	
+	/**
+	 * 12 Sidebars
+	 * @since S3 Framework 1.0
+	 */
 	require_once("sidebars/breadcrumb.php");
 	
 	/**

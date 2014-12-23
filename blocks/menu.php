@@ -1,3 +1,4 @@
+
 <?php
 /*======================================================================*\
 || #################################################################### ||
@@ -15,11 +16,16 @@
 \*======================================================================*/
 ?>
 
-
-<?php if( has_nav_menu ('main-menu') ): ?>
+<?php if( has_nav_menu ('main-menu') || is_active_sidebar('menu') ): ?>
 <section class="dc-menu dc-clear" id="dc-menu">
 	<div class="row">
-    	<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    	<?php
+        	if(is_active_sidebar('menu')){
+				dynamic_sidebar('menu');
+			}else{
+				wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+			}
+		?>
     </div>
 </section>
 <?php endif; ?>

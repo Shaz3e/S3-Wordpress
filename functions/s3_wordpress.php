@@ -30,7 +30,7 @@ function register_s3_menus() {
   register_nav_menus(
     array(
       'main-menu' => __( 'Main Menu' ),
-      'header-menu' => __( 'Header Menu' )
+      'header-menu' => __( 'Header Menu' ),
     )
   );
 }
