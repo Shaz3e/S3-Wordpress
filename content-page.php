@@ -14,17 +14,19 @@
 		//twentyfourteen_post_thumbnail();
 		//the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' );
 	?>
-
-	<div class="page-header">
-    	<h1 class="page-title"><?php the_title(); ?></h1>
-    </div>
+    
+    <?php if(!is_front_page()): ?>
+        <div class="page-header">
+            <h1 class="page-title"><?php the_title(); ?></h1>
+        </div>
+    <?php endif; ?>
     
 	<div class="page-content">
 		<?php
 			// page content
 			the_content();
 
-			edit_post_link( __( 'Edit', 'S3Framework' ), '<span class="edit-link">', '</span>' );
+			//edit_post_link( __( 'Edit', 'S3Framework' ), '<span class="edit-link">', '</span>' );
 		?>
 	</div><!-- .page-content -->
     
