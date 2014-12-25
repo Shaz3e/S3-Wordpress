@@ -16,7 +16,21 @@ include_once("functions/s3_sidebars.php");
 include_once("functions/s3_wordpress.php");
 include_once("s3tools/s3_theme_options.php");
 
-
+/**
+ * Support Added: Type PHP Code in text widget
+ * 
+ * @since S3 Framework 1.0
+ */
+add_filter('widget_text','execute_php',100);
+function execute_php($html){
+     if(strpos($html,"<"."?php")!==false){
+          ob_start();
+          eval("?".">".$html);
+          $html=ob_get_contents();
+          ob_end_clean();
+     }
+     return $html;
+}
 /**
  * Hide admin tool bar for logged-in user front-end
  * disable this hook to show admin tool bar at top
