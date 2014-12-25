@@ -1,3 +1,4 @@
+
 <?php
 /**
  * S3 Wordpress functions and definitions
@@ -8,7 +9,6 @@
  * @subpackage S3Wordpress
  * @since S3 Framework 1.0
  */
- 
 
 
 include_once("functions/s3_title.php");
@@ -17,11 +17,12 @@ include_once("functions/s3_wordpress.php");
 include_once("s3tools/s3_theme_options.php");
 
 /**
- * Support Added: Type PHP Code in text widget
+ * Support Added: Type PHP Code in text widget or page/post area
  * 
  * @since S3 Framework 1.0
  */
-add_filter('widget_text','execute_php',100);
+ 
+
 function execute_php($html){
      if(strpos($html,"<"."?php")!==false){
           ob_start();
@@ -31,6 +32,14 @@ function execute_php($html){
      }
      return $html;
 }
+add_filter('widget_text','execute_php',100);
+/**
+ * PHP code also be include in post/page area in text mode
+ * 
+ * @since S3 Framework 1.0
+ */
+add_filter('the_content','execute_php',100);
+
 /**
  * Hide admin tool bar for logged-in user front-end
  * disable this hook to show admin tool bar at top
