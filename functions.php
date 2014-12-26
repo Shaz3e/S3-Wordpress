@@ -21,8 +21,6 @@ include_once("s3tools/s3_theme_options.php");
  * 
  * @since S3 Framework 1.0
  */
- 
-
 function execute_php($html){
      if(strpos($html,"<"."?php")!==false){
           ob_start();
@@ -32,13 +30,21 @@ function execute_php($html){
      }
      return $html;
 }
+
+/**
+ * PHP code also be include in widgets
+ * 
+ * @since S3 Framework 1.0
+ */
 add_filter('widget_text','execute_php',100);
+
 /**
  * PHP code also be include in post/page area in text mode
  * 
  * @since S3 Framework 1.0
  */
-add_filter('the_content','execute_php',100);
+add_filter('the_content','execute_php',2);
+add_filter('the_excerpt','execute_php',2);
 
 /**
  * Hide admin tool bar for logged-in user front-end
