@@ -104,7 +104,14 @@ require_once("s3tools/s3_tools.php");
 	include_once("blocks/feature.php");
 ?>
 
-
+<?php
+	/**
+	 * Hide main body by selecting Layout: Without Body in page template
+	 */
+	if(is_page_template('layouts/no-body.php')):
+		// this will not show main body
+	else:
+?>
 <section class="dc-container dc-clear" id="container">
 	<div class="row">
 	<?php
@@ -174,6 +181,23 @@ require_once("s3tools/s3_tools.php");
 	 */
 	include_once("blocks/contentTop.php");
 	
+	/**
+	 * page template no-post to hide post/page area
+	 */
+	if(is_page_template('layouts/no-post.php')):	
+		// this will not post/page area but sidebars will be enabled
+	else: 
 	
+	/**
+	 * if no-post selected default will be display
+	 */
 	echo '<div id="page-content" class="block dc-page-content">';
 		echo '<article>';
+		
+	endif;
+
+/**
+ * Hide main body by selecting Layout: Without Body in page template
+ * if(is_page_template('layouts/no-body.php')):
+ */
+endif;
