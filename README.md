@@ -18,12 +18,15 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Full extensible framework architecture
 
 ### Features
- - 4 Layouts Types (Page Templates 1 blank page included)
+ - 7 Layouts Types (Page Templates 1 blank page included to customize your wordpress)
  - Layout: Full Width (at this page no left/right sidebar is defined)
  - Layout: 3 Columns (left Sidebar + Post/Page Area + Right Sidebar)
  - Layout: Right Sidebar (Post/Page Area + Right Sidebar)
  - Layout: Left Sidebar (Left Sidebar + Post/Page Area)
- - Custom Page Templates
+ - Layout: Without Title (Select this template if you'd like to hide Title on certain pages)
+ - Layout: Without Post (Select this template if you'd like to hide Post on certain pages)
+ - Layout: Without Body (Select this template if you'd like to hide page/post area with left/right sidebars)
+ - Custom Page Templates (If you would like to create your own page template should be placed under theme/page-template/ directory)
  - 12 Columns Grid System for sidebars
  - 300+ Sidebar Positions
  - Suitable with any design
