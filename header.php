@@ -107,6 +107,8 @@ require_once("s3tools/s3_tools.php");
 <?php
 	/**
 	 * Hide main body by selecting Layout: Without Body in page template
+	 * No sidebar left/right are enabled in this layout
+	 * no content-top/bottom are enabled in this layout
 	 */
 	if(is_page_template('layouts/no-body.php')):
 		// this will not show main body
