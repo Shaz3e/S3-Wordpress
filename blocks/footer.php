@@ -14,13 +14,15 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('footer') || is_active_sidebar('bottom-footer')): ?>
+<?php if(is_active_sidebar('footer') || is_active_sidebar('bottom-footer') || is_active_sidebar('footer-grid') || is_active_sidebar('bottom-footer-grid')): ?>
 <section class="dc-footer dc-clear" id="dc-footer">
 	<div class="row">
     	<?php
-    		dynamic_sidebar('footer');
-    		dynamic_sidebar('bottom-footer');
-    	?>
+        	dynamic_sidebar('footer');
+			dynamic_sidebar('footer-grid');
+        	dynamic_sidebar('bottom-footer');
+        	dynamic_sidebar('bottom-footer-grid');
+		?>
     </div>
 </section>
 <?php endif; ?>

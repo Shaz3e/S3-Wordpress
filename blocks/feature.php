@@ -14,12 +14,14 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('feature') || is_active_sidebar('bottom-feature')): ?>
+<?php if(is_active_sidebar('feature') || is_active_sidebar('bottom-feature') || is_active_sidebar('feature-grid') || is_active_sidebar('bottom-feature-grid')): ?>
 <section class="dc-feature dc-clear" id="dc-feature">
 	<div class="row">
     	<?php
         	dynamic_sidebar('feature');
+			dynamic_sidebar('feature-grid');
         	dynamic_sidebar('bottom-feature');
+        	dynamic_sidebar('bottom-feature-grid');
 		?>
     </div>
 </section>

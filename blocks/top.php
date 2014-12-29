@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('top')): ?>
+<?php if(is_active_sidebar('top') || is_active_sidebar('top-grid')): ?>
 <section class="dc-top dc-clear" id="dc-top">
 	<div class="row">
-    <?php dynamic_sidebar('top');?>
+		<?php
+			// columns
+            dynamic_sidebar('top');
+			
+			// blocks
+            dynamic_sidebar('top-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

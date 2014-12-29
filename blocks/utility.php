@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('utility')): ?>
+<?php if(is_active_sidebar('utility') || is_active_sidebar('utility-grid')): ?>
 <section class="dc-utility dc-clear" id="dc-utility">
 	<div class="row">
-    <?php dynamic_sidebar('utility');?>
+		<?php
+			// columns
+            dynamic_sidebar('utility');
+			
+			// blocks
+            dynamic_sidebar('utility-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

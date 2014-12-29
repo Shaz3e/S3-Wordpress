@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('scroller')): ?>
+<?php if(is_active_sidebar('scroller') || is_active_sidebar('scroller-grid')): ?>
 <section class="dc-scroller dc-clear" id="dc-scroller">
 	<div class="row">
-    <?php dynamic_sidebar('scroller');?>
+		<?php
+			// columns
+            dynamic_sidebar('scroller');
+			
+			// blocks
+            dynamic_sidebar('scroller-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

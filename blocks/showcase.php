@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('showcase')): ?>
+<?php if(is_active_sidebar('showcase') || is_active_sidebar('showcase-grid')): ?>
 <section class="dc-showcase dc-clear" id="dc-showcase">
 	<div class="row">
-    <?php dynamic_sidebar('showcase');?>
+		<?php
+			// columns
+            dynamic_sidebar('showcase');
+			
+			// blocks
+            dynamic_sidebar('showcase-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

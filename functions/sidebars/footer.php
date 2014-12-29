@@ -26,10 +26,30 @@ function dc_footer_init() {
 	));
 	
 	register_sidebar( array(
+		'name' =>	__( 'Footer Grid', 'shaz3e' ),
+		'id' => 'footer-grid',
+		'description' => __( 'Description', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	register_sidebar( array(
 		'name' =>	__( 'Bottom Footer', 'shaz3e' ),
 		'id' => 'bottom-footer',
 		'description' => __( 'Description', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	register_sidebar( array(
+		'name' =>	__( 'Bottom Footer Grid', 'shaz3e' ),
+		'id' => 'bottom-footer-grid',
+		'description' => __( 'Description', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',

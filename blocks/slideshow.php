@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('slideshow')): ?>
+<?php if(is_active_sidebar('slideshow') || is_active_sidebar('slideshow-grid')): ?>
 <section class="dc-slideshow dc-clear" id="dc-slideshow">
 	<div class="row">
-    <?php dynamic_sidebar('slideshow');?>
+		<?php
+			// columns
+            dynamic_sidebar('slideshow');
+			
+			// blocks
+            dynamic_sidebar('slideshow-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

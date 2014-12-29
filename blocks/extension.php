@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('extension')): ?>
+<?php if(is_active_sidebar('extension') || is_active_sidebar('extension-grid')): ?>
 <section class="dc-extension dc-clear" id="dc-extension">
 	<div class="row">
-    <?php dynamic_sidebar('extension');?>
+		<?php
+			// columns
+            dynamic_sidebar('extension');
+			
+			// blocks
+            dynamic_sidebar('extension-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

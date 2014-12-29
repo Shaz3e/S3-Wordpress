@@ -14,10 +14,16 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('bottom')): ?>
+<?php if(is_active_sidebar('bottom') || is_active_sidebar('bottom-grid')): ?>
 <section class="dc-bottom dc-clear" id="dc-bottom">
 	<div class="row">
-    	<?php dynamic_sidebar('bottom');?>
+		<?php
+			// columns
+            dynamic_sidebar('bottom');
+			
+			// blocks
+            dynamic_sidebar('bottom-grid');
+        ?>
     </div>
 </section>
 <?php endif; ?>

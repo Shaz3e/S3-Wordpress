@@ -24,6 +24,16 @@ function dc_showcase_init() {
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
+	
+	register_sidebar( array(
+		'name' =>	__( 'Showcase Grid', 'shaz3e' ),
+		'id' => 'showcase-grid',
+		'description' => __( 'Description', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
 }
 add_action( 'widgets_init', 'dc_showcase_init' );
 ?>
