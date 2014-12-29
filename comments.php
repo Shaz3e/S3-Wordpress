@@ -63,32 +63,6 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 	<hr />
 	<?php comment_form(); ?>
-    
-    
-    
-    
-	<form action="wp-comments-post.php" method="post" id="commentform" role="form">
-    	<div class="form-group">
-        	<label for="author">Name *</label>
-            <input type="text" name="author" id="author" class="form-control" placeholder="Name (required)" tabindex="1" />
-        </div>
-    	<div class="form-group">
-        	<label for="email">Email * </label>
-            <input type="email" name="email" id="email" placeholder="Email (required)" class="form-control" tabindex="2" />
-        </div>
-        
-    	<div class="form-group">
-        	<label for="url">Website </label>
-            <input type="text" id="url" name="url" placeholder="Website (optional)" class="form-control" tabindex="3" />
-        </div>
-        
-        <div class="col-1">
-        	<label for="comment">Your comments </label>
-            <textarea name="comment" id="comment" class="form-control" rows="10" tabindex="4"></textarea>
-		</div>
-        
-       <input name="submit" id="submit" tabindex="5" value="Submit Comment" type="submit" class="btn btn-default">
-       <input name="comment_post_ID" value="1" type="hidden">
 
 </form>
     
