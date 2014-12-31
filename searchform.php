@@ -10,7 +10,7 @@
 
 ?>
 
-<form id="searchform" method="get" action="" role="form" class="form-inline">
+<form id="searchform" method="get" action="<?php echo bloginfo('url'); ?>/" role="form" class="form-inline">
 	<div class="form-group">
     	<label id="s" for="s">Search for:</label>
         <input type="text" name="s" id="s" class="form-control" placeholder="" />
