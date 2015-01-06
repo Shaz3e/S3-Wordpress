@@ -1,8 +1,10 @@
-## S3 Framework - Responsive Template System for Wordpress
+## S3 Framework
+####Create beautiful responsive Wordpress Themes more easier and faster.
 
-[![S3Framework](http://img.shields.io/badge/S3Framework-beta-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-0.30-green.svg)](http://www.shaz3e.com)
+[![S3Framework](http://img.shields.io/badge/S3Framework-Beta-blue.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-0.38-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
+
 
 ### S3 Framework Base Theme
 The S3 Framework base theme is a clean modern responsive design that is a great place to start when building your custom S3 powered theme.
