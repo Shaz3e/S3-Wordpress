@@ -20,10 +20,18 @@
 <section class="dc-menu dc-clear" id="dc-menu">
 	<div class="row">
     	<?php
-        	if(is_active_sidebar('menu')){
+			if( has_nav_menu('main-menu')){ ?>
+                <div class="dcMenu">
+                    <div id="dcToggleNav" class="dcToggleNav">
+                        <a href="#"><span>|||</span></a>
+                    </div>
+                    <nav>
+                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+                    </nav>
+                </div>				
+		<?php
+        	}else{
 				dynamic_sidebar('menu');
-			}else{
-				wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
 			}
 		?>
     </div>

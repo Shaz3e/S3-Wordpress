@@ -27,16 +27,15 @@
  * @var array
  */
 function register_s3_menus() {
-  register_nav_menus(
-    array(
-      'main-menu' => __( 'Main Menu' ),
-      'header-menu' => __( 'Header Menu' ),
-    )
-  );
+	register_nav_menus(
+		array(
+		  'main-menu' => __( 'Main Menu' ),
+		  'header-menu' => __( 'Header Menu' ),
+		)
+	);
 }
 add_action( 'init', 'register_s3_menus' );
 
- 
 /**
  * Custom length for excerpt
  * @link reference: http://codex.wordpress.org/Function_Reference/the_excerpt
@@ -64,7 +63,7 @@ add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
  * @param string
  */
 function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'S3Framework') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 

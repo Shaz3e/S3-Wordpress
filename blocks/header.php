@@ -14,34 +14,40 @@
 || #################################################################### ||
 \*======================================================================*/
 
+
+if( has_nav_menu('header-menu')){
+	echo '<div class="dcHeaderMenu">';
+		echo '<div id="dcToggleNavHeader" class="dcToggleNavHeader">';
+			echo '<a href="#"><span>|||</span></a>';
+		echo '</div>';
+		echo '<div class="navHeader">';
+			wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
+		echo '</div>';
+	echo '</div>';
+}else{
+			
+	if(is_active_sidebar('header-1')):
+		echo '<div class="dc-header1">';
+			dynamic_sidebar( 'header-1' ); 
+		echo '</div>';
+	endif;
+
+	if(is_active_sidebar('header-2')):
+		echo '<div class="dc-header2">';
+			dynamic_sidebar( 'header-2' ); 
+		echo '</div>';
+	endif;
+	
+	if(is_active_sidebar('header-3')):
+		echo '<div class="dc-header3">';
+			dynamic_sidebar( 'header-3' ); 
+		echo '</div>';
+	endif;
+	
+	if(is_active_sidebar('header-4')):
+		echo '<div class="dc-header4">';
+			dynamic_sidebar( 'header-4' ); 
+		echo '</div>';
+	endif; 
+}
 ?>
-
-<?php 
-/**
- * header menu next to logo float to right
- * @since S3 Framework 1.0
- */
- 
-if( has_nav_menu ('header-menu') ): ?>
-	<div class="header-menu">
-    	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </div>
-<?php endif; ?>
-
-
-<?php if(is_active_sidebar('header-1')): ?>
-	<div class="dc-header1"><?php dynamic_sidebar( 'header-1' ); ?></div>
-<?php endif; ?>
-
-
-<?php if(is_active_sidebar('header-2')): ?>
-	<div class="dc-header2"><?php dynamic_sidebar( 'header-2' ); ?></div>
-<?php endif; ?>
-
-<?php if(is_active_sidebar('header-3')): ?>
-	<div class="dc-header3"><?php dynamic_sidebar( 'header-3' ); ?></div>
-<?php endif; ?>
-
-<?php if(is_active_sidebar('header-4')): ?>
-	<div class="dc-header4"><?php dynamic_sidebar( 'header-4' ); ?></div>
-<?php endif; ?>
