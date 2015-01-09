@@ -9,6 +9,10 @@
  * @subpackage S3Wordpress
  * @since S3 Framework 1.0
  */
+ 
+// Global Settings for Option Pages
+global $s3_options;
+$s3_settings = get_option( 's3_options', $s3_options );
 
 	/**
 	 * Hide main body by selecting Layout: Without Body in page template
@@ -103,7 +107,7 @@ endif;
 	<div class="row">
     	<div class="grid-6 dc-copyright" id="dc-copyright">
             <div class="block">
-                <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>"><?php echo bloginfo('name'); ?></a> | All Rights Reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>"><?php echo ($s3_settings['sitename'] == '' ? bloginfo('name') : $s3_settings['sitename']);?></a> | All Rights Reserved.</p>
             </div>
         </div>
         

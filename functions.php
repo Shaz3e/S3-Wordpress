@@ -1,4 +1,3 @@
-
 <?php
 /**
  * S3 Wordpress functions and definitions
@@ -10,11 +9,21 @@
  * @since S3 Framework 1.0
  */
 
+/**
+ * Register S3 Framework Theme Setting Pages
+ * @since 1.0
+ */
+require_once( $dcTemplate . "/s3framework/s3framework.php" );
 
-include_once("functions/s3_title.php");
-include_once("functions/s3_sidebars.php");
-include_once("functions/s3_wordpress.php");
-include_once("s3tools/s3_theme_options.php");
+// Title Page
+include_once( $dcTemplate . "/functions/s3_title.php" );
+
+// All Sidebars functions are here
+include_once( $dcTemplate . "/functions/s3_sidebars.php" );
+
+// default S3 Framework functions to extend WP
+include_once( $dcTemplate . "/functions/s3_wordpress.php" );
+
 
 /**
  * Support Added: Type PHP Code in text widget or page/post area
@@ -54,5 +63,3 @@ add_filter('the_excerpt','execute_php',2);
  */
 add_filter('show_admin_bar', '__return_false');
 
-
-?>

@@ -19,6 +19,7 @@
  * @since S3 Wordperss 1.0
  */
 $dcTemplate = get_template_directory_uri();
+require_once('s3_params.php');
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>

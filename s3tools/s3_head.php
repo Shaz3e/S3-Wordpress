@@ -13,6 +13,10 @@
 || # A project of DiligentCreators - Construcing Ideas...               ||
 || #################################################################### ||
 \*======================================================================*/
+
+// Global Settings for Option Pages
+global $s3_options;
+$s3_settings = get_option( 's3_options', $s3_options );
 ?>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -22,9 +26,9 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     
     <?php wp_head(); ?>
-
+	<script src="<?php echo $dcTemplate; ?>/js/jquery.min.js"></script>
     <script src="<?php echo $dcTemplate; ?>/js/bootstrap.min.js"></script>
-    <script src="<?php echo $dcTemplate; ?>/js/jquery-noconflict.js"></script>
+    <script src="<?php echo $dcTemplate; ?>/js/menu.js"></script>
     <script src="<?php echo $dcTemplate; ?>/js/scripts.js"></script>
     
     <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/font-awesome/css/font-awesome.min.css">
@@ -89,4 +93,23 @@ if($this->params->get('developmentMode') != 1){
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo $dcTemplate; ?>/images/favicon/mstile-144x144.png">
     <meta name="msapplication-config" content="<?php echo $dcTemplate; ?>/images/favicon/browserconfig.xml">
+    
+    
+<?php if($s3_settings['google_analytics']): ?>
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', '<?php echo $s3_settings['google_analytics']; ?>']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+
+<?php endif; ?>
+
+
 </head>

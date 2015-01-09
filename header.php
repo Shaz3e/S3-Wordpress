@@ -15,6 +15,10 @@
  * @since S3 Wordperss 1.0
  */
 require_once("s3tools/s3_tools.php");
+
+// Global Settings for Option Pages
+global $s3_options;
+$s3_settings = get_option( 's3_options', $s3_options );
 ?>
 
 <body <?php body_class('dc-wrapper' ); ?>>
@@ -75,12 +79,25 @@ require_once("s3tools/s3_tools.php");
 <div class="dc-fixed-header">
 <section class="dc-header dc-clear" id="dc-header">
 	<div class="row">
-        <div class="dc-logo">
-            <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
-                <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
-            </a>
+    	<div class="grid-3">
+        	<div class="block">
+                <div class="dc-logo">
+                    <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
+                    	<img src="<?php echo $s3_settings['logo_image'];?>">
+                        <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
+                    </a>
+                </div>
+            </div>
         </div>
-            <?php include_once("blocks/header.php"); ?>
+        <?php
+			if( has_nav_menu('header-menu') || is_active_sidebar('header-1') || is_active_sidebar('header-2') || is_active_sidebar('header-3') || is_active_sidebar('header-4')){
+				echo '<div class="grid-9">';
+					echo '<div class="block">';
+						include_once("blocks/header.php");
+					echo '</div>';
+				echo '</div>';
+			}
+		?>
     </div>
 </section>
 	<?php
