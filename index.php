@@ -60,9 +60,12 @@ get_header();
 			</div>
 		<?php endwhile;
 	else :
+	
 		// If no content, include the "No posts found" template.
 		get_template_part( 'content', 'none' );
-	endif;
+
+	endif; // if ( have_posts() ) :
+
 // Wordpress Footer
 get_footer();
 ?>
