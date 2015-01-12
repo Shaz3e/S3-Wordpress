@@ -235,5 +235,12 @@ if ( function_exists('register_sidebar') ) {
 	 * @since S3 Framework 1.0
 	 */
 	require_once("sidebars/footer.php");
+	
+	/**
+	 * 2 Sidebars
+	 * Sidebar Names: copyright & credit
+	 * @since S3 Framework 1.0
+	 */
+	require_once("sidebars/copyright-credit.php");
 }
 ?>
