@@ -9,11 +9,15 @@
  * @since S3 Framework 1.0
  */
 
+// default S3 Framework functions to Call CSS/JS Files Accordingly.
+include_once( $dcTemplate . "/functions/s3_css_js.php" );
+
 /**
  * Register S3 Framework Theme Setting Pages
  * @since 1.0
  */
-require_once( $dcTemplate . "/s3framework/s3framework.php" );
+//require_once( $dcTemplate . "/s3framework/s3framework.php" );
+require_once( $dcTemplate . "/s3tools/s3-options.php" );
 
 // Title Page
 include_once( $dcTemplate . "/functions/s3_title.php" );

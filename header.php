@@ -15,10 +15,6 @@
  * @since S3 Wordperss 1.0
  */
 require_once("s3tools/s3_tools.php");
-
-// Global Settings for Option Pages
-global $s3_options;
-$s3_settings = get_option( 's3_options', $s3_options );
 ?>
 
 <body <?php body_class('dc-wrapper' ); ?>>
@@ -79,19 +75,22 @@ $s3_settings = get_option( 's3_options', $s3_options );
 <div class="dc-fixed-header">
 <section class="dc-header dc-clear" id="dc-header">
 	<div class="row">
-    	<div class="grid-3">
+    	<div class="grid-<?php echo s3_option('logo_column'); ?>">
         	<div class="block">
                 <div class="dc-logo">
-                    <a href="<?php echo bloginfo('url'); ?>" title="<?php echo bloginfo('name'); ?>">
-                    	<img src="<?php echo $s3_settings['logo_image'];?>">
-                        <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo bloginfo('name'); ?>">
+                    <a href="<?php echo bloginfo('url'); ?>" title="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
+                        <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
                     </a>
                 </div>
             </div>
         </div>
         <?php
 			if( has_nav_menu('header-menu') || is_active_sidebar('header-1') || is_active_sidebar('header-2') || is_active_sidebar('header-3') || is_active_sidebar('header-4')){
-				echo '<div class="grid-9">';
+				echo '<div class="grid';
+					if(s3_option('logo_column') == s3_option('logo_column') ){
+						echo s3_option('logo_column') - 12;
+					}
+				echo '">';
 					echo '<div class="block">';
 						include_once("blocks/header.php");
 					echo '</div>';
@@ -109,7 +108,6 @@ $s3_settings = get_option( 's3_options', $s3_options );
 	?>
 
 </div>
-
 <?php
 	/**
 	 * all sidebars before post/page container
@@ -175,19 +173,28 @@ $s3_settings = get_option( 's3_options', $s3_options );
 			 * 3 column page
 			 * @since S3 Framework 1.0
 			 */
-            echo '<div class="grid-6">';
+			$grid = 12;
+			$params = s3_option('sidebar_column') + s3_option('sidebar_column');
+			$paramGrid = $params - $grid;
+			echo '<div class="grid'.  $paramGrid .'">';
         }elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
 			/**
 			 * 2 column with left sidebar
 			 * @since S3 Framework 1.0
 			 */
-            echo '<div class="grid-9">';
+			$grid = 12;
+			$params = s3_option('sidebar_column');
+			$paramGrid = $params - $grid;
+			echo '<div class="grid'.  $paramGrid .'">';
         }elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
 			/**
 			 * 2 column with right sidebar
 			 * @since S3 Framework 1.0
 			 */
-            echo '<div class="grid-9">';
+			$grid = 12;
+			$params = s3_option('sidebar_column');
+			$paramGrid = $params - $grid;
+			echo '<div class="grid'.  $paramGrid .'">';
         }else{
             echo '<div class="grid-12">';
         }

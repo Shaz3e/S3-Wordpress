@@ -14,6 +14,7 @@
 || #################################################################### ||
 \*======================================================================*/
 
+
 /**
  * default Wordpress function enhance here
  * 
@@ -54,8 +55,7 @@ function s3_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
 
-
-/*
+/**
  * excerpt with read more link
  *
  * @link reference: http://codex.wordpress.org/Function_Reference/the_excerpt
@@ -66,5 +66,19 @@ function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'S3Framework') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+/**
+ * Hide WP Meta Generator Version
+ *
+ * @since S3 Framework 1.0
+ */
+if($s3_settings['meta_generator']):
+	function s3_meta_generator() {
+		
+		return '';
+	}
+	add_filter('the_generator', 's3_meta_generator');
+endif;
 
 ?>

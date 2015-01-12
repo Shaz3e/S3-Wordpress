@@ -14,91 +14,106 @@
 || #################################################################### ||
 \*======================================================================*/
 
-// Global Settings for Option Pages
-global $s3_options;
-$s3_settings = get_option( 's3_options', $s3_options );
 ?>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, intial-scale=1, maximum-scale=1, user-scaleable=no">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    
-    <?php wp_head(); ?>
-	<script src="<?php echo $dcTemplate; ?>/js/jquery.min.js"></script>
-    <script src="<?php echo $dcTemplate; ?>/js/bootstrap.min.js"></script>
-    <script src="<?php echo $dcTemplate; ?>/js/menu.js"></script>
-    <script src="<?php echo $dcTemplate; ?>/js/scripts.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/fonts/fonts.css">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, intial-scale=1, maximum-scale=1, user-scaleable=no">
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<?php wp_head(); ?>
+
+<?php 
+// Custom Meta Name Generator
+if(s3_option('meta_generator')): ?>
+<meta name="generator" content="<?php echo s3_option('meta_generator'); ?>" />
+<?php endif; ?>
 
 <?php
-// if development mode is off script will generate css file instead less
-/**
-if($this->params->get('developmentMode') != 1){
-	// less compiler
-	require "lessc.inc.php";
-	
-	$inputFile = $dcTemplate . "/themes/style1/style.less";
-	$outputFile = $dcTemplate . "/themes/style1/style.css";
-	
-	$less = new lessc;
-	$less->setFormatter("compressed");
-	$cache = $less->cachedCompile($inputFile);
-	
-	file_put_contents($outputFile, $cache["compiled"]);
-	
-	$last_updated = $cache["updated"];
-	$cache = $less->cachedCompile($cache);
-		if ($cache["updated"] > $last_updated) {
-			file_put_contents($outputFile, $cache["compiled"]);
-		}
+// Less Development Mode 
+if( s3_option('development_mode') == 1): ?>
+<link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style<?php echo s3_option('styles'); ?>/style.less">
+<?php if( s3_option('hosted_cdn') == 1): ?>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
+<?php endif; ?>
+<script type="text/javascript">
+	less.env = "development";
+	less.watch();
+</script>
+<?php endif; ?>
 
-	// compiled css file 
-	<link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style1/style.css">
-}
-*/
+
+<?php 
+/**
+ * Fixed header on scroll up/down slide up/down
+ * hide/show Header and Menu on scroll up/down
+ * 
+ * @var string
+ * @since S3Framework 1.0
+ */
+if( s3_option('fixed_header') == 1 ):
 ?>
-	
+<style type="text/css">
+/* Fixed Header which works on scroll up/down */
+@media (min-width: <?php echo s3_option('break_point'); ?>px) {
+	.dc-fixed{position:fixed;}
+	.dc-fixed-header{
+		margin:0 !important;
+		top:0;
+		display:block;
+		width:100%;
+		z-index:99999999;
+	}
+}
+</style>
+<script type="text/javascript">
+	if (document.documentElement.clientWidth >= <?php echo s3_option('break_point'); ?> || screen.width >= <?php echo s3_option('break_point'); ?>){
+        var dcHeader = $(window);
+        var dcHeaderPosition = dcHeader.scrollTop();
+        var up = false;
+        var newscroll;
+        dcHeader.scroll(function () {
+            newscroll = dcHeader.scrollTop();
+            if (newscroll > dcHeaderPosition && !up && newscroll > <?php echo s3_option('enable_height'); ?>) {
+                $('.dc-fixed-header').stop().slideUp({duration:<?php echo s3_option('ease_speed'); ?>});
+                up = !up;
+                console.log(up);                
+            } else if(newscroll < dcHeaderPosition && up) {
+                $('.dc-fixed-header').stop().slideDown({duration:<?php echo s3_option('ease_speed'); ?>});
+                up = !up;
+            }
+            dcHeaderPosition = newscroll;
+        });
+
+        $(window).scroll(function() {
+            if( $(this).scrollTop()) {
+                $('.dc-fixed-header').addClass('dc-fixed');
+            }else{
+                $('.dc-fixed-header').removeClass('dc-fixed');
+            }
+        });
+    }
+</script>
+<?php endif; ?>
+
+<?php
+// Responsive Video
+if( s3_option('responsive_video') == 1): ?>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+	$(".s3-video").fitVids();
+  });
+</script>
+<?php endif; ?>    
     
-    <link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style1/style.less">
-    <script src="<?php echo $dcTemplate; ?>/js/less.js"></script>
-	
-    
-    <!--[if lt IE 9]>
-    	<link rel="stylesheet" type="text/css" href="<?php echo $dcTemplate; ?>/css/ie.css">
-        <script src="<?php echo dcTemplate; ?>/js/html5.js"></script>
-        <script src="<?php echo dcTemplate; ?>/js/respond.js"></script>
-    <![endif]-->
-    
-    <link rel="shortcut icon" href="<?php echo $dcTemplate; ?>/images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="<?php echo $dcTemplate; ?>/images/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="<?php echo $dcTemplate; ?>/images/favicon/browserconfig.xml">
-    
-    
-<?php if($s3_settings['google_analytics']): ?>
+<?php if( s3_option('google_analytics') ): ?>
 	<script type="text/javascript">
 	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', '<?php echo $s3_settings['google_analytics']; ?>']);
+	_gaq.push(['_setAccount', '<?php echo s3_option('google_analytics') ; ?>']);
 	_gaq.push(['_trackPageview']);
 	(function() {
 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
@@ -111,5 +126,42 @@ if($this->params->get('developmentMode') != 1){
 
 <?php endif; ?>
 
-
+<link rel="shortcut icon" href="<?php echo $dcTemplate; ?>/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="<?php echo $dcTemplate; ?>/images/favicon/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="<?php echo $dcTemplate; ?>/images/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="<?php echo $dcTemplate; ?>/images/favicon/browserconfig.xml">
+<!--[if lt IE 9]>
+<?php
+	// load html5 library
+	if( s3_option('hosted_cdn') == 1 ){
+		// load html5 library on CDN
+		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
+	}else{
+		// load html5 library locally
+		echo '<script src="' . esc_url( get_template_directory_uri() ) . '/js/html5.js"></script>';
+	}
+	
+	// load respond library
+	if( s3_option('hosted_cdn') == 1 ){
+		// load respond library on CDN
+		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
+	}else{
+		// load respond library locally
+		echo '<script src="'. esc_url( get_template_directory_uri() ) . '/js/respond.js"></script>';
+	}
+?>
+<![endif]-->
 </head>

@@ -15,7 +15,7 @@
 \*======================================================================*/
 ?>
 <?php if(is_active_sidebar('right-sidebar')): ?>
-<aside class="grid-3 dc-right-sidebar dc-clear">
+<aside class="grid-<?php echo s3_option('sidebar_column'); ?> dc-right-sidebar dc-clear">
 	<div id="dc-right-sidebar">
     	<div class="dc-sidebar">
 	        <?php dynamic_sidebar('right-sidebar');?>
