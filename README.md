@@ -36,6 +36,33 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - 300+ Sidebar Positions
  - Suitable with any design
  - IE7 and IE8 Supported
+
+### Theme Options Pages
+ - **S3 Theme Configuration**
+ - Site Name
+ - Choose Your Style
+ - Google Analytics
+ - Development Mode
+ - Hosted on CDN
+ - Meta Generator
+ - **Library Settings**
+ - Use Bootstrap
+ - Use Bootstrap Theme
+ - Use Font Awesome
+ - Use Responsive Video
+ - **Layout Setting**
+ - Set Logo Column
+ - Set Sidebar Column
+ - Show Copyright
+ - Show Credit
+ - Show Framework Logo
+ - Fixed Header and Menu
+ - Break Point
+ - Enable Height
+ - Ease Speed
+ - **Reset to Defaults**
+ - Reset theme
+
  
  
 ### Download, Fork, Commit.
