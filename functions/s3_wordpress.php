@@ -14,6 +14,9 @@
 || #################################################################### ||
 \*======================================================================*/
 
+// Global Settings for Option Pages
+global $s3_options;
+$s3_settings = get_option( 's3_options', $s3_options );
 
 /**
  * default Wordpress function enhance here
@@ -43,8 +46,7 @@ add_action( 'init', 'register_s3_menus' );
  * @since S3 Framework 1.0
  * @param string
  * @return int
- */
-
+ */	
 function s3_excerpt_length( $length ) {
 
 	/**
@@ -54,6 +56,7 @@ function s3_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
+
 
 /**
  * excerpt with read more link
@@ -81,4 +84,14 @@ if($s3_settings['meta_generator']):
 	add_filter('the_generator', 's3_meta_generator');
 endif;
 
+/**
+ * Hide admin tool bar for logged-in user front-end
+ * disable this hook to show admin tool bar at top from theme options
+ *
+ * @since S3 Framework 1.0
+ */
+
+if( s3_option('hide_admin_bar') == 1){
+	add_filter('show_admin_bar', '__return_false');
+}
 ?>
