@@ -380,6 +380,18 @@ class s3Options {
 			'type'    => 'text',
 			'section' => 'config'
 		);
+
+		$this->settings['hide_admin_bar'] = array(
+			'title'   => __( 'Hide Admin Toolbar' ),
+			'desc'    => __( 'Hide admin tool bar for logged-in user at front-end.' ),
+			'std'     => 1,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Yes',
+							0 => 'No',
+						 ),
+			'section' => 'config'
+		);
 						
 		/* Libraries Settings
 		===========================================*/
