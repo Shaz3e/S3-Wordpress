@@ -352,7 +352,7 @@ class s3Options {
 		$this->settings['development_mode'] = array(
 			'title'   => __( 'Development Mode' ),
 			'desc'    => __( 'Enable or Disable development mode for this website. When this feature is on style.less as preprocessor will be used instead of style.css' ),
-			'std'     => 0,
+			'std'     => 1,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Yes',
@@ -384,11 +384,33 @@ class s3Options {
 		$this->settings['hide_admin_bar'] = array(
 			'title'   => __( 'Hide Admin Toolbar' ),
 			'desc'    => __( 'Hide admin tool bar for logged-in user at front-end.' ),
-			'std'     => 1,
+			'std'     => 0,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Yes',
 							0 => 'No',
+						 ),
+			'section' => 'config'
+		);
+
+		$this->settings['column_grid_count'] = array(
+			'title'   => __( 'Set Columns in one row' ),
+			'desc'    => __( 'How many columns should be in one row. i.e. if you select 3 Columns and you have enabled 4 sidebars in one row the 4th sidebar will be in next row' ),
+			'std'     => 12,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Column 1',
+							2 => 'Column 2',
+							3 => 'Column 3',
+							4 => 'Column 4',
+							5 => 'Column 5',
+							6 => 'Column 6',
+							7 => 'Column 7',
+							8 => 'Column 8',
+							9 => 'Column 9',
+							10 => 'Column 10',
+							11 => 'Column 11',
+							12 => 'Column 12',
 						 ),
 			'section' => 'config'
 		);
@@ -543,7 +565,7 @@ class s3Options {
 			'title'   => __( 'Break Point' ),
 			'desc'    => __( 'Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.' ),
 			'std'     => 768,
-			'type'    => 'text',
+			'type'    => 'number',
 			'section' => 'layout'
 		);
 		

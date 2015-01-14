@@ -94,15 +94,20 @@ function dc_sidebar_params($dc_params) {
 			 
 			/* 
 			 * less 1 column max 12 column as defined in css/template.less
+			 * s3_option('column_grid_count') config settings under theme options
+			 *
+			 * @params int
+			 *
 			 * @since S3 Framework 1.0
 			 */
-			if($dc_sidebar_widgets > 12){
+			//if($dc_sidebar_widgets > 12){
+			if($dc_sidebar_widgets > s3_option('column_grid_count')){
 				/**
 				 * change col-12 to default in class="col-12"
 				 * default 12 columns sidebars change the number to make it default
 				 * @since S3 Framework 1.0
 				 */
-				$dc_params[0]['before_widget'] = '<div class="col-12">'.$dc_params[0]['before_widget'];
+				$dc_params[0]['before_widget'] = '<div class="col-'.s3_option('column_grid_count').'">'.$dc_params[0]['before_widget'];
 			}else{
 				$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
 			}
