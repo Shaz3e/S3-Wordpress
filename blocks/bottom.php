@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('bottom') || is_active_sidebar('bottom-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('bottom') || 
+		is_active_sidebar('bottom-grid') || 
+		is_active_sidebar('bottom-top') || 
+		is_active_sidebar('bottom-bottom')
+	):
+?>
 <section class="dc-bottom dc-clear" id="dc-bottom">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('bottom-top'); ?>
+    
+	<?php if(is_active_sidebar('bottom') || is_active_sidebar('bottom-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('bottom-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('bottom-bottom'); ?>
+        
 </section>
 <?php endif; ?>

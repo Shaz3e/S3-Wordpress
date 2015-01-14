@@ -14,15 +14,43 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('feature') || is_active_sidebar('bottom-feature') || is_active_sidebar('feature-grid') || is_active_sidebar('bottom-feature-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('feature') || 
+		is_active_sidebar('feature-grid') || 
+		is_active_sidebar('bottom-feature') || 
+		is_active_sidebar('bottom-feature-grid') ||
+		is_active_sidebar('feature-top') || 
+		is_active_sidebar('feature-bottom')
+	):
+?>
 <section class="dc-feature dc-clear" id="dc-feature">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('feature-top'); ?>
+    
+	<?php if(is_active_sidebar('feature') || is_active_sidebar('feature-grid') ): ?>
 	<div class="row">
-    	<?php
-        	dynamic_sidebar('feature');
-			dynamic_sidebar('feature-grid');
-        	dynamic_sidebar('bottom-feature');
-        	dynamic_sidebar('bottom-feature-grid');
-		?>
+		<?php
+			// columns
+            dynamic_sidebar('feature');
+			
+			// blocks
+            dynamic_sidebar('feature-grid');
+			
+			// columns
+			dynamic_sidebar('bottom-feature');
+			
+			// blocks
+			dynamic_sidebar('bottom-feature-grid');
+        ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('feature-bottom'); ?>
+        
 </section>
 <?php endif; ?>

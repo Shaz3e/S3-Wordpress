@@ -14,15 +14,43 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('footer') || is_active_sidebar('bottom-footer') || is_active_sidebar('footer-grid') || is_active_sidebar('bottom-footer-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('footer') || 
+		is_active_sidebar('footer-grid') || 
+		is_active_sidebar('bottom-footer') || 
+		is_active_sidebar('bottom-footer-grid') ||
+		is_active_sidebar('footer-top') || 
+		is_active_sidebar('footer-bottom')
+	):
+?>
 <section class="dc-footer dc-clear" id="dc-footer">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('footer-top'); ?>
+    
+	<?php if(is_active_sidebar('footer') || is_active_sidebar('footer-grid') ): ?>
 	<div class="row">
-    	<?php
-        	dynamic_sidebar('footer');
-			dynamic_sidebar('footer-grid');
-        	dynamic_sidebar('bottom-footer');
-        	dynamic_sidebar('bottom-footer-grid');
-		?>
+		<?php
+			// columns
+            dynamic_sidebar('footer');
+			
+			// blocks
+            dynamic_sidebar('footer-grid');
+			
+			// columns
+			dynamic_sidebar('bottom-footer');
+			
+			// blocks
+			dynamic_sidebar('bottom-footer-grid');
+        ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('footer-bottom'); ?>
+        
 </section>
 <?php endif; ?>

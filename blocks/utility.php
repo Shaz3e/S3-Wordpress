@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('utility') || is_active_sidebar('utility-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('utility') || 
+		is_active_sidebar('utility-grid') || 
+		is_active_sidebar('utility-top') || 
+		is_active_sidebar('utility-bottom')
+	):
+?>
 <section class="dc-utility dc-clear" id="dc-utility">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('utility-top'); ?>
+    
+	<?php if(is_active_sidebar('utility') || is_active_sidebar('utility-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('utility-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('utility-bottom'); ?>
+        
 </section>
 <?php endif; ?>

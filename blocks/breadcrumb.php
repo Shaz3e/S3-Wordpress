@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('breadcrumb') || is_active_sidebar('breadcrumb-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('breadcrumb') || 
+		is_active_sidebar('breadcrumb-grid') || 
+		is_active_sidebar('breadcrumb-top') || 
+		is_active_sidebar('breadcrumb-bottom')
+	):
+?>
 <section class="dc-breadcrumb dc-clear" id="dc-breadcrumb">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('breadcrumb-top'); ?>
+    
+	<?php if(is_active_sidebar('breadcrumb') || is_active_sidebar('breadcrumb-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('breadcrumb-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('breadcrumb-bottom'); ?>
+        
 </section>
 <?php endif; ?>

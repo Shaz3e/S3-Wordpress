@@ -44,6 +44,7 @@ body{margin:0;padding:0;}
 .grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-7,.grid-8,.grid-9,.grid-10,.grid-11,.grid-12,
 .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
 	position:relative;
+	z-index:1;
 	min-height:1px;
 	float:left;
 }
@@ -51,17 +52,24 @@ body{margin:0;padding:0;}
 .block{
 	position:relative;
 	min-height:1px;
-	padding:@gutter; /* Padding is set as @gutter 5px */
+	padding:@gutter;
 	margin-top:0;
 	margin-right:@gutter;
 	margin-bottom:@gutter * 2;
 	margin-left:@gutter;
-	
+
 	&:last-child{
-		margin-bottom:0 !important;
+		//margin-bottom:0 !important;
 	}
 }
 
+/* Full width block i.e. (.full-width .block)
+**********************************************/
+.full-width{
+    margin:0 !important;
+    padding:0 !important;
+	display:block;
+}
 
 /* default width variable */
 @width:100%;

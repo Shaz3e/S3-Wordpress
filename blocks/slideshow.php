@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('slideshow') || is_active_sidebar('slideshow-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('slideshow') || 
+		is_active_sidebar('slideshow-grid') || 
+		is_active_sidebar('slideshow-top') || 
+		is_active_sidebar('slideshow-bottom')
+	):
+?>
 <section class="dc-slideshow dc-clear" id="dc-slideshow">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('slideshow-top'); ?>
+    
+	<?php if(is_active_sidebar('slideshow') || is_active_sidebar('slideshow-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('slideshow-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('slideshow-bottom'); ?>
+        
 </section>
 <?php endif; ?>

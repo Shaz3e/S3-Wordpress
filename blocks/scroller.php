@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('scroller') || is_active_sidebar('scroller-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('scroller') || 
+		is_active_sidebar('scroller-grid') || 
+		is_active_sidebar('scroller-top') || 
+		is_active_sidebar('scroller-bottom')
+	):
+?>
 <section class="dc-scroller dc-clear" id="dc-scroller">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('scroller-top'); ?>
+    
+	<?php if(is_active_sidebar('scroller') || is_active_sidebar('scroller-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('scroller-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('scroller-bottom'); ?>
+        
 </section>
 <?php endif; ?>

@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('showcase') || is_active_sidebar('showcase-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('showcase') || 
+		is_active_sidebar('showcase-grid') || 
+		is_active_sidebar('showcase-top') || 
+		is_active_sidebar('showcase-bottom')
+	):
+?>
 <section class="dc-showcase dc-clear" id="dc-showcase">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('showcase-top'); ?>
+    
+	<?php if(is_active_sidebar('showcase') || is_active_sidebar('showcase-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('showcase-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('showcase-bottom'); ?>
+        
 </section>
 <?php endif; ?>

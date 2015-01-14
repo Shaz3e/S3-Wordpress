@@ -15,21 +15,46 @@
 \*======================================================================*/
 	
 function dc_extension_init() {
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Extension Top', 'shaz3e' ),
+		'id' => 'extension-top',
+		'description' => __( 'Extension Top Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	// columns
 	register_sidebar( array(
 		'name' =>	__( 'Extension', 'shaz3e' ),
 		'id' => 'extension',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Columns will be automatically added', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// blocks
 	register_sidebar( array(
 		'name' =>	__( 'Extension Grid', 'shaz3e' ),
 		'id' => 'extension-grid',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Extension Bottom', 'shaz3e' ),
+		'id' => 'extension-bottom',
+		'description' => __( 'Extension Bottom Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',

@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('top') || is_active_sidebar('top-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('top') || 
+		is_active_sidebar('top-grid') || 
+		is_active_sidebar('top-top') || 
+		is_active_sidebar('top-bottom')
+	):
+?>
 <section class="dc-top dc-clear" id="dc-top">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('top-top'); ?>
+    
+	<?php if(is_active_sidebar('top') || is_active_sidebar('top-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('top-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('top-bottom'); ?>
+        
 </section>
 <?php endif; ?>

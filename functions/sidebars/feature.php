@@ -15,41 +15,68 @@
 \*======================================================================*/
 	
 function dc_feature_init() {
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Feature Top', 'shaz3e' ),
+		'id' => 'feature-top',
+		'description' => __( 'Feature Top Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	// columns
 	register_sidebar( array(
 		'name' =>	__( 'Feature', 'shaz3e' ),
 		'id' => 'feature',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Columns will be automatically added', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// blocks
 	register_sidebar( array(
 		'name' =>	__( 'Feature Grid', 'shaz3e' ),
 		'id' => 'feature-grid',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="%2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// columns
 	register_sidebar( array(
 		'name' =>	__( 'Bottom Feature', 'shaz3e' ),
 		'id' => 'bottom-feature',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Columns will be automatically added', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// blocks
 	register_sidebar( array(
 		'name' =>	__( 'Bottom Feature Grid', 'shaz3e' ),
 		'id' => 'bottom-feature-grid',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Feature Bottom', 'shaz3e' ),
+		'id' => 'bottom-feature-bottom',
+		'description' => __( 'Feature Bottom Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',

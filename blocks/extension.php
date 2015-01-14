@@ -14,8 +14,21 @@
 || #################################################################### ||
 \*======================================================================*/
 ?>
-<?php if(is_active_sidebar('extension') || is_active_sidebar('extension-grid')): ?>
+<?php 
+	if(
+		is_active_sidebar('extension') || 
+		is_active_sidebar('extension-grid') || 
+		is_active_sidebar('extension-top') || 
+		is_active_sidebar('extension-bottom')
+	):
+?>
 <section class="dc-extension dc-clear" id="dc-extension">
+	
+    <?php
+    	//Full width sidebar
+    	dynamic_sidebar('extension-top'); ?>
+    
+	<?php if(is_active_sidebar('extension') || is_active_sidebar('extension-grid') ): ?>
 	<div class="row">
 		<?php
 			// columns
@@ -25,5 +38,11 @@
             dynamic_sidebar('extension-grid');
         ?>
     </div>
+    <?php endif; ?>
+    
+    <?php 
+		// Full width sidebar
+		dynamic_sidebar('extension-bottom'); ?>
+        
 </section>
 <?php endif; ?>

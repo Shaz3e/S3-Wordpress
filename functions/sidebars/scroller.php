@@ -15,21 +15,46 @@
 \*======================================================================*/
 	
 function dc_scroller_init() {
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Scroller Top', 'shaz3e' ),
+		'id' => 'scroller-top',
+		'description' => __( 'Scroller Top Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	// columns
 	register_sidebar( array(
 		'name' =>	__( 'Scroller', 'shaz3e' ),
 		'id' => 'scroller',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Columns will be automatically added', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// blocks
 	register_sidebar( array(
 		'name' =>	__( 'Scroller Grid', 'shaz3e' ),
 		'id' => 'scroller-grid',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Scroller Bottom', 'shaz3e' ),
+		'id' => 'scroller-bottom',
+		'description' => __( 'Scroller Bottom Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',

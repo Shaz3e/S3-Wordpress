@@ -15,21 +15,46 @@
 \*======================================================================*/
 	
 function dc_breadcrumb_init() {
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Breadcrumb Top', 'shaz3e' ),
+		'id' => 'breadcrumb-top',
+		'description' => __( 'Breadcrumb Top Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	// columns
 	register_sidebar( array(
 		'name' =>	__( 'Breadcrumb', 'shaz3e' ),
 		'id' => 'breadcrumb',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Columns will be automatically added', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
 	
+	// blocks
 	register_sidebar( array(
 		'name' =>	__( 'Breadcrumb Grid', 'shaz3e' ),
 		'id' => 'breadcrumb-grid',
-		'description' => __( 'Description', 'shaz3e' ),
+		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+	
+	//Full width sidebar
+	register_sidebar( array(
+		'name' =>	__( 'Breadcrumb Bottom', 'shaz3e' ),
+		'id' => 'breadcrumb-bottom',
+		'description' => __( 'Breadcrumb Bottom Full Width', 'shaz3e' ),
+		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
