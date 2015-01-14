@@ -10,23 +10,23 @@
  */
 
 // default S3 Framework functions to Call CSS/JS Files Accordingly.
-include_once( $dcTemplate . "/functions/s3_css_js.php" );
+require ( get_template_directory() . "/functions/s3_css_js.php" );
 
 /**
  * Register S3 Framework Theme Setting Pages
  * @since 1.0
  */
 //require_once( $dcTemplate . "/s3framework/s3framework.php" );
-require_once( $dcTemplate . "/s3tools/s3-options.php" );
+require ( get_template_directory() . "/s3tools/s3-options.php" );
 
 // Title Page
-include_once( $dcTemplate . "/functions/s3_title.php" );
+require ( get_template_directory() . "/functions/s3_title.php" );
 
 // All Sidebars functions are here
-include_once( $dcTemplate . "/functions/s3_sidebars.php" );
+require ( get_template_directory() . "/functions/s3_sidebars.php" );
 
 // default S3 Framework functions to extend WP
-include_once( $dcTemplate . "/functions/s3_wordpress.php" );
+require ( get_template_directory() . "/functions/s3_wordpress.php" );
 
 
 /**
