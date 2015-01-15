@@ -102,21 +102,30 @@ function s3_css_js(){
 	
 	/**
 	 * Calls less.js and style.less files in s3tools/s3_head.php
-	 * Compile file when development mode is off
+	 * Compile *.less files to style.css 
+	 * Compress s3_option('styles')/style.css file
 	 *
 	 * @since 1.0
 	 */
 	
 	if( s3_option('development_mode') != 1):	
 		// Compile LESS file to CSS
-		require_once( get_template_directory().'/s3tools/lessc.inc.php' );
-	
+		require( get_template_directory() . '/s3tools/lessc.inc.php' );
+		
+		$inputFile  = get_template_directory() . '/themes/style'.s3_option('styles').'/style.less';
+		$outputFile = get_template_directory() . '/themes/style'.s3_option('styles').'/style.css';
+		
 		$less = new lessc;
 		$less->setFormatter("compressed");
-		$less->checkedCompile(
-			get_template_directory() . '/themes/style'.s3_option('styles').'/style.less',
-			get_template_directory() . '/themes/style'.s3_option('styles').'/style.css'
-		);
+		$cache = $less->cachedCompile($inputFile);
+		
+		file_put_contents($outputFile, $cache["compiled"]);
+		
+		$last_updated = $cache["updated"];
+		$cache = $less->cachedCompile($cache);
+			if ($cache["updated"] > $last_updated) {
+				file_put_contents($outputFile, $cache["compiled"]);
+			}
 		
 		wp_enqueue_style( 's3-framework', get_template_directory_uri() . '/themes/style'.s3_option('styles').'/style.css', array() );
 	endif;
