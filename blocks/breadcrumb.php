@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('breadcrumb-top') || 
 		is_active_sidebar('breadcrumb') || 
 		is_active_sidebar('breadcrumb-grid') || 
-		is_active_sidebar('breadcrumb-top') || 
 		is_active_sidebar('breadcrumb-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('breadcrumb-top'); ?>
     
-	<?php if(is_active_sidebar('breadcrumb') || is_active_sidebar('breadcrumb-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+    	if(
+			is_active_sidebar('breadcrumb') || 
+			is_active_sidebar('breadcrumb-grid')
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

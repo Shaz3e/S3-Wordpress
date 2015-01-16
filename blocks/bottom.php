@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('bottom-top') || 
 		is_active_sidebar('bottom') || 
 		is_active_sidebar('bottom-grid') || 
-		is_active_sidebar('bottom-top') || 
 		is_active_sidebar('bottom-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('bottom-top'); ?>
     
-	<?php if(is_active_sidebar('bottom') || is_active_sidebar('bottom-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+    	if(
+			is_active_sidebar('bottom') || 
+			is_active_sidebar('bottom-grid')
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

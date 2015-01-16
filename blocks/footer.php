@@ -16,11 +16,11 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('footer-top') || 
 		is_active_sidebar('footer') || 
 		is_active_sidebar('footer-grid') || 
 		is_active_sidebar('bottom-footer') || 
 		is_active_sidebar('bottom-footer-grid') ||
-		is_active_sidebar('footer-top') || 
 		is_active_sidebar('footer-bottom')
 	):
 ?>
@@ -30,7 +30,15 @@
     	//Full width sidebar
     	dynamic_sidebar('footer-top'); ?>
     
-	<?php if(is_active_sidebar('footer') || is_active_sidebar('footer-grid') ): ?>
+	<?php 
+		// Columns & Grids Sidebars
+		if(
+			is_active_sidebar('footer') || 
+			is_active_sidebar('footer-grid') || 
+			is_active_sidebar('bottom-footer') || 
+			is_active_sidebar('bottom-footer-grid') 
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

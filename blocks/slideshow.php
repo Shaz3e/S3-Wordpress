@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('slideshow-top') || 
 		is_active_sidebar('slideshow') || 
 		is_active_sidebar('slideshow-grid') || 
-		is_active_sidebar('slideshow-top') || 
 		is_active_sidebar('slideshow-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('slideshow-top'); ?>
     
-	<?php if(is_active_sidebar('slideshow') || is_active_sidebar('slideshow-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+		if(
+			is_active_sidebar('slideshow') || 
+			is_active_sidebar('slideshow-grid')
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('utility-top') || 
 		is_active_sidebar('utility') || 
 		is_active_sidebar('utility-grid') || 
-		is_active_sidebar('utility-top') || 
 		is_active_sidebar('utility-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('utility-top'); ?>
     
-	<?php if(is_active_sidebar('utility') || is_active_sidebar('utility-grid') ): ?>
+	<?php 
+		// Columns & Grids Sidebars
+		if(
+			is_active_sidebar('utility') || 
+			is_active_sidebar('utility-grid')
+		): 
+	?>
 	<div class="row">
 		<?php
 			// columns

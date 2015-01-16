@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('top-top') || 
 		is_active_sidebar('top') || 
 		is_active_sidebar('top-grid') || 
-		is_active_sidebar('top-top') || 
 		is_active_sidebar('top-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('top-top'); ?>
     
-	<?php if(is_active_sidebar('top') || is_active_sidebar('top-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+    	if(
+			is_active_sidebar('top') || 
+			is_active_sidebar('top-grid')
+		): 
+	?>
 	<div class="row">
 		<?php
 			// columns

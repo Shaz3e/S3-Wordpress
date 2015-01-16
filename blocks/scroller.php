@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('scroller-top') || 
 		is_active_sidebar('scroller') || 
 		is_active_sidebar('scroller-grid') || 
-		is_active_sidebar('scroller-top') || 
 		is_active_sidebar('scroller-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('scroller-top'); ?>
     
-	<?php if(is_active_sidebar('scroller') || is_active_sidebar('scroller-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+    	if(
+			is_active_sidebar('scroller') || 
+			is_active_sidebar('scroller-grid')
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

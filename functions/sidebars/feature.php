@@ -74,7 +74,7 @@ function dc_feature_init() {
 	//Full width sidebar
 	register_sidebar( array(
 		'name' =>	__( 'Feature Bottom', 'shaz3e' ),
-		'id' => 'bottom-feature-bottom',
+		'id' => 'feature-bottom',
 		'description' => __( 'Feature Bottom Full Width', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',

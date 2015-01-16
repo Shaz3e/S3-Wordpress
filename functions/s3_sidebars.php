@@ -23,7 +23,7 @@
  * Put the first word in widget's title in span and style it in theme LESS/CSS file
  * @since S3 Wordperss 1.0
  */
- 
+
 function s3_title($title) {
     $title_parts = explode(' ', $title, 2);
     $title = '<span>'.$title_parts[0].'</span>';

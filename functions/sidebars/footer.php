@@ -74,7 +74,7 @@ function dc_footer_init() {
 	//Full width sidebar
 	register_sidebar( array(
 		'name' =>	__( 'Footer Bottom', 'shaz3e' ),
-		'id' => 'bottom-footer-bottom',
+		'id' => 'footer-bottom',
 		'description' => __( 'Footer Bottom Full Width', 'shaz3e' ),
 		'before_widget' => '<div id="%1$s" class="full-width block %2$s">',
 		'after_widget' => '</div></div>',

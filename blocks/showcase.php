@@ -16,9 +16,9 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('showcase-top') || 
 		is_active_sidebar('showcase') || 
 		is_active_sidebar('showcase-grid') || 
-		is_active_sidebar('showcase-top') || 
 		is_active_sidebar('showcase-bottom')
 	):
 ?>
@@ -28,7 +28,13 @@
     	//Full width sidebar
     	dynamic_sidebar('showcase-top'); ?>
     
-	<?php if(is_active_sidebar('showcase') || is_active_sidebar('showcase-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+    	if(
+			is_active_sidebar('showcase') || 
+			is_active_sidebar('showcase-grid')
+		):
+	?>
 	<div class="row">
 		<?php
 			// columns

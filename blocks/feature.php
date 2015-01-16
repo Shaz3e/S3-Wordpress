@@ -16,11 +16,11 @@
 ?>
 <?php 
 	if(
+		is_active_sidebar('feature-top') || 
 		is_active_sidebar('feature') || 
 		is_active_sidebar('feature-grid') || 
 		is_active_sidebar('bottom-feature') || 
 		is_active_sidebar('bottom-feature-grid') ||
-		is_active_sidebar('feature-top') || 
 		is_active_sidebar('feature-bottom')
 	):
 ?>
@@ -30,7 +30,15 @@
     	//Full width sidebar
     	dynamic_sidebar('feature-top'); ?>
     
-	<?php if(is_active_sidebar('feature') || is_active_sidebar('feature-grid') ): ?>
+	<?php
+		// Columns & Grids Sidebars
+	    if(
+			is_active_sidebar('feature') || 
+			is_active_sidebar('feature-grid') || 
+			is_active_sidebar('bottom-feature') || 
+			is_active_sidebar('bottom-feature-grid') 
+		): 
+	?>
 	<div class="row">
 		<?php
 			// columns
