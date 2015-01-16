@@ -1,8 +1,8 @@
 ## S3 Framework
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
-[![S3Framework](http://img.shields.io/badge/S3Framework-RC-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-0.44-green.svg)](http://www.shaz3e.com)
+[![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-1.0-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 
