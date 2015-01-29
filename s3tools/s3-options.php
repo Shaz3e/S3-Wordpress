@@ -32,11 +32,11 @@ class s3Options {
 		$this->settings = array();
 		$this->get_settings();
 		
-		$this->sections['config']   = __( 'S3 Theme Configurations' );
-		$this->sections['library']   = __( 'Libraries Settings' );
-		$this->sections['layout']   = __( 'Layout Settings' );
-		$this->sections['about']   = __( 'About S3 Framework' );
-		$this->sections['reset']        = __( 'Reset to Defaults' );
+		$this->sections['config'] = __( 'S3 Theme Configurations' );
+		$this->sections['library'] = __( 'Libraries Settings' );
+		$this->sections['layout'] = __( 'Layout Settings' );
+		$this->sections['about'] = __( 'About S3 Framework' );
+		$this->sections['reset'] = __( 'Reset to Defaults' );
 		
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );
 		add_action( 'admin_init', array( &$this, 'register_settings' ) );
@@ -392,7 +392,7 @@ class s3Options {
 						 ),
 			'section' => 'config'
 		);
-
+		
 		$this->settings['column_grid_count'] = array(
 			'title'   => __( 'Set Columns in one row' ),
 			'desc'    => __( 'How many columns should be in one row. i.e. if you select 3 Columns and you have enabled 4 sidebars in one row the 4th sidebar will be in next row' ),

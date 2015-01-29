@@ -87,20 +87,20 @@ function dc_sidebar_params($dc_params) {
 				$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
 			}
 		}else{
-			/**
-			 * all dc_sidebar_id has 12 columns
-			 * @since S3 Framework 1.0
-			 */
-			 
-			/* 
-			 * less 1 column max 12 column as defined in css/template.less
-			 * s3_option('column_grid_count') config settings under theme options
-			 *
-			 * @params int
-			 *
-			 * @since S3 Framework 1.0
-			 */
-			//if($dc_sidebar_widgets > 12){
+		
+		/**
+		 * all dc_sidebar_id has 12 columns
+		 * @since S3 Framework 1.0
+		 */
+		 
+		/** 
+		 * less 1 column max 12 column as defined in css/template.less
+		 * s3_option('column_grid_count') Config settings under theme options
+		 *
+		 * @params int
+		 *
+		 * @since S3 Framework 1.0
+		 */
 			if($dc_sidebar_widgets > s3_option('column_grid_count')){
 				/**
 				 * change col-12 to default in class="col-12"
@@ -110,7 +110,7 @@ function dc_sidebar_params($dc_params) {
 				$dc_params[0]['before_widget'] = '<div class="col-'.s3_option('column_grid_count').'">'.$dc_params[0]['before_widget'];
 			}else{
 				$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
-			}
+			}		
 		}
 	}
 	return $dc_params;
