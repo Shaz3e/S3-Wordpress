@@ -361,18 +361,6 @@ class s3Options {
 			'section' => 'config'
 		);
 		
-		$this->settings['hosted_cdn'] = array(
-			'title'   => __( 'Hosted on CDN' ),
-			'desc'    => __( 'By disabling this feature template will use all files locally.' ),
-			'std'     => 0,
-			'type'    => 'select',
-			'choices' => array(
-							1 => 'Yes',
-							0 => 'No',
-						 ),
-			'section' => 'config'
-		);
-		
 		$this->settings['meta_generator'] = array(
 			'title'   => __( 'Meta Generator' ),
 			'desc'    => __( 'Type your custom meta generator text here.' ),
@@ -417,6 +405,18 @@ class s3Options {
 						
 		/* Libraries Settings
 		===========================================*/
+		
+		$this->settings['hosted_cdn'] = array(
+			'title'   => __( 'Hosted on CDN' ),
+			'desc'    => __( 'By disabling this feature template will use all files locally.' ),
+			'std'     => 0,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Yes',
+							0 => 'No',
+						 ),
+			'section' => 'library'
+		);
 		
 		$this->settings['bootstrap'] = array(
 			'title'   => __( 'Use Bootstrap' ),
