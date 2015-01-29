@@ -162,7 +162,7 @@ require_once("s3tools/s3_tools.php");
 			
 			echo '<div class="grid'.  $paramGrid .'">';
 		
-		elseif(is_page_template('layouts/2-columns-left-sidebar.php' || is_page_template('layouts/2-columns-right-sidebar.php'))):
+		elseif(is_page_template('layouts/2-columns-left-sidebar.php') || is_page_template('layouts/2-columns-right-sidebar.php')):
 			/**
 			 * 2 column with left / right sidebar
 			 * @since S3 Framework 1.0
@@ -175,6 +175,11 @@ require_once("s3tools/s3_tools.php");
 		
 		
 		elseif(is_page_template('layouts/full-width.php')):
+		
+			/**
+			 * Full width no sidebar
+			 * @since S3 Framework 1.0
+			 */
 			echo '<div class="grid-12">';
 			
 		else:
