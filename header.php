@@ -151,13 +151,28 @@ require_once("s3tools/s3_tools.php");
 		 * @since S3 Framework 1.0
 		 */
         if(is_page_template('layouts/3-columns.php')):
-            echo '<div class="grid-6">';
+			/**
+			 * 3 column page
+			 * @since S3 Framework 1.0.2
+			 */
+			 
+			$grid = 12;
+			$params = s3_option('sidebar_column') + s3_option('sidebar_column');
+			$paramGrid = $params - $grid;
+			
+			echo '<div class="grid'.  $paramGrid .'">';
 		
-		elseif(is_page_template('layouts/2-columns-left-sidebar.php')):
-			echo '<div class="grid-9">';
+		elseif(is_page_template('layouts/2-columns-left-sidebar.php' || is_page_template('layouts/2-columns-right-sidebar.php'))):
+			/**
+			 * 2 column with left / right sidebar
+			 * @since S3 Framework 1.0
+			 */
+			$grid = 12;
+			$params = s3_option('sidebar_column');
+			$paramGrid = $params - $grid;
+			
+			echo '<div class="grid'.  $paramGrid .'">';
 		
-		elseif(is_page_template('layouts/2-columns-right-sidebar.php')):
-			echo '<div class="grid-9">';
 		
 		elseif(is_page_template('layouts/full-width.php')):
 			echo '<div class="grid-12">';
@@ -177,6 +192,7 @@ require_once("s3tools/s3_tools.php");
 			$params = s3_option('sidebar_column') + s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
 			echo '<div class="grid'.  $paramGrid .'">';
+			
         }elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
 			/**
 			 * 2 column with left sidebar
@@ -186,6 +202,7 @@ require_once("s3tools/s3_tools.php");
 			$params = s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
 			echo '<div class="grid'.  $paramGrid .'">';
+			
         }elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
 			/**
 			 * 2 column with right sidebar
@@ -195,8 +212,15 @@ require_once("s3tools/s3_tools.php");
 			$params = s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
 			echo '<div class="grid'.  $paramGrid .'">';
+			
         }else{
+			
+			/**
+			 * Full width no sidebar
+			 * @since S3 Framework 1.0
+			 */
             echo '<div class="grid-12">';
+			
         }
         
     endif; // if(is_page_template()) 
