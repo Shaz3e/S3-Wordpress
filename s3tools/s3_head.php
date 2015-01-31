@@ -33,16 +33,16 @@ if(s3_option('meta_generator')): ?>
 <?php
 // Less Development Mode 
 if( s3_option('development_mode') == 1): ?>
-<link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style<?php echo s3_option('styles'); ?>/style.less">
-<?php if( s3_option('hosted_cdn') == 1): ?>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
-<?php else: ?>
-<script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
-<?php endif; ?>
-<script type="text/javascript">
-	less.env = "development";
-	less.watch();
-</script>
+    <link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style<?php echo s3_option('styles'); ?>/style.less">
+    <?php if( s3_option('hosted_cdn') == 1): ?>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
+    <?php else: ?>
+        <script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
+    <?php endif; ?>
+        <script type="text/javascript">
+            less.env = "development";
+            less.watch();
+        </script>
 <?php endif; ?>
 
 
