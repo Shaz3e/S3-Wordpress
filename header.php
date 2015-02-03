@@ -14,7 +14,7 @@
  * DOCTYPE and s3_head.php for header
  * @since S3 Wordperss 1.0
  */
-require_once("s3tools/s3_tools.php");
+include(get_template_directory() . '/s3tools/s3_tools.php');
 ?>
 
 <body <?php body_class('dc-wrapper' ); ?>>

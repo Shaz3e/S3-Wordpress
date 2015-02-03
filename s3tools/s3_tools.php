@@ -35,5 +35,5 @@ $dcTemplate = esc_url( get_template_directory_uri() ); //get_template_directory_
 	 * S3 Wordpress header
 	 * @since S3 Wordperss 1.0
 	 */
-	include_once("s3_head.php");
+	include(get_template_directory() . '/s3tools/s3_head.php');
 ?>
