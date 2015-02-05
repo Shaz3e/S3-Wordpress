@@ -59,18 +59,18 @@ if( s3_option('fixed_header') == 1 ):
 <style type="text/css">
 /* Fixed Header which works on scroll up/down */
 @media (min-width: <?php echo s3_option('break_point'); ?>px) {
-	.dc-fixed{position:fixed;}
-	.dc-fixed-header{
+    .dc-fixed{position:fixed;}
+    .dc-fixed-header{
 		margin:0 !important;
-		top:0;
-		display:block;
-		width:100%;
-		z-index:99999999;
-	}
+        top:0;
+        display:block;
+        width:100%;
+        z-index:99999999;
+    }
 }
 </style>
 <script type="text/javascript">
-	if (document.documentElement.clientWidth >= <?php echo s3_option('break_point'); ?> || screen.width >= <?php echo s3_option('break_point'); ?>){
+    if (document.documentElement.clientWidth >= <?php echo s3_option('break_point'); ?> || screen.width >= <?php echo s3_option('break_point'); ?>){
         var dcHeader = $(window);
         var dcHeaderPosition = dcHeader.scrollTop();
         var up = false;
@@ -105,7 +105,7 @@ if( s3_option('responsive_video') == 1): ?>
 <script>
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
-	$(".s3-video").fitVids();
+    $(".s3-video").fitVids();
   });
 </script>
 <?php endif; ?>    
@@ -142,23 +142,23 @@ if( s3_option('responsive_video') == 1): ?>
 <meta name="msapplication-config" content="<?php echo $dcTemplate; ?>/images/favicon/browserconfig.xml">
 <!--[if lt IE 9]>
 <?php
-	// load html5 library
-	if( s3_option('hosted_cdn') == 1 ){
-		// load html5 library on CDN
-		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
-	}else{
-		// load html5 library locally
-		echo '<script src="' . esc_url( get_template_directory_uri() ) . '/js/html5.js"></script>';
-	}
-	
-	// load respond library
-	if( s3_option('hosted_cdn') == 1 ){
-		// load respond library on CDN
-		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
-	}else{
-		// load respond library locally
-		echo '<script src="'. esc_url( get_template_directory_uri() ) . '/js/respond.js"></script>';
-	}
+    // load html5 library
+    if( s3_option('hosted_cdn') == 1 ){
+        // load html5 library on CDN
+        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
+    }else{
+        // load html5 library locally
+        echo '<script src="' . esc_url( get_template_directory_uri() ) . '/js/html5.js"></script>';
+    }
+    
+    // load respond library
+    if( s3_option('hosted_cdn') == 1 ){
+        // load respond library on CDN
+        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
+    }else{
+        // load respond library locally
+        echo '<script src="'. esc_url( get_template_directory_uri() ) . '/js/respond.js"></script>';
+    }
 ?>
 <![endif]-->
 </head>
