@@ -33,16 +33,16 @@ if(s3_option('meta_generator')): ?>
 <?php
 // Less Development Mode 
 if( s3_option('development_mode') == 1): ?>
-    <link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style<?php echo s3_option('styles'); ?>/style.less">
-    <?php if( s3_option('hosted_cdn') == 1): ?>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
-    <?php else: ?>
-        <script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
-    <?php endif; ?>
-        <script type="text/javascript">
-            less.env = "development";
-            less.watch();
-        </script>
+<link rel="stylesheet/less" type="text/css" href="<?php echo $dcTemplate; ?>/themes/style<?php echo s3_option('styles'); ?>/style.less">
+<?php if( s3_option('hosted_cdn') == 1): ?>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
+<?php endif; ?>
+<script type="text/javascript">
+	less.env = "development";
+	less.watch();
+</script>
 <?php endif; ?>
 
 
@@ -52,50 +52,94 @@ if( s3_option('development_mode') == 1): ?>
  * hide/show Header and Menu on scroll up/down
  * 
  * @var string
- * @since S3Framework 1.0
+ * @since S3Framework 1.3
  */
+
 if( s3_option('fixed_header') == 1 ):
+	
+	/**
+	 * Enable Height i.e. 100 (Fixed header will be hide after scrolling down 100px) at Joomla back-end/
+	 * 
+	 * $var int
+	 * @since S3Framework 3.3
+	 */
+	$sizeHeight = s3_option( 'header_height' );
+	
+	/**
+	 * Define header ease slideUp/slideDown speed in ms default 400 in templateDetails.xml
+	 * 
+	 * $var int
+	 * @since S3Framework 3.3
+	 */
+	$duration = s3_option( 'ease_speed' );
+	
+	/**
+	 * Break point fixed header will show on larger than break point devices as defined at Joomla back-end.
+	 * 
+	 * $var int
+	 * @since S3Framework 3.3
+	 */
+	$breakPoint = s3_option( 'break_point' );
+	
+	/**
+	 * Text Colors for fixed header as defined at Joomla back-end.
+	 * 
+	 * $var string
+	 * @since S3Framework 3.4.1
+	 */
+	$headerTextColor = s3_option( 'header_text_color' );
+	
+	/**
+	 * Background Colors for fixed header as defined at Joomla back-end.
+	 * 
+	 * $var string
+	 * @since S3Framework 3.4.1
+	 */
+	$headerBackgroundColor = s3_option( 'header_background_color' );
+	
 ?>
 <style type="text/css">
-/* Fixed Header which works on scroll up/down */
-@media (min-width: <?php echo s3_option('break_point'); ?>px) {
-    .dc-fixed{position:fixed;}
-    .dc-fixed-header{
-		margin:0 !important;
-        top:0;
-        display:block;
-        width:100%;
-        z-index:99999999;
-    }
+@media(min-width:<?php echo $breakPoint; ?>px){
+	body{padding-top:<?php echo $sizeHeight; ?>;}
+	.dc-fixed {
+		position: fixed;
+		top: 0px;
+		width:100%;
+		z-index:99;
+		<?php if( s3_option( 'header_text_color' ) ){echo 'color:'. $headerTextColor .';';} ?>
+		<?php if( s3_option( 'header_background_color' ) ){echo 'background-color:'. $headerBackgroundColor .';';} ?>
+	}
 }
 </style>
 <script type="text/javascript">
-    if (document.documentElement.clientWidth >= <?php echo s3_option('break_point'); ?> || screen.width >= <?php echo s3_option('break_point'); ?>){
-        var dcHeader = $(window);
-        var dcHeaderPosition = dcHeader.scrollTop();
-        var up = false;
-        var newscroll;
-        dcHeader.scroll(function () {
-            newscroll = dcHeader.scrollTop();
-            if (newscroll > dcHeaderPosition && !up && newscroll > <?php echo s3_option('enable_height'); ?>) {
-                $('.dc-fixed-header').stop().slideUp({duration:<?php echo s3_option('ease_speed'); ?>});
-                up = !up;
-                console.log(up);                
-            } else if(newscroll < dcHeaderPosition && up) {
-                $('.dc-fixed-header').stop().slideDown({duration:<?php echo s3_option('ease_speed'); ?>});
-                up = !up;
-            }
-            dcHeaderPosition = newscroll;
-        });
-
-        $(window).scroll(function() {
-            if( $(this).scrollTop()) {
-                $('.dc-fixed-header').addClass('dc-fixed');
-            }else{
-                $('.dc-fixed-header').removeClass('dc-fixed');
-            }
-        });
-    }
+if (document.documentElement.clientWidth >= <?php echo $breakPoint; ?> || screen.width >= <?php echo $breakPoint; ?>){
+	$(function(){
+		var prevScroll = 0,
+		curDir = 'down',
+		prevDir = 'up';
+		
+		$(window).scroll(function(){
+			if($(this).scrollTop() >= prevScroll){
+				curDir = 'down';
+				if(curDir != prevDir){
+					$('.dc-fixed').stop();
+					$('.dc-fixed').animate({ top: '-100%' }, <?php echo $duration; ?>);
+					prevDir = curDir;
+				}
+			} else {
+				curDir = 'up';
+				
+				if(curDir != prevDir){
+					$('.dc-fixed').stop();
+					$('.dc-fixed').animate({ top: '0px' }, <?php echo $duration; ?>);
+					prevDir = curDir;
+				}
+			}
+			
+			prevScroll = $(this).scrollTop();
+		});
+	})
+}
 </script>
 <?php endif; ?>
 
@@ -105,7 +149,7 @@ if( s3_option('responsive_video') == 1): ?>
 <script>
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
-    $(".s3-video").fitVids();
+	$(".s3-video").fitVids();
   });
 </script>
 <?php endif; ?>    
@@ -142,23 +186,23 @@ if( s3_option('responsive_video') == 1): ?>
 <meta name="msapplication-config" content="<?php echo $dcTemplate; ?>/images/favicon/browserconfig.xml">
 <!--[if lt IE 9]>
 <?php
-    // load html5 library
-    if( s3_option('hosted_cdn') == 1 ){
-        // load html5 library on CDN
-        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
-    }else{
-        // load html5 library locally
-        echo '<script src="' . esc_url( get_template_directory_uri() ) . '/js/html5.js"></script>';
-    }
-    
-    // load respond library
-    if( s3_option('hosted_cdn') == 1 ){
-        // load respond library on CDN
-        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
-    }else{
-        // load respond library locally
-        echo '<script src="'. esc_url( get_template_directory_uri() ) . '/js/respond.js"></script>';
-    }
+	// load html5 library
+	if( s3_option('hosted_cdn') == 1 ){
+		// load html5 library on CDN
+		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
+	}else{
+		// load html5 library locally
+		echo '<script src="' . esc_url( get_template_directory_uri() ) . '/js/html5.js"></script>';
+	}
+	
+	// load respond library
+	if( s3_option('hosted_cdn') == 1 ){
+		// load respond library on CDN
+		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
+	}else{
+		// load respond library locally
+		echo '<script src="'. esc_url( get_template_directory_uri() ) . '/js/respond.js"></script>';
+	}
 ?>
 <![endif]-->
 </head>
