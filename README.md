@@ -2,7 +2,7 @@
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-1.2-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-1.3-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 
@@ -32,37 +32,46 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Layout: Without Post (Select this template if you'd like to hide Post on certain pages)
  - Layout: Without Body (Select this template if you'd like to hide page/post area with left/right sidebars)
  - Custom Page Templates (If you would like to create your own page template should be placed under theme/page-template/ directory)
- - 12 Columns Grid System for sidebars
- - 300+ Sidebar Positions
+ - 12 Columns Grid System
+ - 300+ Module Positions
+ - Full width Sidebars
  - Suitable with any design
  - IE7 and IE8 Supported
+ - Theme Option Manager
+ 
+### S3 Theme Configurations
 
-### Theme Options Pages
- - **S3 Theme Configuration**
- - Site Name
- - Choose Your Style
+ - Custom Sitename
+ - Choose from different Styles
  - Google Analytics
- - Development Mode
- - Hosted on CDN
- - Meta Generator
- - **Library Settings**
+ - Enable / Disable development mode
+ - Custom Meta Generator
+ - Hide Admin Toolbar
+ - Set Columns in one row
+ 
+### Libraries
+ - Hosted on CDN (external libraries option)
  - Use Bootstrap
  - Use Bootstrap Theme
  - Use Font Awesome
  - Use Responsive Video
- - **Layout Setting**
- - Set Logo Column
- - Set Sidebar Column
- - Show Copyright
- - Show Credit
- - Show Framework Logo
- - Fixed Header and Menu
- - Break Point
- - Enable Height
- - Ease Speed
- - **Reset to Defaults**
- - Reset theme
 
+### Layout Settings
+ - Set Logo Column (by selecting logo column header module will be automaticaly adjusted)
+ - Set Sidebar Column (by selecting sidebar column page container will be automatically adjusted)
+ - Show Copyright "Default Show" (Hide or Show) when its hide the module still be available for this postion
+ - Show Credit "Default Show" (Hide or Show) when its hide the module still be available for this postion 
+ - Show Framework Logo "Default Show" (Hide or Show)
+ - **Fixed Header and Menu**
+ - Fixed Header "Default Off" If you want to hide/show header and Menu on scroll up/down enable this option
+ - Fixed Header Text Color Added in v1.3
+ - Fixed Header Background Color Added in v1.3
+ - Header Height Change body top padding when using fixed header i.e. 150px Added in v1.3
+ - Ease Speed: Define header ease slideUp/slideDown speed in ms default 200
+ - Break Point: Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.
+
+### Reset to Defaults
+ - Reset all setting to default with single click.
  
  
 ### Download, Fork, Commit.
