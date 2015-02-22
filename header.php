@@ -72,7 +72,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	include_once("blocks/top.php");
 ?>
 
-<div class="dc-fixed-header">
+<div class="dc-fixed-header <?php if( s3_option('fixed_header') == 1 ){echo ' dc-fixed';}?>">
 <section class="dc-header dc-clear" id="dc-header">
 	<div class="row">
     	<div class="grid-<?php echo s3_option('logo_column'); ?>">
