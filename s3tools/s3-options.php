@@ -561,28 +561,43 @@ class s3Options {
 			'section' => 'layout'
 		);
 		
-		$this->settings['break_point'] = array(
-			'title'   => __( 'Break Point' ),
-			'desc'    => __( 'Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.' ),
-			'std'     => 768,
-			'type'    => 'number',
-			'section' => 'layout'
-		);
-		
-		$this->settings['enable_height'] = array(
-			'title'   => __( 'Enable Height' ),
-			'desc'    => __( 'Enable Height i.e. 100 (Fixed header will be hide after scrolling down 100px).' ),
-			'std'     => 100,
+		$this->settings['header_text_color'] = array(
+			'title'   => __( 'Text Color' ),
+			'desc'    => __( 'Header text color i.e. #000000' ),
+			'std'     => '',
 			'type'    => 'text',
 			'section' => 'layout'
 		);
 		
+		$this->settings['header_background_color'] = array(
+			'title'   => __( 'Background Color' ),
+			'desc'    => __( 'Header background color i.e. #ffffff' ),
+			'std'     => '',
+			'type'    => 'text',
+			'section' => 'layout'
+		);
+		
+		$this->settings['header_height'] = array(
+			'title'   => __( 'Header Height' ),
+			'desc'    => __( 'Change body top padding when using fixed header i.e. 150px' ),
+			'std'     => '',
+			'type'    => 'text',
+			'section' => 'layout'
+		);
 		
 		$this->settings['ease_speed'] = array(
 			'title'   => __( 'Ease Speed' ),
-			'desc'    => __( 'Define header ease slideUp/slideDown speed in millisecond i.e 400.' ),
-			'std'     => 400,
+			'desc'    => __( 'Define header ease slideUp/slideDown speed in millisecond i.e 200.' ),
+			'std'     => '',
 			'type'    => 'text',
+			'section' => 'layout'
+		);
+		
+		$this->settings['break_point'] = array(
+			'title'   => __( 'Break Point' ),
+			'desc'    => __( 'Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.' ),
+			'std'     => '',
+			'type'    => 'number',
 			'section' => 'layout'
 		);
 		
