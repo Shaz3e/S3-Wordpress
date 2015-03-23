@@ -58,3 +58,22 @@ add_filter('widget_text','execute_php',100);
  */
 add_filter('the_content','execute_php',2);
 add_filter('the_excerpt','execute_php',2);
+
+/**
+ * Add thumbnails support
+ *
+ * @params string
+ * @since S3 Framework 1.4
+ */
+add_theme_support( 'post-thumbnails' );
+// default Post Thumbnail dimensions (cropped)
+set_post_thumbnail_size(
+	// thumbnail width
+	s3_option('thumbnails_width'),
+	
+	// thumbnail height
+	s3_option('thumbnails_height'),
+	
+	// Crop thumnail true/flase
+	s3_option('thumbnails_crop') 
+);

@@ -402,6 +402,34 @@ class s3Options {
 						 ),
 			'section' => 'config'
 		);
+
+		$this->settings['thumbnails_width'] = array(
+			'title'   => __( 'Thumbnails Width' ),
+			'desc'    => __( 'Set post/page thumbnail width, e.g. 100 for 100px.' ),
+			'std'     => 'auto',
+			'type'    => 'text',
+			'section' => 'config'
+		);
+		
+		$this->settings['thumbnails_height'] = array(
+			'title'   => __( 'Thumbnails Height' ),
+			'desc'    => __( 'Set post/page thumbnail height, e.g. 100 for 100px.' ),
+			'std'     => 'auto',
+			'type'    => 'text',
+			'section' => 'config'
+		);
+		
+		$this->settings['thumbnails_crop'] = array(
+			'title'   => __( 'Thumbnail Crop' ),
+			'desc'    => __( 'Crop thumbnail?.' ),
+			'std'     => 'false',
+			'type'    => 'select',
+			'choices' => array(
+							'true' => 'Yes',
+							'false' => 'No',
+						 ),
+			'section' => 'config'
+		);
 						
 		/* Libraries Settings
 		===========================================*/

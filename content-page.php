@@ -9,6 +9,18 @@
  
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php
+	/**
+	 * check if the post has a Post Thumbnail assigned to it.
+ 	 *
+ 	 * @params string
+ 	 * @since S3 Framework 1.4
+ 	 */
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail();
+	}
+?>
     
     <?php if(is_front_page() || is_page_template('layouts/no-title.php')):
 		
