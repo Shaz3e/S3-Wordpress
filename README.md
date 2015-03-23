@@ -2,7 +2,7 @@
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-1.3-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-1.4-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 
@@ -48,6 +48,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Custom Meta Generator
  - Hide Admin Toolbar
  - Set Columns in one row
+ - Set Thumbnail Size
  
 ### Libraries
  - Hosted on CDN (external libraries option)
