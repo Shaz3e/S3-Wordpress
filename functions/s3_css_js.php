@@ -28,7 +28,7 @@ function s3_css_js(){
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
-			wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js', array(), '3.3.2' );
+			wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '3.3.4' );
 		}
 
 		// load Responsive Video fitvids.js with CDN
@@ -39,11 +39,11 @@ function s3_css_js(){
 	// Load js File Locally
 	}else{
 		
-		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.1' );
+		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
-			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.2' );
+			wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4' );
 		}
 		
 		// load Responsive Video fitvids.js localy
@@ -79,10 +79,10 @@ function s3_css_js(){
 	if( s3_option('bootstrap')  == 1){
 		// load bootstrap on CDN
 		if( s3_option('hosted_cdn') == 1 ){
-			wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', array(), '3.3.2' );
+			wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4' );
 		}else{
 			// load bootstrap locally
-			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.2' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.4' );
 		}
 	}
 	
@@ -90,10 +90,10 @@ function s3_css_js(){
 	if( s3_option('bootstrap_theme')  == 1){
 		// load bootstrap theme on CDN
 		if( s3_option('hosted_cdn') == 1 ){
-			wp_enqueue_style( 'bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css', array(), '3.3.2' );
+			wp_enqueue_style( 'bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css', array(), '3.3.4' );
 		}else{
 			// load bootstrap theme locally
-			wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.css', array(), '3.3.2' );
+			wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.css', array(), '3.3.4' );
 		}
 	}
 	
