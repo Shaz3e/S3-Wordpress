@@ -39,7 +39,7 @@ function s3_css_js(){
 	// Load js File Locally
 	}else{
 		
-		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
+		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.2' );
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
