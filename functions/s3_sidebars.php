@@ -43,74 +43,87 @@ function dc_sidebar_params($dc_params) {
 
 	if (
 		$dc_sidebar_id == 'top' || 
+		$dc_sidebar_id == 'top-grid' || 
 		$dc_sidebar_id == 'breadcrumb' || 
+		$dc_sidebar_id == 'breadcrumb-grid' || 
 		$dc_sidebar_id == 'slideshow' || 
+		$dc_sidebar_id == 'slideshow-grid' || 
 		$dc_sidebar_id == 'showcase' || 
+		$dc_sidebar_id == 'showcase-grid' || 
 		$dc_sidebar_id == 'feature' || 
+		$dc_sidebar_id == 'feature-grid' || 
 		$dc_sidebar_id == 'bottom-feature' ||
+		$dc_sidebar_id == 'bottom-feature-grid' || 
 		$dc_sidebar_id == 'content-top' ||
 		$dc_sidebar_id == 'content-bottom' || 
 		$dc_sidebar_id == 'utility' || 
+		$dc_sidebar_id == 'utility-grid' || 
 		$dc_sidebar_id == 'scroller' || 
+		$dc_sidebar_id == 'scroller-grid' || 
 		$dc_sidebar_id == 'extension' || 
+		$dc_sidebar_id == 'extension-grid' || 
 		$dc_sidebar_id == 'bottom' || 
+		$dc_sidebar_id == 'bottom-grid' || 
 		$dc_sidebar_id == 'footer' || 
-		$dc_sidebar_id == 'bottom-footer') {
+		$dc_sidebar_id == 'footer-grid' || 
+		$dc_sidebar_id == 'bottom-footer' || 
+		$dc_sidebar_id == 'bottom-footer-grid') {
 
-		$dc_total_widgets = wp_get_sidebars_widgets();
-		$dc_sidebar_widgets = count($dc_total_widgets[$dc_sidebar_id]);
- 
-		/**
-		 * header static (4 sidebars)
-		 * @since S3 Framework 1.0
-		 */
-		if($dc_sidebar_id == 'header-1' || $dc_sidebar_id == 'header-2' || $dc_sidebar_id == 'header-3' || $dc_sidebar_id == 'header-4'){
-			$dc_params[0]['before_widget'] = $dc_params[0]['before_widget'];
-		}
-
-		/**
-		 * panel sidebars
-		 * @since S3 Framework 1.0
-		 */
-		if($dc_sidebar_id == 'top-left-panel' || $dc_sidebar_id == 'top-right-panel' || $dc_sidebar_id == 'left-panel' || $dc_sidebar_id == 'right-panel' || $dc_sidebar_id == 'bottom-left-panel' || $dc_sidebar_id == 'bottom-right-panel'){
-			$dc_params[0]['before_widget'] = $dc_params[0]['before_widget'];
-		}
-
-		/**
-		 * content-top and content-bottom has 3 column sidebars
-		 * @since S3 Framework 1.0
-		 */
-		if($dc_sidebar_id == 'content-top' || $dc_sidebar_id == 'content-bottom'){
-			if($dc_sidebar_widgets > 3){
-				$dc_params[0]['before_widget'] = '<div class="col-3">'.$dc_params[0]['before_widget'];
-			}else{
-				$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
+			$dc_total_widgets = wp_get_sidebars_widgets();
+			$dc_sidebar_widgets = count($dc_total_widgets[$dc_sidebar_id]);
+	 
+			/**
+			 * header static (4 sidebars)
+			 * @since S3 Framework 1.0
+			 */
+			if($dc_sidebar_id == 'header-1' || $dc_sidebar_id == 'header-2' || $dc_sidebar_id == 'header-3' || $dc_sidebar_id == 'header-4'){
+				$dc_params[0]['before_widget'] = $dc_params[0]['before_widget'];
 			}
+
+			/**
+			 * panel sidebars
+			 * @since S3 Framework 1.0
+			 */
+			if($dc_sidebar_id == 'top-left-panel' || $dc_sidebar_id == 'top-right-panel' || $dc_sidebar_id == 'left-panel' || $dc_sidebar_id == 'right-panel' || $dc_sidebar_id == 'bottom-left-panel' || $dc_sidebar_id == 'bottom-right-panel'){
+				$dc_params[0]['before_widget'] = $dc_params[0]['before_widget'];
+			}
+
+			/**
+			 * content-top and content-bottom has 3 column sidebars
+			 * @since S3 Framework 1.0
+			 */
+			if($dc_sidebar_id == 'content-top' || $dc_sidebar_id == 'content-bottom'){
+				if($dc_sidebar_widgets > 3){
+					$dc_params[0]['before_widget'] = '<div class="col-3">'.$dc_params[0]['before_widget'];
+				}else{
+					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
+			}
+
 		}else{
-		
-		/**
-		 * all dc_sidebar_id has 12 columns
-		 * @since S3 Framework 1.0
-		 */
-		 
-		/** 
-		 * less 1 column max 12 column as defined in css/template.less
-		 * s3_option('column_grid_count') Config settings under theme options
-		 *
-		 * @params int
-		 *
-		 * @since S3 Framework 1.0
-		 */
-			if($dc_sidebar_widgets > s3_option('column_grid_count')){
-				/**
-				 * change col-12 to default in class="col-12"
-				 * default 12 columns sidebars change the number to make it default
-				 * @since S3 Framework 1.0
-				 */
-				$dc_params[0]['before_widget'] = '<div class="col-'.s3_option('column_grid_count').'">'.$dc_params[0]['before_widget'];
-			}else{
-				$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
-			}		
+
+			/**
+			 * all dc_sidebar_id has 12 columns
+			 * @since S3 Framework 1.0
+			 */
+
+			 /** 
+			  * less 1 column max 12 column as defined in css/template.less
+			  * s3_option('column_grid_count') Config settings under theme options
+			  *
+			  * @params int
+			  *
+			  * @since S3 Framework 1.0
+			  */
+			 if($dc_sidebar_widgets > s3_option('column_grid_count')){
+			 	/**
+			 	 * change col-12 to default in class="col-12"
+			 	 * default 12 columns sidebars change the number to make it default
+			 	 * @since S3 Framework 1.0
+			 	 */
+			 	$dc_params[0]['before_widget'] = '<div class="col-'.s3_option('column_grid_count').'">'.$dc_params[0]['before_widget'];
+			 }else{
+			 	$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
+			 }		
 		}
 	}
 	return $dc_params;
