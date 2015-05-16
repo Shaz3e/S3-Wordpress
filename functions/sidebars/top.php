@@ -43,7 +43,7 @@ function dc_top_init() {
 		'name' =>	__( 'Top Grid', 'shaz3e' ),
 		'id' => 'top-grid',
 		'description' => __( 'Make sure you use custom grid blocks here', 'shaz3e' ),
-		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'before_widget' => '<div id="%1$s" class="block %2$s">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
