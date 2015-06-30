@@ -48,12 +48,13 @@ add_action( 'init', 'register_s3_menus' );
  * @return int
  */	
 function s3_excerpt_length( $length ) {
-
 	/**
 	 * change 20 with the word count
 	 * it's a sentence or paragraph (5 words)
+	 *
+	 * @since S3 Framework 1.6
 	 */
-	return 20;
+	return (s3_option('excerpt_length') == 'auto' ? 20 : s3_option('excerpt_length'));
 }
 add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
 
@@ -62,11 +63,11 @@ add_filter( 'excerpt_length', 's3_excerpt_length', 999 );
  * excerpt with read more link
  *
  * @link reference: http://codex.wordpress.org/Function_Reference/the_excerpt
- * @since S3 Framework 1.0
+ * @since S3 Framework 1.5 updated
  * @param string
  */
 function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'S3Framework') . '</a>';
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __(s3_option('excerpt_more') == 'auto' ? "Read More" : s3_option('excerpt_more'), 'S3Framework') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 

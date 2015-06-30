@@ -430,6 +430,22 @@ class s3Options {
 						 ),
 			'section' => 'config'
 		);
+
+		$this->settings['excerpt_length'] = array(
+			'title'   => __( 'Excerpt Length' ),
+			'desc'    => __( 'Change 20 with the word count i.e. 20' ),
+			'std'     => 'auto',
+			'type'    => 'text',
+			'section' => 'config'
+		);
+		
+		$this->settings['excerpt_more'] = array(
+			'title'   => __( 'Change Read More' ),
+			'desc'    => __( 'Change excerpt read more text' ),
+			'std'     => 'auto',
+			'type'    => 'text',
+			'section' => 'config'
+		);
 						
 		/* Libraries Settings
 		===========================================*/
