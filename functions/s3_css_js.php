@@ -24,7 +24,7 @@ function s3_css_js(){
 
 	// Load js Files with CDN
 	if( s3_option('hosted_cdn') == 1 ){
-		wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.1' );	
+		wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3' );	
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
@@ -39,7 +39,7 @@ function s3_css_js(){
 	// Load js File Locally
 	}else{
 		
-		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.2' );
+		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
