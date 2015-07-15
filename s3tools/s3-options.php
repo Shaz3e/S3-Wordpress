@@ -221,7 +221,7 @@ class s3Options {
 		';
 
 		echo '
-			<iframe src="http://cdn.diligentcreators.com/wordpress/news.php"></iframe>
+			<iframe id="iframe2" src="http://cdn.diligentcreators.com/wordpress/news.php" frameborder="0" style="overflow: hidden; height: 100%; width: 100%; position: absolute;" height="100%" width="100%"></iframe>
 		';
 		
 	}
