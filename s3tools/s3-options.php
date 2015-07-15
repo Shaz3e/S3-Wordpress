@@ -202,7 +202,7 @@ class s3Options {
 		
 		// This displays on the "About" tab. Echo regular HTML here, like so:
 		echo '
-			<h2>S3 Responsive Template System <span class="label label-success">v1.6.2</span></h2>
+			<h2>S3 Responsive Template System</h2>
 			<p>Get more help and find out more at <a href="http://www.Sha3e.com">http://www.Sha3e.com</a></p>
 			
 			<h2>Key Features</h2>
@@ -221,7 +221,7 @@ class s3Options {
 		';
 
 		echo '
-			<iframe id="iframe2" src="http://cdn.diligentcreators.com/wordpress/news.php" frameborder="0" style="overflow: hidden; height: 100%; width: 100%; position: absolute;" height="100%" width="100%"></iframe>
+			<iframe id="iframe2" src="http://cdn.diligentcreators.com/joomla/news.php" frameborder="0" style="overflow: hidden; height: auto; width: auto; position: absolute;" height="auto" width="auto" scrolling="no" seamless="seamless"></iframe>
 		';
 		
 	}
