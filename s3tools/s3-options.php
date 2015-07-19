@@ -202,7 +202,7 @@ class s3Options {
 		
 		// This displays on the "About" tab. Echo regular HTML here, like so:
 		echo '
-			<h2>S3 Responsive Template System</h2>
+			<h2>S3 Responsive Template System <span class="label label-success">v1.0</span></h2>
 			<p>Get more help and find out more at <a href="http://www.Sha3e.com">http://www.Sha3e.com</a></p>
 			
 			<h2>Key Features</h2>
@@ -218,10 +218,6 @@ class s3Options {
 
 			<h2>What is the S3 Responsive Framework?</h2>
 			<p>S3 is a sophisticated framework with the sole intention of being the best platform to build a solid theme with. S3 takes all the lessons learned during the development of many Joomla templates Themes and distills that knowledge into a single super-flexible framework that is easy to configure, simple to extend, and powerful enough to handle anything we want to throw at it.</p>
-		';
-
-		echo '
-			<iframe id="iframe2" src="http://cdn.diligentcreators.com/joomla/news.php" frameborder="0" style="overflow: hidden; height: auto; width: auto; position: absolute;" height="auto" width="auto" scrolling="no" seamless="seamless"></iframe>
 		';
 		
 	}
@@ -627,7 +623,7 @@ class s3Options {
 		
 		$this->settings['header_height'] = array(
 			'title'   => __( 'Header Height' ),
-			'desc'    => __( 'Change body top padding when using fixed header i.e. 150px' ),
+			'desc'    => __( 'Change body top padding when using fixed header i.e. 200' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'layout'

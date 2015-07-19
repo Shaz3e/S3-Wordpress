@@ -163,6 +163,12 @@ endif;
 </section>
 <?php endif; ?>
 
-<?php wp_footer(); ?>
+<?php
+	wp_footer();
+	
+	// Show/Hide Scroll on Scroll Up/Down
+	include(get_template_directory() . '/s3tools/s3_fixed_header.php');
+?>
+
 </body>
 </html>
