@@ -608,7 +608,7 @@ class s3Options {
 		$this->settings['header_text_color'] = array(
 			'title'   => __( 'Text Color' ),
 			'desc'    => __( 'Header text color i.e. #000000' ),
-			'std'     => '',
+			'std'     => '#000000',
 			'type'    => 'text',
 			'section' => 'layout'
 		);
@@ -616,7 +616,7 @@ class s3Options {
 		$this->settings['header_background_color'] = array(
 			'title'   => __( 'Background Color' ),
 			'desc'    => __( 'Header background color i.e. #ffffff' ),
-			'std'     => '',
+			'std'     => '#ffffff',
 			'type'    => 'text',
 			'section' => 'layout'
 		);
@@ -624,7 +624,7 @@ class s3Options {
 		$this->settings['header_height'] = array(
 			'title'   => __( 'Header Height' ),
 			'desc'    => __( 'Change body top padding when using fixed header i.e. 200' ),
-			'std'     => '',
+			'std'     => '200',
 			'type'    => 'text',
 			'section' => 'layout'
 		);
@@ -632,7 +632,7 @@ class s3Options {
 		$this->settings['ease_speed'] = array(
 			'title'   => __( 'Ease Speed' ),
 			'desc'    => __( 'Define header ease slideUp/slideDown speed in millisecond i.e 200.' ),
-			'std'     => '',
+			'std'     => '200',
 			'type'    => 'text',
 			'section' => 'layout'
 		);
@@ -640,7 +640,7 @@ class s3Options {
 		$this->settings['break_point'] = array(
 			'title'   => __( 'Break Point' ),
 			'desc'    => __( 'Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.' ),
-			'std'     => '',
+			'std'     => '768',
 			'type'    => 'number',
 			'section' => 'layout'
 		);
