@@ -68,10 +68,10 @@ function s3_css_js(){
 	if( s3_option('font_awesome')  == 1){
 		// load font awesome library on CDN
 		if( s3_option('hosted_cdn') == 1 ){
-			wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0' );
+			wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0' );
 		}else{
 		// load font awesome library locally
-			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.3.0' );
+			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.4.0' );
 		}
 	}
 	
