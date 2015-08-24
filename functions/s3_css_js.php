@@ -55,8 +55,8 @@ function s3_css_js(){
 	// load S3 Framework Responsive Menu
 	wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
 	
-	// load user script
-	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0' );
+	// load user script before closing </body> tag
+	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0', true );
 	
 	/**
 	 * Load CSS Files
