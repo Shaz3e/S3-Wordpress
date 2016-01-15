@@ -71,8 +71,9 @@
 		 * <div class="row">
 		 * @since S3 Framework 1.0
 		 */
-	
-    echo '</div>';
+	if( !is_page_template('layouts/page-fluid.php') ): 
+	    echo '</div>';
+	endif;
 
 
 /**

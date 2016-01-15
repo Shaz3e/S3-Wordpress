@@ -130,8 +130,9 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	else:
 ?>
 <section class="dc-container dc-clear" id="container">
+	<?php if( !is_page_template('layouts/page-fluid.php') ):?>
 	<div class="row">
-	<?php
+	<?php endif;
 	/**
 	 * call left sidebar if left-sidebar is enabled but template page is not active
 	 * @since S3 Wordperss 1.0
