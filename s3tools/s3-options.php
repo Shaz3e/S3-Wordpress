@@ -341,6 +341,11 @@ class s3Options {
 							1 => 'Style 1',
 							2 => 'Style 2',
 							3 => 'Style 3',
+							4 => 'Style 4',
+							5 => 'Style 5',
+							6 => 'Style 6',
+							7 => 'Style 7',
+							8 => 'Style 8',
 						 ),
 			'section' => 'config'
 		);

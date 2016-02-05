@@ -79,7 +79,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
         	<div class="block">
                 <div class="dc-logo">
                     <a href="<?php echo bloginfo('url'); ?>" title="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
-                        <img src="<?php echo $dcTemplate; ?>/themes/style1/images/logo.png" alt="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
+                        <img src="<?php echo $dcTemplate; ?>/themes/images/logo.png" alt="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
                     </a>
                 </div>
             </div>

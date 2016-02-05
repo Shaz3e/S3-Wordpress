@@ -112,8 +112,8 @@ function s3_css_js(){
 		// Compile LESS file to CSS
 		require( get_template_directory() . '/s3tools/lessc.inc.php' );
 		
-		$inputFile  = get_template_directory() . '/themes/style'.s3_option('styles').'/style.less';
-		$outputFile = get_template_directory() . '/themes/style'.s3_option('styles').'/style.css';
+		$inputFile  = get_template_directory() . '/themes/styles/theme'.s3_option('styles').'.less';
+		$outputFile = get_template_directory() . '/themes/style.css';
 		
 		$less = new lessc;
 		$less->setFormatter("compressed");
@@ -127,7 +127,7 @@ function s3_css_js(){
 				file_put_contents($outputFile, $cache["compiled"]);
 			}
 		
-		wp_enqueue_style( 's3-framework', get_template_directory_uri() . '/themes/style'.s3_option('styles').'/style.css', array() );
+		wp_enqueue_style( 's3-framework', get_template_directory_uri() . '/themes/style.css', array() );
 	endif;
 	
 	// load IE condistional CSS Template Files
