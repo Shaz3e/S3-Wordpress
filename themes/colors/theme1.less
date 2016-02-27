@@ -1,0 +1,269 @@
+@import "../defaults.less";
+@import "default-colors.less"; // Default Colors for All Style(#number).less
+/* All variables assinged to current theme
+*******************************************/
+@color1: #222222;
+@color2: #333333;
+@color3: #0073aa;
+@color4: #00a0d2;
+
+/* Classes to Colorize Grid
+*******************************************/
+.dc-top{}
+.dc-header{}
+.dc-menu{}
+.dc-breadcrumb{}
+.dc-slideshow{}
+.dc-showcase{}
+.dc-feature{}
+.dc-utility{}
+.dc-scroller{}
+.dc-extension{}
+.dc-bottom{}
+.dc-footer{}
+.DiligentCreators{}
+
+/* Classes to Colorize Elements
+*******************************************/
+*{}
+html,body{}
+html{}
+body{}
+
+a:link,a:visited{}
+a:hover{}
+
+h1,h2,h3,h4,h5,h6{}
+/**********************************************
+Default Wrapper
+***********************************************/
+.dc-wrapper{}
+
+/**********************************************
+IE Warnings
+***********************************************/
+.dc-broswer-alert{
+	p{
+		a{}
+		a:hover{}
+	}
+}
+
+/**********************************************
+Module Default Styles
+***********************************************/
+.block{
+	h3{
+		span{
+		}
+	}
+	p{}
+	
+	a{
+		/* href specific grid styles */
+		&:hover{
+		}
+	}
+	
+	ul{
+		/* unordered list specific grid styles */
+		li{
+			/* href list specific grid styles */
+			a{
+				&:first-child{}
+				&:last-child{}
+				&:hover{
+					&:first-child{}
+					&:last-child{}
+				}
+			}
+			&:first-child{}
+			&:last-child{}
+		}
+	}
+	
+	ol{
+		/* ordered list specific grid styles */
+		li{
+			/* href list specific grid styles */
+			a{
+				&:first-child{}
+				&:last-child{}
+				&:hover{
+					&:first-child{}
+					&:last-child{}
+				}
+			}
+			&:first-child{}
+			&:last-child{}
+		}
+	}
+}
+
+/**********************************************
+Relative Default Style Modules
+***********************************************/
+.right-panel,
+.left-panel,
+.top-left-panel,
+.top-right-panel,
+.bottom-left-panel,
+.bottom-right-panel{}
+
+
+.right-panel{
+	#right-panel{}
+}
+
+.left-panel{
+	#left-panel{}
+}
+
+.top-left-panel{
+	#top-left-panel{}
+}
+
+.top-right-panel{
+	#top-right-panel{}
+}
+
+.bottom-left-panel{
+	#bottom-left-panel{}
+}
+
+.bottom-right-panel{
+	#bottom-right-panel{}
+}
+
+/**********************************************
+Margin or Padding for to each grid 
+i.e. top margin or bottom margin for each grid
+***********************************************/
+.dc-top,
+.dc-header,
+.dc-breadcrumb,
+.dc-slideshow,
+.dc-showcase,
+.dc-feature,
+.dc-container,
+.dc-utility,
+.dc-scroller,
+.dc-extension,
+.dc-bottom,
+.dc-footer{
+	/* margin-top:@gutter * 2; */ /* top margin 10px as block has gutter */
+}
+
+/* Top Modules */
+.dc-top{}
+
+/* Fixed Header which works on scroll up/down */
+.dc-fixed-header{}
+.dc-fixed{}
+
+/**
+ * .dc-header is now .dc-header-0 and it has its own file header.less
+ * Where 0 = header style number selected from s3-theme page
+ * header.less is located under s3framework/themes/header.less
+ * which is called by default.less at line:2 in same directory
+ * @since S3 Framework 2.0
+ */
+
+/* Logo */
+.dc-logo{
+	img{}
+	img:hover{}
+}
+
+/* Menu Modules */
+.dc-menu{}
+
+/* Breadcrumb Modules */
+.dc-breadcrumb{}
+
+/* Slideshow Modules */
+.dc-slideshow{}
+
+/* Showcase Modules */
+.dc-showcase{}
+
+/* Feature Modules */
+.dc-feature{}
+
+/* Main Container  */
+.dc-container{
+	/*margin-top:@gutter * 2;margin-bottom:@gutter * 2;*/
+}
+
+/* Component Area */
+.dc-page-content{
+	article{}
+}
+
+/* Sidebar (left+right) */
+.dc-sidebar{}
+
+/* left Sidebar */
+.dc-left-sidebar{
+	#dc-left-sidebar{
+		.dc-sidebar{}
+	}
+}
+
+/* right Sidebar */
+.dc-right-sidebar{
+	#dc-right-sidebar{
+		.dc-sidebar{}
+	}
+}
+
+/* Content Top Modules */
+.dc-content-top{}
+
+/* Content Bottom Modules */
+.dc-content-bottom{}
+
+/* Utility Modules */
+.dc-utility{}
+
+/* Scroller Modules */
+.dc-scroller{}
+
+/* Extension Modules */
+.dc-extension{}
+
+/* Bottom Modules */
+.dc-bottom{}
+
+/* Footer Modules */
+.dc-footer{}
+
+/* Powered by DiligentCreators */
+.DiligentCreators{}
+
+.dc-copyright{}
+.dc-credits{}
+/* Shaz3e logo */
+.shaz3e{
+	img{}
+}
+
+/* Media Queries
+*********************************************/
+/* Retina */
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {}
+
+/* old desktop */
+@media (min-width: 980px){}
+
+/* Large desktop */
+@media (min-width: 1024px) {}
