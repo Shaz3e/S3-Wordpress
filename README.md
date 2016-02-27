@@ -2,7 +2,7 @@
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-1.6.5-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-2.0.0beta-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 
@@ -41,38 +41,54 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Category Template
  - Parent Page Template
  - Blank Page Template
+ - Fluid Page (Since 2.0)
  
 ### S3 Theme Configurations
-
  - Custom Sitename
- - Choose from different Styles
+ - Choose from 8 Different Themes (Since 2.0)
+ - Choose from Different Theme Styles (Since 2.0)
  - Google Analytics
  - Enable / Disable development mode
  - Custom Meta Generator
- - Hide Admin Toolbar
- - Set Columns in one row
- - Set Thumbnail Size
- 
+ - Show/Hide Admin Toolbar
+ - Set Thumbnail - Width/Height/Crop (Since 2.0)
+ - Excerpt Length (Since 2.0)
+ - Change Read More (Since 2.0)
+
+### Header Settings
+ - Custom Site Logo
+ - 14 different header styles
+ - Enable/Diable Search Option
+ - Custom Social Links
+ - Phone Number
+ - Email
+ - Call to Action
+
+### CC Settings - Copyright & Credit Settings
+ - Change Style - Choose from 3 different styles
+ - Show Copyright "Default Show" (Hide or Show) when its hide you cannot use sidebar
+ - Show Credit "Default Show" (Hide or Show) when its hide you cannot use sidebar 
+ - Show/Hide Framework Logo
+  - Custom Footer Logo - instead of Framework logo
+
+### Layout Settings
+ - Set Logo Column (by selecting logo column header module will be automaticaly adjusted)
+ - Set Columns in one row (by selecting this option only the 'n' side will be displayed in a row)
+ - Set Sidebar Column (by selecting sidebar column page container will be automatically adjusted)
+ - **Fixed Header and Menu**
+ - Fixed Header "Default Off" If you want to hide/show header and Menu on scroll up/down enable this option
+ - Fixed Header Text Color - Color Picker Added
+ - Fixed Header Background Color - Color Picker Added
+ - Header Height Change body top padding when using fixed header i.e. 150px Added in v1.3
+ - Ease Speed: Define header ease slideUp/slideDown speed in ms default 200
+ - Break Point: Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.
+
 ### Libraries
  - Hosted on CDN (external libraries option)
  - Use Bootstrap
  - Use Bootstrap Theme
  - Use Font Awesome
  - Use Responsive Video
-
-### Layout Settings
- - Set Logo Column (by selecting logo column header module will be automaticaly adjusted)
- - Set Sidebar Column (by selecting sidebar column page container will be automatically adjusted)
- - Show Copyright "Default Show" (Hide or Show) when its hide the module still be available for this postion
- - Show Credit "Default Show" (Hide or Show) when its hide the module still be available for this postion 
- - Show Framework Logo "Default Show" (Hide or Show)
- - **Fixed Header and Menu**
- - Fixed Header "Default Off" If you want to hide/show header and Menu on scroll up/down enable this option
- - Fixed Header Text Color Added in v1.3
- - Fixed Header Background Color Added in v1.3
- - Header Height Change body top padding when using fixed header i.e. 150px Added in v1.3
- - Ease Speed: Define header ease slideUp/slideDown speed in ms default 200
- - Break Point: Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.
 
 ### Reset to Defaults
  - Reset all setting to default with single click.
