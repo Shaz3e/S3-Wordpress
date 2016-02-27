@@ -1,4 +1,3 @@
-
 <?php
 /*======================================================================*\
 || #################################################################### ||
@@ -16,24 +15,10 @@
 \*======================================================================*/
 ?>
 
-<?php if( has_nav_menu ('main-menu') || is_active_sidebar('menu') ): ?>
+<?php if( has_nav_menu ('main-menu') ): ?>
 <section class="dc-menu dc-clear" id="dc-menu">
 	<div class="row">
-    	<?php
-			if( has_nav_menu('main-menu')){ ?>
-                <div class="dcMenu">
-                    <div id="dcToggleNav" class="dcToggleNav">
-                        <a href="#"><span>|||</span></a>
-                    </div>
-                    <nav>
-                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-                    </nav>
-                </div>				
-		<?php
-        	}else{
-				dynamic_sidebar('menu');
-			}
-		?>
+    	<?php s3_main_menu(); ?>
     </div>
 </section>
 <?php endif; ?>
