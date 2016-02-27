@@ -24,7 +24,7 @@ function s3_css_js(){
 
 	// Load js Files with CDN
 	if( s3_option('hosted_cdn') == 1 ){
-		wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3' );	
+		wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js', array(), '2.2.0' );	
 		
 		// load bootstrap library
 		if( s3_option('bootstrap')  == 1){
@@ -56,7 +56,7 @@ function s3_css_js(){
 	wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
 	
 	// load user script before closing </body> tag
-	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0', true );
+	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0' );
 	
 	/**
 	 * Load CSS Files
@@ -112,7 +112,39 @@ function s3_css_js(){
 		// Compile LESS file to CSS
 		require( get_template_directory() . '/s3tools/lessc.inc.php' );
 		
-		$inputFile  = get_template_directory() . '/themes/styles/theme'.s3_option('styles').'.less';
+		$inputFileTheme  = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.less';
+		$inputFileStyle  = get_template_directory() . '/themes/styles/style'.s3_option('s3_styles').'.less';
+		
+		$outputFileTheme = get_template_directory() . '/themes/colors/color.css';
+		$outputFileStyle = get_template_directory() . '/themes/styles/style.css';
+		
+		$less = new lessc;
+		$less->setFormatter("compressed");
+		$cacheTheme = $less->cachedCompile($inputFileTheme);
+		$cacheStyle = $less->cachedCompile($inputFileStyle);
+		
+		file_put_contents($outputFileTheme, $cacheTheme["compiled"]);
+		file_put_contents($outputFileStyle, $cacheStyle["compiled"]);
+		
+		$FileThemeUpdated = $cacheTheme["updated"];
+		$FileStyleUpdated = $cacheStyle["updated"];
+		
+		$cacheTheme = $less->cachedCompile($cacheTheme);
+		$cacheStyle = $less->cachedCompile($cacheStyle);
+		
+			if ($cacheTheme["updated"] > $FileThemeUpdated) {
+				file_put_contents($outputFileTheme, $cacheTheme["compiled"]);
+			}
+			
+			if ($cacheStyle["updated"] > $FileStyleUpdated) {
+				file_put_contents($outputFileStyle, $cacheStyle["compiled"]);
+			}
+		
+		wp_enqueue_style( 's3-framework-color', get_template_directory_uri() . '/themes/colors/color.css', array() );
+		wp_enqueue_style( 's3-framework-style', get_template_directory_uri() . '/themes/styles/style.css', array() );
+		
+		/*
+		$inputFile  = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.less';
 		$outputFile = get_template_directory() . '/themes/style.css';
 		
 		$less = new lessc;
@@ -128,6 +160,7 @@ function s3_css_js(){
 			}
 		
 		wp_enqueue_style( 's3-framework', get_template_directory_uri() . '/themes/style.css', array() );
+		*/
 	endif;
 	
 	// load IE condistional CSS Template Files
