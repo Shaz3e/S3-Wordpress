@@ -1,0 +1,3 @@
+<a href="http://www.shaz3e.com" class="Shaz3e" id="Shaz3e" target="_blank" title="<?php echo (s3_option('s3Framework_custom_title') == '' ? 'Shaz3e - S3Framework' : s3_option('s3Framework_custom_title') ); ?>">
+<img src="<?php echo( s3_option('s3Framework_custom_logo') == '' ? get_template_directory_uri().'/images/Shaz3e.png' : s3_option('s3Framework_custom_logo') ); ?>" alt="<?php echo (s3_option('s3Framework_custom_title') == '' ? 'Shaz3e - S3Framework' : s3_option('s3Framework_custom_title') ); ?>">
+</a>
