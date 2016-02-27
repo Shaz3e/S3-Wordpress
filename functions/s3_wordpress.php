@@ -23,22 +23,7 @@ $s3_settings = get_option( 's3_options', $s3_options );
  * 
  * @since S3 Framework 1.0
  */
- 
- 
-/**
- * Navigations
- * @since S3 Framework 1.0
- * @var array
- */
-function register_s3_menus() {
-	register_nav_menus(
-		array(
-		  'main-menu' => __( 'Main Menu' ),
-		  'header-menu' => __( 'Header Menu' ),
-		)
-	);
-}
-add_action( 'init', 'register_s3_menus' );
+
 
 /**
  * Custom length for excerpt
