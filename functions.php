@@ -17,7 +17,13 @@ require ( get_template_directory() . "/functions/s3_css_js.php" );
  * @since 1.0
  */
 //require_once( $dcTemplate . "/s3framework/s3framework.php" );
-require ( get_template_directory() . "/s3tools/s3-options.php" );
+require ( get_template_directory() . "/s3framework/s3-options.php" );
+
+/**
+ * Header's functions are here
+ * @since S3 Framework 2.0
+ */
+require ( get_template_directory() . "/functions/s3_headers.php" );
 
 // Title Page
 require ( get_template_directory() . "/functions/s3_title.php" );
@@ -27,7 +33,6 @@ require ( get_template_directory() . "/functions/s3_sidebars.php" );
 
 // default S3 Framework functions to extend WP
 require ( get_template_directory() . "/functions/s3_wordpress.php" );
-
 
 /**
  * Support Added: Type PHP Code in text widget or page/post area
