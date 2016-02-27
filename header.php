@@ -17,7 +17,7 @@
 include(get_template_directory() . '/s3tools/s3_tools.php');
 ?>
 
-<body <?php body_class('dc-wrapper' ); ?>>
+<body <?php body_class('dc-wrapper'); ?>>
 
 <?php if(is_active_sidebar('top-left-panel')) :?>
     <div class="top-left-panel">
@@ -72,42 +72,14 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	include_once("blocks/top.php");
 ?>
 
-<div class="dc-fixed-header">
-<section class="dc-header dc-clear" id="dc-header">
-	<div class="row">
-    	<div class="grid-<?php echo s3_option('logo_column'); ?>">
-        	<div class="block">
-                <div class="dc-logo">
-                    <a href="<?php echo bloginfo('url'); ?>" title="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
-                        <img src="<?php echo $dcTemplate; ?>/themes/images/logo.png" alt="<?php echo( s3_option('sitename') == '' ? bloginfo('name') : s3_option('sitename') );?>">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <?php
-			if( has_nav_menu('header-menu') || is_active_sidebar('header-1') || is_active_sidebar('header-2') || is_active_sidebar('header-3') || is_active_sidebar('header-4')){
-				echo '<div class="grid';
-					if(s3_option('logo_column') == s3_option('logo_column') ){
-						echo s3_option('logo_column') - 12;
-					}
-				echo '">';
-					echo '<div class="block">';
-						include_once("blocks/header.php");
-					echo '</div>';
-				echo '</div>';
-			}
-		?>
-    </div>
-</section>
-	<?php
-		/**
-		 * Main Menu Location
-		 * @since S3 Framework 1.0
-		 */
-		include_once("blocks/menu.php");
-	?>
+<?php
+	/**
+	 * Header Styles can be selected via s3 theme option page
+	 * @since S3 Framework 2.0
+	 */
+	include_once("s3inc/headers/headers.php");
+?>
 
-</div>
 <?php
 	/**
 	 * all sidebars before post/page container
@@ -130,7 +102,12 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	else:
 ?>
 <section class="dc-container dc-clear" id="container">
-	<?php if( !is_page_template('layouts/page-fluid.php') ):?>
+	<?php
+	/**
+	 * Fuild Page will width it can also contains (left+right) sidebars
+	 * @since S3 Framework 2.0
+	 */
+	if( !is_page_template('layouts/page-fluid.php') ):?>
 	<div class="row">
 	<?php endif;
 	/**
@@ -247,9 +224,17 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	/**
 	 * if no-post selected default will be display
 	 */
-	echo '<div id="page-content" class="block dc-page-content">';
+	
+		/**
+		 * Hide .block class for 0 padding when fluid page is called
+		 * @since S3 Framework 2.0
+		 */
+		if( is_page_template('layouts/page-fluid.php') ):
+			echo '<div id="page-content" class="dc-page-content">';
+		else:
+			echo '<div id="page-content" class="block dc-page-content">';
+		endif;
 		echo '<article>';
-		
 	endif;
 
 /**
