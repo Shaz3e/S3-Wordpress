@@ -19,15 +19,18 @@
  * @since S3 Wordperss 1.0
  */
 
+
 /**
- * Put the first word in widget's title in span and style it in theme LESS/CSS file
+ * Wraps the first half of the provided string inside a span with the class lol_class.
+ *
+ * @param  string  $title  The string.
+ * @return string          The modified string.
  * @since S3 Wordperss 1.0
  */
-
 function s3_title($title) {
     $title_parts = explode(' ', $title, 2);
     $title = '<span>'.$title_parts[0].'</span>';
-    if(isset($title_parts[1])){
+    if( isset( $title_parts[1] ) ){
         $title .= ' '.$title_parts[1];
 	}
     return $title;
@@ -173,18 +176,6 @@ if ( function_exists('register_sidebar') ) {
 	 * @since S3 Framework 1.0
 	 */
 	require_once("sidebars/top.php");
-	
-	/**
-	 * 12 Sidebars
-	 * @since S3 Framework 1.0
-	 */
-	require_once("sidebars/header.php");
-	
-	/**
-	 * 12 Sidebars
-	 * @since S3 Framework 1.0
-	 */
-	require_once("sidebars/menu.php");
 	
 	/**
 	 * 12 Sidebars
