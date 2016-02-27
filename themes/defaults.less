@@ -1,5 +1,6 @@
 @import "../css/template.less"; // grid file
-@import "style.less"; // Mail StyleSheet
+@import "header.less"; // Header Styles
+@import "s3cc.less"; // Copyright & Credit Styles
 @import "menu.less"; // default menu
 @import "variables-mixin.less"; // all variable and mixin
 @import "theme-modules.less"; // theme extra modules
@@ -78,7 +79,6 @@ i.e. top margin or bottom margin for each grid
 ***********************************************/
 .dc-top,
 .dc-header,
-.dc-menu,
 .dc-breadcrumb,
 .dc-slideshow,
 .dc-showcase,
@@ -96,44 +96,6 @@ i.e. top margin or bottom margin for each grid
 .dc-top{}
 .dc-fixed-header{}
 .dc-fixed{}
-.dc-header{
-	z-index:9;
-	.row{
-		.block{
-			background:none;
-			margin-bottom:0 !important;
-			padding-top:0 !important;
-			padding-bottom:0 !important;
-		}
-	}
-	
-	.dc-header1,.dc-header2,.dc-header3,.dc-header4{}
-	@media(min-width:769px){
-		.dc-header1,.dc-header2,.dc-header3,.dc-header4{
-			margin-left:1em;
-		}
-		.dc-header1{
-			float:right;
-		}
-		.dc-header2{
-			float:right;
-		}
-		.dc-header3{
-			float:right;
-		}
-		.dc-header4{
-			float:right;
-		}
-	}
-	
-	@media(max-width:768px){
-		.dc-header1,.dc-header2,.dc-header3,.dc-header4{
-			display:block;float:none;position:relative;
-		}
-	}
-
-
-}
 
 /* Logo */
 .dc-logo{
@@ -149,7 +111,6 @@ i.e. top margin or bottom margin for each grid
 /* Menu Modules */
 .dc-menu{
 	.block{padding:0 !important;} /* hide block margin/padding after menu */
-	z-index:2;
 }
 
 /**
@@ -171,31 +132,12 @@ i.e. top margin or bottom margin for each grid
 	}
 }
 
-
-.dc-copyright{}
-.dc-credits{text-align:right;}
-
 @media(max-width:768px){
 	.dc-copyright,.dc-credits{
 		text-align:center; /* text center on small devices */
-		.block{margin-bottom:0 !important;} /* remove bottom margin when on small device */
+		.block{margin-bottom:0 !important;} /* remove bottom margin on small device */
 	}
 }
-
-/* Shaz3e logo */
-.shaz3e{
-	text-align:center;display:block;width:50px;margin:auto;		
-	img{
-		text-align:center;
-		width:auto;
-		height:50px;
-		margin:auto;
-	}
-}
-
-/**********************************************
-         Template Color Variant Styles
-***********************************************/
 
 /* Media Queries
 *********************************************/
@@ -223,3 +165,7 @@ i.e. top margin or bottom margin for each grid
 
 /* Large desktop */
 @media (min-width: 1024px) {}
+
+/**********************************************
+		All Header Default Styles
+***********************************************/
