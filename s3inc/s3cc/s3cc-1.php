@@ -1,3 +1,10 @@
+<?php
+	/**
+	 * S3CC Styles
+	 * File Name: s3cc-1.php
+	 * @since S3 Framework 2.0
+	 */
+?>
 <?php if( s3_option('copyright')  == 1 || s3_option('credit') == 1 || s3_option('s3Framework_logo') == 1 ): ?>
 <section class="DiligentCreators s3cc-<?php echo s3_option('s3cc_style'); ?> dc-clear" id="DiligentCreators">
 	<div class="row">
@@ -5,21 +12,8 @@
     	<div class="grid-6 dc-copyright" id="dc-copyright">
             <div class="block">
             <?php
-				if( s3_option('copyright') == 1){
-					if(is_active_sidebar('copyright')){
-						dynamic_sidebar( 'copyright' );
-					}else{
-						include("copyright.php");
-					}
-				}
-				
-				if( s3_option('credit') == 1){
-					if(is_active_sidebar('credit')){
-						dynamic_sidebar( 'credit' );
-					}else{
-						include("credit.php");
-					}
-				}
+				include("copyright.php");
+				include("credit.php");
 			?>
             </div>
         </div>

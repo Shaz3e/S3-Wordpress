@@ -1,3 +1,10 @@
+<?php
+	/**
+	 * Header Styles
+	 * File Name: header-1.php
+	 * @since S3 Framework 4.0
+	 */
+?>
 <div class="dc-fixed-header">
     <section class="dc-header dc-header-<?php echo s3_option('header_style'); ?> dc-clear" id="dc-header">
         <div class="row">

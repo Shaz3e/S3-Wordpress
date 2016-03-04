@@ -23,11 +23,13 @@
 							3 => 'Header 3',
 							4 => 'Header 4',
 							5 => 'Header 5',
-							6 => 'Header 6',
-							7 => 'Header 7',
-							8 => 'Header 8',
-							9 => 'Header 9',
-							10 => 'Header 10',
+							// Top Headers
+							6 => 'Top 1',
+							7 => 'Top 2',
+							8 => 'Top 3',
+							// Bottom Headers
+							9 => 'Bottom 1',
+							10 => 'Bottom 2',
 							// Center Headers
 							11 => 'Center 1',
 							12 => 'Center 2',
@@ -50,7 +52,7 @@
 		
 		$this->settings['social_icons'] = array(
 			'title'   => __( 'Enable Social Icons' ),
-			'desc'    => __( 'Please enable or disable social icons in header by default its enable, Remember to use Font Awesome library from respective section' ),
+			'desc'    => __( 'Please enable or disable social icons in header by default its disabled, Remember to use Font Awesome library. Example: <code>&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'

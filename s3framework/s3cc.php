@@ -67,4 +67,24 @@
 			'type'    => 'text',
 			'section' => 's3cc'
 		);
+		
+		$this->settings['s3Framework_custom_link'] = array(
+			'title'   => __( 'Custom Link' ),
+			'desc'    => __( 'Here you will put the link on Footer Logo i.e. http://www.shaz3e.com' ),
+			'std'     => 'http://www.shaz3e.com',
+			'type'    => 'text',
+			'section' => 's3cc'
+		);
+		
+		$this->settings['s3Framework_link_target'] = array(
+			'title'   => __( 'Link Target' ),
+			'desc'    => __( 'Select Link Target Type on Footer Logo i.e. _blank' ),
+			'std'     => '_blank',
+			'type'    => 'radio',
+			'choices' => array(
+							'_blank' => '_blank',
+							'_self' => '_self',
+						 ),
+			'section' => 's3cc'
+		);
 ?>

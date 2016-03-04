@@ -142,25 +142,6 @@ function s3_css_js(){
 		
 		wp_enqueue_style( 's3-framework-color', get_template_directory_uri() . '/themes/colors/color.css', array() );
 		wp_enqueue_style( 's3-framework-style', get_template_directory_uri() . '/themes/styles/style.css', array() );
-		
-		/*
-		$inputFile  = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.less';
-		$outputFile = get_template_directory() . '/themes/style.css';
-		
-		$less = new lessc;
-		$less->setFormatter("compressed");
-		$cache = $less->cachedCompile($inputFile);
-		
-		file_put_contents($outputFile, $cache["compiled"]);
-		
-		$last_updated = $cache["updated"];
-		$cache = $less->cachedCompile($cache);
-			if ($cache["updated"] > $last_updated) {
-				file_put_contents($outputFile, $cache["compiled"]);
-			}
-		
-		wp_enqueue_style( 's3-framework', get_template_directory_uri() . '/themes/style.css', array() );
-		*/
 	endif;
 	
 	// load IE condistional CSS Template Files

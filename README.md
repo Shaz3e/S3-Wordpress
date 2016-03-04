@@ -23,6 +23,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Responsive Video with [FitVids.js](https://github.com/davatron5000/FitVids.js).
 
 ### Features
+ - 10+ Different Header Styles
  - 7 Layouts Types (Page Templates 1 blank page included to customize your wordpress)
  - Layout: Full Width (at this page no left/right sidebar is defined)
  - Layout: 3 Columns (left Sidebar + Post/Page Area + Right Sidebar)
