@@ -73,20 +73,22 @@ jQuery(document).ready(function($){
  * @since S3 Framework 2.0
  */
 jQuery(document).ready(function($) {
-    $('#header_text_color_id').hide();
-    $('#header_text_color_id').farbtastic('#header_text_color');
+    //$('#header_text_color_id').hide();
+    //$('#header_text_color_id').farbtastic('#header_text_color');
 
-    $('#header_text_color').click(function() {
-        $('#header_text_color_id').fadeIn();
-    });
-
-    $(document).mousedown(function() {
-        $('#header_text_color_id').each(function() {
-            var display = $(this).css('display');
-            if ( display == 'block' )
-                $(this).fadeOut();
-        });
-    });
+    //$('#header_text_color').click(function() {
+    //    $('#header_text_color_id').fadeIn();
+    //});
+    
+    $('#header_text_color_id').wpColorPicker();
+    
+    //$(document).mousedown(function() {
+    //    $('#header_text_color_id').each(function() {
+    //        var display = $(this).css('display');
+    //        if ( display == 'block' )
+    //            $(this).fadeOut();
+    //    });
+    //});
 });
 
 
@@ -95,18 +97,20 @@ jQuery(document).ready(function($) {
  * @since S3 Framework 2.0
  */
 jQuery(document).ready(function($) {
-    $('#header_background_color_id').hide();
-    $('#header_background_color_id').farbtastic('#header_background_color');
+    //$('#header_background_color_id').hide();
+    //$('#header_background_color_id').farbtastic('#header_background_color');
 
-    $('#header_background_color').click(function() {
-        $('#header_background_color_id').fadeIn();
-    });
-
-    $(document).mousedown(function() {
-        $('#header_background_color_id').each(function() {
-            var display = $(this).css('display');
-            if ( display == 'block' )
-                $(this).fadeOut();
-        });
-    });
+    //$('#header_background_color').click(function() {
+    //    $('#header_background_color_id').fadeIn();
+    //});
+    
+    $('#header_background_color_id').wpColorPicker();
+    
+    //$(document).mousedown(function() {
+    //    $('#header_background_color_id').each(function() {
+    //        var display = $(this).css('display');
+    //        if ( display == 'block' )
+    //            $(this).fadeOut();
+    //    });
+    //});
 });
