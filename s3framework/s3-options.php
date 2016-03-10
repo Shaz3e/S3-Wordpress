@@ -42,7 +42,7 @@ class s3Options {
 		
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );
 		add_action( 'admin_init', array( &$this, 'register_settings' ) );
-		add_action( 'admin_enqueue_scripts', array( &$this, 'my_enqueue_color_picker' ) );
+		add_action( 'admin_enqueue_scripts', array( &$this, 's3_enqueue_color_picker' ) );
 
 		if ( ! get_option( 's3_theme_options' ) )
 			$this->initialize_settings();
@@ -52,16 +52,17 @@ class s3Options {
 	/**
 	 * Add color picker enqueue
 	 *
-	 * @since 1.0
+	 * @since 2.0
+	 * Credits: dingo_d
+	 * https://github.com/Shaz3e/S3-Wordpress/pull/1
+	 * https://github.com/Shaz3e/S3-Wordpress/pull/2
 	 */
-	public function my_enqueue_color_picker( $hook_suffix ) {
-	
+	public function s3_enqueue_color_picker( $hook_suffix ) {
 	    // first check that $hook_suffix is appropriate for your admin page
-	    if ($hook_suffix == 'toplevel_page_s3-theme-options') {
+	    if ( $hook_suffix == 'toplevel_page_s3-theme-options' ) {
 	        wp_enqueue_style( 'wp-color-picker' );
-	        wp_enqueue_script( 'my-script-handle', get_bloginfo( 'stylesheet_directory' ) . '/s3framework/assets/scripts.js', array('wp-color-picker'), false, true );
+	        wp_enqueue_script( 'my-script-handle', get_template_directory_uri() . '/s3framework/assets/options.js', array('wp-color-picker'), false, true );
 	    }
-	
 	}
 	
 	/**
@@ -272,7 +273,6 @@ class s3Options {
 				
 			case 'header_text_color':
 			default:
-				echo '<div class="color-picker">';
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -280,10 +280,8 @@ class s3Options {
 					name="s3_theme_options[' . $id . ']" 
 					placeholder="' . $std . '" 
 					value="';
-						echo (esc_attr( $options[$id] ) == '' ? '#ffffff' : esc_attr( $options[$id] ));
+						echo ( esc_attr( $options[$id] ) );
 					echo '" />';
-					echo '<div class="color-picker-box" id="header_text_color_id"></div>';
-				echo '</div>';
 		 		
 		 		if ( $desc != '' )
 		 			echo '<p class="description">' . $desc . '</p>';
@@ -292,7 +290,6 @@ class s3Options {
 				
 			case 'header_background_color':
 			default:
-				echo '<div class="color-picker">';
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -300,10 +297,8 @@ class s3Options {
 					name="s3_theme_options[' . $id . ']" 
 					placeholder="' . $std . '" 
 					value="';
-						echo (esc_attr( $options[$id] ) == '' ? '#000000' : esc_attr( $options[$id] ));
+						echo ( esc_attr( $options[$id] ) );
 					echo '" />';
-					echo '<div class="color-picker-box" id="header_background_color_id"></div>';
-				echo '</div>';
 		 		
 		 		if ( $desc != '' )
 		 			echo '<p class="description">' . $desc . '</p>';
@@ -389,8 +384,6 @@ class s3Options {
 	*/
 	public function scripts() {
 		wp_enqueue_media();
-		//wp_enqueue_style( 'farbtastic' ); remove this two lines
-		//wp_enqueue_script( 'farbtastic' );
 		wp_print_scripts( 'jquery-ui-tabs' );
 	}
 	
@@ -401,11 +394,8 @@ class s3Options {
 	*/
 	public function styles() {
 		
-		wp_register_style( 'mytheme-admin', get_bloginfo( 'stylesheet_directory' ) . '/s3framework/assets/default.css' );
+		wp_register_style( 'mytheme-admin', get_template_directory_uri() . '/s3framework/assets/default.css' );
 		wp_enqueue_style( 'mytheme-admin' );
-		
-		wp_register_script( 'mytheme-admin-js', get_bloginfo( 'stylesheet_directory' ) . '/s3framework/assets/script.js' );
-		wp_enqueue_script( 'mytheme-admin-js' );
 	}
 	
 	/**
