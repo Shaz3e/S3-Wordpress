@@ -74,15 +74,3 @@
 .wrap h3, .wrap table {
 	display: none;
 }
-
-/* Colo Picker */
-.color-picker{
-	position:relative;
-}
-.color-picker .color-picker-box{
-	position:absolute;
-	z-index:1;
-	border:solid 1px #f1f1f1;
-	padding:1em;
-	background:#ffffff;
-}

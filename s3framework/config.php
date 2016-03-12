@@ -50,11 +50,11 @@
 			'section' => 'config'
 		);
 		
-		$this->settings['google_analytics'] = array(
-			'title'   => __( 'Google Analytics' ),
-			'desc'    => __( 'Type your Google Analytic code (UA-XXXXXXXX-X) here.' ),
+		$this->settings['analytics_code'] = array(
+			'title'   => __( 'Analytics Code' ),
+			'desc'    => __( 'Copy and Paste your analytics script heres.' ),
 			'std'     => '',
-			'type'    => 'text',
+			'type'    => 'textarea',
 			'section' => 'config'
 		);
 		

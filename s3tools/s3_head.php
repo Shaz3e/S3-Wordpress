@@ -57,18 +57,15 @@ if( s3_option('responsive_video') == 1): ?>
 </script>
 <?php endif; ?>    
     
-<?php if( s3_option('google_analytics') ): ?>  
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '<?php echo s3_option('google_analytics') ; ?>', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<?php endif; ?>
+<?php
+/**
+ * Analytics Script
+ * @since S3 Framework 2.0
+ */
+if( s3_option('analytics_code') ):
+	echo s3_option('analytics_code') ;
+endif;
+?>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo $dcTemplate; ?>/images/favicon/apple-touch-icon-60x60.png">

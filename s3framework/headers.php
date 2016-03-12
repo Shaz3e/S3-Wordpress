@@ -81,4 +81,56 @@
 			'type'    => 'text',
 			'section' => 'headers'
 		);
+
+		$this->settings['fixed_header'] = array(
+			'title'   => __( 'Fixed Header and Menu' ),
+			'desc'    => __( 'If you want to hide/show header and Menu on scroll up/down' ),
+			'std'     => 0,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Yes',
+							0 => 'No',
+						 ),
+			'section' => 'headers'
+		);
+		
+		$this->settings['header_text_color'] = array(
+			'title'   => __( 'Text Color' ),
+			'desc'    => __( 'Enter color code i.e. #ffffff or choose color' ),
+			'std'     => '',
+			'type'    => 'header_text_color',
+			'section' => 'headers'
+		);
+		
+		$this->settings['header_background_color'] = array(
+			'title'   => __( 'Background Color' ),
+			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
+			'std'     => '',
+			'type'    => 'header_background_color',
+			'section' => 'headers'
+		);
+		
+		$this->settings['header_height'] = array(
+			'title'   => __( 'Header Height' ),
+			'desc'    => __( 'Change body top padding when using fixed header i.e. 200' ),
+			'std'     => '100',
+			'type'    => 'text',
+			'section' => 'headers'
+		);
+		
+		$this->settings['ease_speed'] = array(
+			'title'   => __( 'Ease Speed' ),
+			'desc'    => __( 'Define header ease slideUp/slideDown speed in millisecond i.e 200.' ),
+			'std'     => '0',
+			'type'    => 'text',
+			'section' => 'headers'
+		);
+		
+		$this->settings['break_point'] = array(
+			'title'   => __( 'Break Point' ),
+			'desc'    => __( 'Type your break point (only number) i.e. (768 for tablet) fixed header will show on larger than break point defined here.' ),
+			'std'     => '979',
+			'type'    => 'number',
+			'section' => 'headers'
+		);
 ?>
