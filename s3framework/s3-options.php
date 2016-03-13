@@ -37,7 +37,7 @@ class s3Options {
 		$this->sections['headers'] = __( 'Header Settings' );
 		$this->sections['s3cc'] = __( 'CC Settings' );
 		$this->sections['layout'] = __( 'Layout Settings' );
-		$this->sections['library'] = __( 'Libraries Settings' );
+		$this->sections['library'] = __( 'External Libraries' );
 		$this->sections['reset'] = __( 'Reset to Defaults' );
 		
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );

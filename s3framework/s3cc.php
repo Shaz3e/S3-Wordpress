@@ -82,8 +82,8 @@
 			'std'     => '_blank',
 			'type'    => 'radio',
 			'choices' => array(
-							'_blank' => '_blank',
-							'_self' => '_self',
+							'_blank' => 'Other Window',
+							'_self' => 'Same Window',
 						 ),
 			'section' => 's3cc'
 		);
