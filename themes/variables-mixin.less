@@ -1,5 +1,19 @@
 /* All mixin assigned to current theme
 *******************************************/
+.s3-transition(@time: 0.5s){
+    transition:All @time ease-in-out;
+    -webkit-transition:All @time ease-in-out;
+    -moz-transition:All @time ease-in-out;
+    -o-transition:All @time ease-in-out;
+	
+	&:hover{
+		transition:All @time ease-in-out;
+		-webkit-transition:All @time ease-in-out;
+		-moz-transition:All @time ease-in-out;
+		-o-transition:All @time ease-in-out;
+	}
+}
+
 .s3-horizontal-ellipsis{
   width:100%;
   white-space: nowrap;

@@ -115,8 +115,13 @@
 
 /* Full Screen Search
 **********************/
+.s3-search-body-hide{
+	.s3-transition(0.2s);
+    margin-top:100vh;
+    overflow-y:hidden;
+}
 .s3-popup {
-	@background: rgba(0,0,0,0.5);
+	@background: rgba(255,255,255,0);
 	display: none;
 	position: fixed;
 	top:0;
@@ -172,14 +177,14 @@
 		position:absolute;
 		right:20px;
 		top:20px;
-		transform:scale(0.5);
+		transform:scale(1);
 
 		&:after{
 			height:0 !important;
 		}
 
 		&:hover{
-			transform:scale(1);
+			transform:scale(0.5);
 		}
 	}
 }
