@@ -38,18 +38,6 @@
 			'section' => 'headers'
 		);
 		
-		$this->settings['search_box'] = array(
-			'title'   => __( 'Enable Search Box' ),
-			'desc'    => __( 'Please enable or disable search box in header by default its enable' ),
-			'std'     => 1,
-			'type'    => 'select',
-			'choices' => array(
-							0 => 'Disable',
-							1 => 'Enable',
-						 ),
-			'section' => 'headers'
-		);
-		
 		$this->settings['social_icons'] = array(
 			'title'   => __( 'Enable Social Icons' ),
 			'desc'    => __( 'Please enable or disable social icons in header by default its disabled, Remember to use Font Awesome library. Example: <code>&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code>' ),
@@ -79,6 +67,30 @@
 			'desc'    => __( 'Please write for call to action option' ),
 			'std'     => '',
 			'type'    => 'text',
+			'section' => 'headers'
+		);
+
+		$this->settings['search_box'] = array(
+			'title'   => __( 'Enable Search Box' ),
+			'desc'    => __( 'Please enable or disable search box in header by default its enable' ),
+			'std'     => 1,
+			'type'    => 'select',
+			'choices' => array(
+							0 => 'Disable',
+							1 => 'Enable',
+						 ),
+			'section' => 'headers'
+		);
+
+		$this->settings['search_box_type'] = array(
+			'title'   => __( 'Select Search Type' ),
+			'desc'    => __( 'Select the type of search box to appear on your website' ),
+			'std'     => 0,
+			'type'    => 'select',
+			'choices' => array(
+							0 => 'Normal Search Form',
+							1 => 'Full Screen Search',
+						 ),
 			'section' => 'headers'
 		);
 

@@ -56,6 +56,9 @@ function s3_css_js(){
 	wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
 	
 	// load user script before closing </body> tag
+	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/search.js', array(), '1.0' );
+
+	// load user script before closing </body> tag
 	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0' );
 	
 	/**
@@ -115,8 +118,8 @@ function s3_css_js(){
 		$inputFileTheme  = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.less';
 		$inputFileStyle  = get_template_directory() . '/themes/styles/style'.s3_option('s3_styles').'.less';
 		
-		$outputFileTheme = get_template_directory() . '/themes/colors/color.css';
-		$outputFileStyle = get_template_directory() . '/themes/styles/style.css';
+		$outputFileTheme = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.css';
+		$outputFileStyle = get_template_directory() . '/themes/styles/style'.s3_option('s3_styles').'.css';
 		
 		$less = new lessc;
 		$less->setFormatter("compressed");
@@ -140,8 +143,8 @@ function s3_css_js(){
 				file_put_contents($outputFileStyle, $cacheStyle["compiled"]);
 			}
 		
-		wp_enqueue_style( 's3-framework-color', get_template_directory_uri() . '/themes/colors/color.css', array() );
-		wp_enqueue_style( 's3-framework-style', get_template_directory_uri() . '/themes/styles/style.css', array() );
+		wp_enqueue_style( 's3-framework-color', get_template_directory_uri() . '/themes/colors/theme'.s3_option('s3_themes').'.css', array() );
+		wp_enqueue_style( 's3-framework-style', get_template_directory_uri() . '/themes/styles/style'.s3_option('s3_styles').'.css', array() );
 	endif;
 	
 	// load IE condistional CSS Template Files
