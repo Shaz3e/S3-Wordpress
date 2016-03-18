@@ -304,6 +304,40 @@ class s3Options {
 		 			echo '<p class="description">' . $desc . '</p>';
 		 		
 		 		break;
+				
+			case 's3cc_text_color':
+			default:
+		 		echo '<input 
+					class="regular-text' . $field_class . '" 
+					type="text" 
+					id="' . $id . '" 
+					name="s3_theme_options[' . $id . ']" 
+					placeholder="' . $std . '" 
+					value="';
+						echo ( esc_attr( $options[$id] ) );
+					echo '" />';
+		 		
+		 		if ( $desc != '' )
+		 			echo '<p class="description">' . $desc . '</p>';
+		 		
+		 		break;
+				
+			case 's3cc_background_color':
+			default:
+		 		echo '<input 
+					class="regular-text' . $field_class . '" 
+					type="text" 
+					id="' . $id . '" 
+					name="s3_theme_options[' . $id . ']" 
+					placeholder="' . $std . '" 
+					value="';
+						echo ( esc_attr( $options[$id] ) );
+					echo '" />';
+		 		
+		 		if ( $desc != '' )
+		 			echo '<p class="description">' . $desc . '</p>';
+		 		
+		 		break;
 		 	
 		}
 		

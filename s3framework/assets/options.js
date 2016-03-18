@@ -77,4 +77,16 @@ jQuery(document).ready(function($){
 	 * @since S3 Framework 2.0
 	 */
 	$('#header_background_color').wpColorPicker();
+	
+	/**
+	 * Custom Fixed S3CC Text Color
+	 * @since S3 Framework 2.0
+	 */    
+    $('#s3cc_text_color').wpColorPicker();
+	
+	/**
+	 * Custom Fixed S3CC Background Color
+	 * @since S3 Framework 2.0
+	 */
+	$('#s3cc_background_color').wpColorPicker();
 });

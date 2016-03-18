@@ -6,7 +6,7 @@
 	 */
 ?>
 <?php if( s3_option('copyright')  == 1 || s3_option('credit') == 1 || s3_option('s3Framework_logo') == 1 ): ?>
-<section class="DiligentCreators s3cc-<?php echo s3_option('s3cc_style'); ?> dc-clear" id="DiligentCreators">
+<section class="DiligentCreators s3cc-<?php echo s3_option('s3cc_style'); ?><?php echo( s3_option('s3cc_fixed') == '' ? '' : ' s3cc-fixed' );?> dc-clear" id="DiligentCreators">
 	<div class="row">
     <?php if( s3_option('copyright')  == 1 || s3_option('credit') == 1): ?>
     	<div class="grid-6 dc-copyright" id="dc-copyright">

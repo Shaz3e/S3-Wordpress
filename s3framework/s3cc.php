@@ -87,4 +87,32 @@
 						 ),
 			'section' => 's3cc'
 		);
+		
+		$this->settings['s3cc_fixed'] = array(
+			'title'   => __( 'Fixed CC Area?' ),
+			'desc'    => __( 'Enable or Disable Sticky Copyright and Credit. This will only work on larget than 980px devices.' ),
+			'std'     => '0',
+			'type'    => 'radio',
+			'choices' => array(
+							0 => 'Disable',
+							1 => 'Enable',
+						 ),
+			'section' => 's3cc'
+		);
+		
+		$this->settings['s3cc_text_color'] = array(
+			'title'   => __( 'Text Color' ),
+			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
+			'std'     => '',
+			'type'    => 's3cc_text_color',
+			'section' => 's3cc'
+		);
+		
+		$this->settings['s3cc_background_color'] = array(
+			'title'   => __( 'Background Color' ),
+			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
+			'std'     => '',
+			'type'    => 's3cc_background_color',
+			'section' => 's3cc'
+		);
 ?>
