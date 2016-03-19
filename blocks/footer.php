@@ -39,7 +39,7 @@
 			is_active_sidebar('bottom-footer-grid') 
 		):
 	?>
-	<div class="row">
+	<div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
 		<?php
 			// columns
             dynamic_sidebar('footer');

@@ -17,7 +17,7 @@
 
 <?php if( has_nav_menu ('main-menu') ): ?>
 <section class="dc-menu dc-clear" id="dc-menu">
-	<div class="row">
+	<div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
     	<?php s3_main_menu(); ?>
     </div>
 </section>

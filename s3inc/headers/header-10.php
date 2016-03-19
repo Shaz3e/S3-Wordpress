@@ -7,7 +7,7 @@
 ?>
 <div class="dc-fixed-header">
     <section class="dc-header dc-header-<?php echo s3_option('header_style'); ?> dc-clear" id="dc-header">
-        <div class="row">
+        <div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
             <div class="grid-<?php echo s3_option('logo_column'); ?>">
                 <div class="block">
                     <div class="dc-logo">
@@ -28,7 +28,7 @@
             
         <?php if( is_s3_headers() ): ?>
         <div class="s3-header-<?php echo s3_option('header_style'); ?>">
-            <div class="row">
+            <div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
             	<div class="grid-12">
                 	<div class="block">
                         <div class="dc-header-boxes">

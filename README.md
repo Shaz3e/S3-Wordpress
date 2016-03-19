@@ -71,6 +71,9 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Show Credit "Default Show" (Hide or Show) when its hide you cannot use sidebar 
  - Show/Hide Framework Logo
   - Custom Footer Logo - instead of Framework logo
+ - CC Fixed Functionality
+ - CC Text Color
+ - CC Background Color
 
 ### Layout Settings
  - Set Logo Column (by selecting logo column header module will be automaticaly adjusted)

@@ -108,7 +108,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	 * @since S3 Framework 2.0
 	 */
 	if( !is_page_template('layouts/page-fluid.php') ):?>
-	<div class="row">
+	<div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
 	<?php endif;
 	/**
 	 * call left sidebar if left-sidebar is enabled but template page is not active

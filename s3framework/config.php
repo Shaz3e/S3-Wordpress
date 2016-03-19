@@ -70,6 +70,18 @@
 			'section' => 'config'
 		);
 		
+		$this->settings['fluidContainer'] = array(
+			'title'   => __( 'Fluid Layout' ),
+			'desc'    => __( 'Use Fluid or Static layout (both are responsive)' ),
+			'std'     => 0,
+			'type'    => 'select',
+			'choices' => array(
+							0 => 'No',
+							1 => 'Yes',
+						 ),
+			'section' => 'config'
+		);
+		
 		$this->settings['meta_generator'] = array(
 			'title'   => __( 'Meta Generator' ),
 			'desc'    => __( 'Type your custom meta generator text here.' ),
