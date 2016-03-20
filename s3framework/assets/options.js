@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($){	
 	/**
 	 * Custom Site Logo
 	 * @since S3 Framework 2.0
