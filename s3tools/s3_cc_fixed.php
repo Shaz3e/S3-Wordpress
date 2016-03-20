@@ -12,4 +12,13 @@ if( s3_option('s3cc_fixed') == 1 || s3_option('s3cc_text_color') || s3_option('s
 	}
 }
 </style>
+<script type="text/javascript">
+	$(window).scroll(function(){
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			$('.s3cc-fixed').css('position','static');
+		}else{
+			$('.s3cc-fixed').css('position','fixed');
+		}
+	});
+</script>
 <?php } ?>
