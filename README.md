@@ -5,6 +5,7 @@
 [![Version](http://img.shields.io/badge/Version-2.0.0beta-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
+### [LIVE DEMO](http://demo.shaz3e.com/wordpress)
 
 ### S3 Framework Base Theme
 The S3 Framework base theme is a clean modern responsive design that is a great place to start when building your custom S3 powered theme.
