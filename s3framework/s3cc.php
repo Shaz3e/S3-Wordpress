@@ -100,6 +100,14 @@
 			'section' => 's3cc'
 		);
 		
+		$this->settings['s3cc_fixed_trigger'] = array(
+			'title'   => __( 'Fixed Trigger' ),
+			'desc'    => __( 'just adjust this to whatever pixel from the bottom you want to trigger on.' ),
+			'std'     => '0',
+			'type'    => 'number',
+			'section' => 's3cc'
+		);
+		
 		$this->settings['s3cc_text_color'] = array(
 			'title'   => __( 'Text Color' ),
 			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
