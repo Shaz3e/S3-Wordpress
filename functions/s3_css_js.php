@@ -100,8 +100,15 @@ function s3_css_js(){
 		}
 	}
 	
-	// load user fonts
-	wp_enqueue_style( 's3-fonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0' );
+	/**
+	 * load user fonts only when google fonts are disabled
+	 * Google Fonts Added
+	 * 
+	 * @since S3 Framework 2.0
+	 */
+	if( s3_option('gfont_config') == 0 ):
+		wp_enqueue_style( 's3-fonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0' );
+	endif;
 	
 	/**
 	 * Calls less.js and style.less files in s3tools/s3_head.php

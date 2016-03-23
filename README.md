@@ -44,6 +44,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Parent Page Template
  - Blank Page Template
  - Fluid Page (Since 2.0)
+ - Custom Google Fonts (Since 2.0)
  
 ### S3 Theme Configurations
  - Custom Sitename

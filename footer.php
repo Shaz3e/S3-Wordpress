@@ -121,6 +121,12 @@ endif;
 	 * @param int
 	 */
 	include(get_template_directory() . '/s3tools/s3_cc_fixed.php');
+	
+	/**
+	 * Google Web Fonts
+	 * @since S3 Framework 2.0
+	 */
+	include(get_template_directory() . '/s3tools/s3_google_fonts.php');
 ?>
 </body>
 </html>

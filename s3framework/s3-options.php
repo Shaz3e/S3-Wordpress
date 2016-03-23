@@ -34,6 +34,7 @@ class s3Options {
 		
 		$this->sections['about'] = __( 'About S3 Framework' );
 		$this->sections['config'] = __( 'S3 Theme Configurations' );
+		$this->sections['typography'] = __( 'Typegraphy' );
 		$this->sections['headers'] = __( 'Header Settings' );
 		$this->sections['s3cc'] = __( 'CC Settings' );
 		$this->sections['layout'] = __( 'Layout Settings' );
@@ -384,6 +385,7 @@ class s3Options {
 	 */
 	public function get_settings() {
 		include(TEMPLATEPATH  . "/s3framework/config.php");
+		include(TEMPLATEPATH  . "/s3framework/typography.php");
 		include(TEMPLATEPATH  . "/s3framework/headers.php");
 		include(TEMPLATEPATH  . "/s3framework/s3cc.php");
 		include(TEMPLATEPATH  . "/s3framework/layout.php");
