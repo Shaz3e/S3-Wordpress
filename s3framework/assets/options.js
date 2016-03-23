@@ -89,4 +89,16 @@ jQuery(document).ready(function($){
 	 * @since S3 Framework 2.0
 	 */
 	$('#s3cc_background_color').wpColorPicker();
+	
+	/**
+	 * S3CC Link Color
+	 * @since S3 Framework 2.0
+	 */    
+    $('#s3cc_link_color').wpColorPicker();
+	
+	/**
+	 * S3CC Link Hover Color
+	 * @since S3 Framework 2.0
+	 */
+	$('#s3cc_link_hover_color').wpColorPicker();
 });

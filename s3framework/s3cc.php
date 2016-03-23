@@ -28,6 +28,14 @@
 			'section' => 's3cc'
 		);
 		
+		$this->settings['copyright_text'] = array(
+			'title'   => __( 'Copyright Text' ),
+			'desc'    => __( 'Type your own copyright text i.e. All copyright reserved by Shaz3e' ),
+			'std'     => '',
+			'type'    => 'textarea',
+			'section' => 's3cc'
+		);
+		
 		$this->settings['credit'] = array(
 			'title'   => __( 'Show Credit' ),
 			'desc'    => __( 'You can Show or Hide credit information here.' ),
@@ -37,6 +45,14 @@
 							1 => 'Yes',
 							0 => 'No',
 						 ),
+			'section' => 's3cc'
+		);
+		
+		$this->settings['credit_text'] = array(
+			'title'   => __( 'Credit Text' ),
+			'desc'    => __( 'Type your own credit text i.e. Designed by Shaz3e' ),
+			'std'     => '',
+			'type'    => 'textarea',
 			'section' => 's3cc'
 		);
 		
@@ -121,6 +137,22 @@
 			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
 			'std'     => '',
 			'type'    => 's3cc_background_color',
+			'section' => 's3cc'
+		);
+		
+		$this->settings['s3cc_link_color'] = array(
+			'title'   => __( 'Link Color' ),
+			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
+			'std'     => '',
+			'type'    => 's3cc_link_color',
+			'section' => 's3cc'
+		);
+		
+		$this->settings['s3cc_link_hover_color'] = array(
+			'title'   => __( 'Link Hover Color' ),
+			'desc'    => __( 'Enter color code i.e. #000000 or choose color' ),
+			'std'     => '',
+			'type'    => 's3cc_link_hover_color',
 			'section' => 's3cc'
 		);
 ?>
