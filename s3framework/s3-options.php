@@ -60,7 +60,8 @@ class s3Options {
 	 */
 	public function s3_enqueue_color_picker( $hook_suffix ) {
 	    // first check that $hook_suffix is appropriate for your admin page
-	    if ( $hook_suffix == 'toplevel_page_s3-theme-options' ) {
+	    if ( $hook_suffix == 'toplevel_page_s3-theme-options' ) {			
+			// WP Color Picker
 	        wp_enqueue_style( 'wp-color-picker' );
 	        wp_enqueue_script( 'my-script-handle', get_template_directory_uri() . '/s3framework/assets/options.js', array('wp-color-picker'), false, true );
 	    }
