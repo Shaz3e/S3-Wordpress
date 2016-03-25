@@ -34,6 +34,14 @@
 							11 => 'Center 1',
 							12 => 'Center 2',
 							13 => 'Center 3',
+							// Small Headers
+							14 => 'Small Header RTLA', // Alignment Right
+							15 => 'Small Header LTRA', // Alignment Left
+							16 => 'Small Header Center', // Alignment Center
+							// Small Headers w/ Menu
+							17 => 'Small Header &amp; Menu RTLA', // Alignment Right
+							18 => 'Small Header &amp; Menu LTLA', // Alignment Left
+							19 => 'Small Header RTLA Menu LTLA', // Header Right Menu Left Alignment
 						 ),
 			'section' => 'headers'
 		);
