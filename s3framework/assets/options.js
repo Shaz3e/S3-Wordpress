@@ -1,4 +1,16 @@
-jQuery(document).ready(function($){	
+jQuery(document).ready(function($){
+	/**
+	 * Chosen.js Customize select box for search functionality
+	 * @since 2.0
+	 */
+	$("select").chosen({
+		no_results_text: "Oops, nothing found!",
+		width: "80%"
+	});
+	$("multi-select-box").chosen({
+		no_results_text: "Oops, nothing found!",
+		width: "80%"
+	}); 
 	/**
 	 * Custom Site Logo
 	 * @since S3 Framework 2.0

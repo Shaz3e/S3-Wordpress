@@ -16,23 +16,23 @@
                 </div>
             </div><?php // .grid-3 ?>
             
-            <?php if( is_s3_headers() ): ?>
             <div class="grid<?php echo s3_option('logo_column') - 12; ?>">
             	<div class="block">
                     <div class="dc-header-boxes">
+                    	<?php if( is_s3_headers() ): ?>
 						<?php phone_text(); ?>
                         <?php email_text();?>
                         <?php social_icons();?>
                         <?php search_box();?>
                         <?php calltoaction();?>
                         <div class="dc-clear"></div>
+						<?php endif; ?>
                         <div class="dc-menu">
 							<?php s3_main_menu(); ?>
                         </div>
                     </div>
 				</div>
             </div>
-            <?php endif; ?>
         </div><?php // .row ?>
     </section>
 </div>

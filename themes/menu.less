@@ -4,13 +4,23 @@
 .dcToggleNav,
 .dc-menu-show{
 	a{
-		background-image:url(images/responsive-menu.png);
-		background-repeat:no-repeat;
-		background-position:center center;
-		width:30px;
-		height:30px;
-		display:inline-block;
-		span{display:none;}
+		line-height:0.5em;
+		font-size:150%;
+		color:lighten(@color1,50%);
+		background-color:@color1;
+		display:block;
+		
+		span{
+			text-align:center;			
+			-webkit-transform:rotate(90deg);
+			-moz-transform:rotate(90deg);
+			-o-transform:rotate(90deg);
+			-ms-transform:rotate(90deg);
+			transform:rotate(90deg);
+			display:block;
+			padding:0.5em;
+			margin-left:0.2em;
+		}
 	}
 }
 

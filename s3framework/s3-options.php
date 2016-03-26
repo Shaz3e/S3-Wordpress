@@ -455,7 +455,9 @@ class s3Options {
 	*/
 	public function scripts() {
 		wp_enqueue_media();
-		wp_print_scripts( 'jquery-ui-tabs' );
+		//wp_print_scripts( 'jquery-ui-tabs' );
+		
+		
 	}
 	
 	/**
@@ -467,6 +469,10 @@ class s3Options {
 		
 		wp_register_style( 'mytheme-admin', get_template_directory_uri() . '/s3framework/assets/default.css' );
 		wp_enqueue_style( 'mytheme-admin' );
+		wp_enqueue_style( 'chosen', get_template_directory_uri() . '/s3framework/assets/chosen.min.css' );
+		
+		wp_enqueue_script('uitabs', get_template_directory_uri() . '/s3framework/assets/tabs.min.js' );
+		wp_enqueue_script('chosen', get_template_directory_uri() . '/s3framework/assets/chosen.jquery.min.js' );
 	}
 	
 	/**
