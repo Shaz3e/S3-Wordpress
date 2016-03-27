@@ -101,6 +101,21 @@ function s3_css_js(){
 	}
 	
 	/**
+	 * Load animate.css 
+	 * 
+	 * @since S3 Framework 2.0
+	 */
+	if( s3_option('animate_css')  == 1){
+		// load animate.css on CDN
+		if( s3_option('hosted_cdn') == 1 ){
+			wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css', array(), '3.5.1' );
+		}else{
+			// load animate.css locally
+			wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), '3.5.1' );
+		}
+	}
+	
+	/**
 	 * load user fonts only when google fonts are disabled
 	 * Google Fonts Added
 	 * 
