@@ -74,6 +74,3 @@
 .wrap h3, .wrap table {
 	display: none;
 }
-input.regular-text,textarea,.select{
-	width:80% !important;
-}
