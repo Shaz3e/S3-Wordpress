@@ -59,6 +59,9 @@ get_header();
 
 			</div>
 		<?php endwhile;
+
+		get_template_part('content', 'pagination');
+		
 	else :
 	
 		// If no content, include the "No posts found" template.
