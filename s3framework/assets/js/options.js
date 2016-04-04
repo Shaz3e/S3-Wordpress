@@ -5,11 +5,11 @@ jQuery(document).ready(function($){
 	 */
 	$("select").chosen({
 		no_results_text: "Oops, nothing found!",
-		//width: "80%"
+		width: "80%"
 	});
 	$("multi-select-box").chosen({
 		no_results_text: "Oops, nothing found!",
-		//width: "80%"
+		width: "80%"
 	}); 
 	/**
 	 * Custom Site Logo

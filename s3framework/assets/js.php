@@ -4,13 +4,13 @@
 		<?php foreach ( $this->sections as $section_slug => $section ){
 			echo "sections['$section'] = '$section_slug';";
 		}?>
-		var wrapped = $(".wrap h3").wrap("<div class=\"ui-tabs-panel\">");
+		var wrapped = $(".wrap h2, .wrap h3").wrap("<div class=\"ui-tabs-panel\">");
 		wrapped.each(function() {
 			$(this).parent().append($(this).parent().nextUntil("div.ui-tabs-panel"));
 		});
 		
 		$(".ui-tabs-panel").each(function(index) {
-			$(this).attr("id", sections[$(this).children("h3").text()]);
+			$(this).attr("id", sections[$(this).children("h2, h3").text()]);
 				if (index > 0)
 					$(this).addClass("ui-tabs-hide");
 		});
@@ -36,7 +36,7 @@
 				}
 			});
 			
-			$(".wrap h3, .wrap table").show();
+			$(".wrap h22, .wrap h3, .wrap table").show();
 			
 			// This will make the "warning" checkbox class really stand out when checked.
 			// I use it here for the Reset checkbox.
