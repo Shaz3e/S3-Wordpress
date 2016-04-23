@@ -27,6 +27,7 @@
 							6 => 'Top 1',
 							7 => 'Top 2',
 							8 => 'Top 3',
+							20 => 'Top 4',
 							// Bottom Headers
 							9 => 'Bottom 1',
 							10 => 'Bottom 2',
