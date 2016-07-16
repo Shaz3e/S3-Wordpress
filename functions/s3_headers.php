@@ -36,7 +36,7 @@ add_action( 'init', 'register_s3_menus' );
 function s3_main_menu(){
 	echo '<div class="dcMenu">';
 		echo '<div id="dcToggleNav" class="dcToggleNav">';
-			echo '<a href="#"><span>|||</span></a>';
+			echo '<a href="#"><span></span></a>';
 		echo '</div>';
 		
 		echo '<nav>';
@@ -131,9 +131,9 @@ function calltoaction(){
  */
 function is_s3_headers(){
 	if(
-		s3_option('phone_text') == 1 || 
-		s3_option('email_text') == 1 || 
-		s3_option('social_icons') == 1 || 
+		s3_option('phone_text') != '' || 
+		s3_option('email_text') != '' || 
+		s3_option('social_icons') != '' || 
 		s3_option('search_box') == 1
 	){
 		return true;

@@ -1,6 +1,7 @@
+@menuWidth: 90vw;
 .dc-nav-show{left:0 !important;} // for nav
-.dc-body-show{left:200px; overflow-x:hidden;} // for body
-.dc-menu-show{position:fixed;left:200px;top:0;} // for menu ||| lines
+.dc-body-show{left:0; overflow-x:hidden;overflow-y:hidden;} // for body
+.dc-menu-show{position:fixed;left:@menuWidth;top:0;} // for menu ||| lines
 .dcToggleNav,
 .dc-menu-show{
 	a{
@@ -20,6 +21,26 @@
 			display:block;
 			padding:0.5em;
 			margin-left:0.2em;
+		}
+	}
+}
+
+.dcToggleNav{
+	a{
+		span{
+			&:after{
+				content:"|||";
+			}
+		}
+	}
+}
+.dc-menu-show{
+	a{
+		span{
+			margin-left:0;
+			&:after{
+				content:"X";
+			}
 		}
 	}
 }
@@ -116,7 +137,7 @@
 			position: fixed;
 			top:0;
 			left:-100%;
-			width:200px;
+			width:@menuWidth;
 			background:@color1;
 		}
 		  
