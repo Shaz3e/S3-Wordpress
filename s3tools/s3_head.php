@@ -48,7 +48,7 @@ if( s3_option('development_mode') == 1): ?>
 
 <?php
 // Responsive Video
-if( s3_option('responsive_video') == 1): ?>
+if( s3_option('loadResponsiveVideo') == 1): ?>
 <script>
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
