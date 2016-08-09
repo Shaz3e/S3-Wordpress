@@ -134,7 +134,9 @@ function s3_css_js(){
 	
 	if( s3_option('development_mode') != 1):	
 		// Compile LESS file to CSS
-		require( get_template_directory() . '/s3tools/lessc.inc.php' );
+		if ( !class_exists( 'lessc' ) ) {
+			require( get_template_directory() . '/s3tools/lessc.inc.php' );
+		}
 		
 		$inputFileTheme  = get_template_directory() . '/themes/colors/theme'.s3_option('s3_themes').'.less';
 		$inputFileStyle  = get_template_directory() . '/themes/styles/style'.s3_option('s3_styles').'.less';
