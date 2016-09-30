@@ -119,7 +119,9 @@ function s3_css_js(){
 	wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
 	
 	// load user script before closing </body> tag
-	wp_enqueue_script( 's3-search', get_template_directory_uri() . '/js/search.js', array(), '1.0' );
+	if( s3_option('search_box') == 1){
+		wp_enqueue_script( 's3-search', get_template_directory_uri() . '/js/search.js', array(), '1.0' );
+	}
 
 	// load user script before closing </body> tag
 	wp_enqueue_script( 's3-script', get_template_directory_uri() . '/js/scripts.js', array(), '1.0' );
