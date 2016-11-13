@@ -2,6 +2,18 @@
 		/* Typography
 		===========================================*/
 		
+		$this->settings['css_custom_font'] = array(
+			'title'   => __( 'Use Custom Font?' ),
+			'desc'    => __( 'Would you like to use custom font enable this option and update your font styles under /fonts/fonts.css' ),
+			'std'     => '0',
+			'type'    => 'select',
+			'choices' => array(
+							0 => 'Disable',
+							1 => 'Enable',
+						 ),
+			'section' => 'typography'
+		);
+		
 		$this->settings['gfont_config'] = array(
 			'title'   => __( 'Use Google Font?' ),
 			'desc'    => __( 'Enable/Disable Google Web Fonts' ),
