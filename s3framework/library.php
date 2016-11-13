@@ -13,6 +13,18 @@
 						 ),
 			'section' => 'library'
 		);
+
+		$this->settings['loadJquery'] = array(
+			'title'   => __( 'Use jQuery' ),
+			'desc'    => __( 'Enable or Disable jQuery. Note: for better performance disable it and use WP default jquery library.' ),
+			'std'     => 0,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Yes',
+							0 => 'No',
+						 ),
+			'section' => 'library'
+		);
 		
 		$this->settings['loadBootstrap'] = array(
 			'title'   => __( 'Use Bootstrap' ),
