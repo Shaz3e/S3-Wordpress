@@ -52,7 +52,9 @@ function s3_css_js(){
 		}
 		
 		// Load jQuery
-		wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js', array(), '2.2.0' );	
+		if( s3_option('loadJquery') == 1 ){
+			wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js', array(), '2.2.0' );	
+		}
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
@@ -90,7 +92,9 @@ function s3_css_js(){
 		}	
 		
 		// Add Javascripts
-		wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
+		if( s3_option('loadJquery') == 1 ){
+			wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
+		}
 		
 		
 		// Load Bootstrap
@@ -110,9 +114,9 @@ function s3_css_js(){
 	 * 
 	 * @since S3 Framework 2.0
 	 */
-	if( s3_option('gfont_config') == 0 ):
+	if( s3_option('css_custom_font') == 1 ){
 		wp_enqueue_style( 's3-fonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0' );
-	endif;
+	}
 
 
 	// load S3 Framework Responsive Menu
