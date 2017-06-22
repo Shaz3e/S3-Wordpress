@@ -231,7 +231,6 @@ class s3Options {
 		 		break;
 				
 			case 'number':
-			default:
 		 		echo '<input class="regular-text' . $field_class . '" type="number" id="' . $id . '" name="s3_theme_options[' . $id . ']" placeholder="' . $std . '" value="' . esc_attr( $options[$id] ) . '" />';
 		 		
 		 		if ( $desc != '' )
@@ -240,7 +239,6 @@ class s3Options {
 		 		break;
 				
 			case 'site_logo':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -257,7 +255,6 @@ class s3Options {
 		 		break;
 				
 			case 'footer_logo':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -274,7 +271,6 @@ class s3Options {
 		 		break;
 				
 			case 'header_text_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -291,7 +287,6 @@ class s3Options {
 		 		break;
 				
 			case 'header_background_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -308,7 +303,6 @@ class s3Options {
 		 		break;
 				
 			case 's3cc_text_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -325,7 +319,6 @@ class s3Options {
 		 		break;
 				
 			case 's3cc_background_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -342,7 +335,6 @@ class s3Options {
 		 		break;
 				
 			case 's3cc_link_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
@@ -359,7 +351,6 @@ class s3Options {
 		 		break;
 				
 			case 's3cc_link_hover_color':
-			default:
 		 		echo '<input 
 					class="regular-text' . $field_class . '" 
 					type="text" 
