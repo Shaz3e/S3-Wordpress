@@ -17,7 +17,7 @@
 		$this->settings['loadJquery'] = array(
 			'title'   => __( 'Use jQuery' ),
 			'desc'    => __( 'Enable or Disable jQuery. Note: for better performance disable it and use WP default jquery library.' ),
-			'std'     => 0,
+			'std'     => 1,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Yes',
