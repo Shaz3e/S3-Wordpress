@@ -29,7 +29,7 @@
         </div>
         
         <div class="DiligentCreators">
-			<p><?php echo __('S3 Framework');?> by <a href="http://shaz3e.com/">Shaz3e</a> | <a href="http://twitter.com/shaz3e">Follow on Twitter</a>! | <a href="http://on.fb.me/shaz3e">Like on Facebook</a>!</p>
+			<p><?php echo __('S3 Framework');?> by <a href="http://shaz3e.com/" target="_blank">Shaz3e</a> | <a href="https://twitter.com/Shaz3e" target="_blank">Follow on Twitter</a>! | <a href="https://www.facebook.com/Shaz3e" target="_blank">Like on Facebook</a>!</p>
         </div>
 	</form>
 </div>

@@ -388,7 +388,7 @@ class s3Options {
 		
 		$this->settings['reset_theme'] = array(
 			'section' => 'reset',
-			'title'   => __( 'Reset theme' ),
+			'title'   => __( 'Reset Settings' ),
 			'type'    => 'checkbox',
 			'std'     => 0,
 			'class'   => 'warning', // Custom class for CSS
