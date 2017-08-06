@@ -108,9 +108,7 @@ endif;
 	include_once("s3inc/s3cc/s3cc.php");
 ?>
 
-<?php
-	wp_footer();
-	
+<?php	
 	/**
 	 * Show/Hide Header on Scroll Up/Down
 	 */
@@ -127,6 +125,11 @@ endif;
 	 * @since S3 Framework 2.0
 	 */
 	include(get_template_directory() . '/s3tools/s3_google_fonts.php');
+
+	/**
+	 * WordPress Footer
+	 */
+	wp_footer();
 ?>
 </body>
 </html>
