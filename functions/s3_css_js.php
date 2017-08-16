@@ -120,7 +120,9 @@ function s3_css_js(){
 
 
 	// load S3 Framework Responsive Menu
-	wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
+	if( s3_option('s3_main_menu') == 1) {
+		wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
+	}
 	
 	// load user script before closing </body> tag
 	if( s3_option('search_box') == 1){

@@ -34,15 +34,19 @@ add_action( 'init', 'register_s3_menus' );
  */
 
 function s3_main_menu(){
-	echo '<div class="dcMenu">';
-		echo '<div id="dcToggleNav" class="dcToggleNav">';
-			echo '<a href="#"><span></span></a>';
+	if( s3_option('s3_main_menu') == 1) {
+		echo '<div class="dcMenu">';
+			echo '<div id="dcToggleNav" class="dcToggleNav">';
+				echo '<a href="#"><span></span></a>';
+			echo '</div>';
+			
+			echo '<nav>';
+				wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+			echo '</nav>';
 		echo '</div>';
-		
-		echo '<nav>';
-			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
-		echo '</nav>';
-	echo '</div>';
+	}else{
+		wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+	}
 }
 
 /**

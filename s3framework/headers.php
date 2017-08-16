@@ -3,6 +3,18 @@
 		/* Header Settings
 		===========================================*/
 		
+		$this->settings['s3_main_menu'] = array(
+			'title'   => __( 'Use Default Menu' ),
+			'desc'    => __( 'Please enable or disable default S3 Drop Down Menu i.e. if you would like to use any plugin please disable this to use plugin functions' ),
+			'std'     => 1,
+			'type'    => 'select',
+			'choices' => array(
+							0 => 'Disable',
+							1 => 'Enable',
+						 ),
+			'section' => 'headers'
+		);
+
 		$this->settings['s3_site_logo'] = array(
 			'title'   => __( 'Custom Site Logo' ),
 			'desc'    => __( 'Enter a URL or upload an image' ),
