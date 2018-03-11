@@ -61,7 +61,7 @@ function search_box(){
 		        <div class="s3-popup" id="s3search">
 		            <form id="searchform" method="get" action="<?php echo bloginfo('url'); ?>/">
 		            <div class="form-group">
-		                <input type="search" name="s" id="s" class="s3-search-input" placeholder="Search & Enter..." autocomplete="off">
+		                <input type="search" name="s" id="s" class="s3-search-input" placeholder="Type & Enter..." autocomplete="off">
 		            </div>
 		        </form>
 		            <a class="s3-search-close" href="#" id="search-close"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/search-close.png"></a>
@@ -69,12 +69,7 @@ function search_box(){
 	    	<?php else: ?>
 	            <div class="s3-search-normal">
 	                <form id="searchform" method="get" action="<?php echo bloginfo('url'); ?>/">
-	                    <div class="input-group add-on">
-	                    	<input type="search" name="s" id="s" class="form-control s3-search-input-normal" placeholder="Search & Enter..." autocomplete="off">
-	                        <div class="input-group-btn">
-	                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-	                        </div>
-	                    </div>
+	                	<input type="search" name="s" id="s" class="form-control s3-search-input-normal" placeholder="Type & Enter..." autocomplete="off">
 	                </form>
 	            </div>
 			<?php endif;?>
