@@ -61,7 +61,7 @@
 		$this->settings['development_mode'] = array(
 			'title'   => __( 'Development Mode' ),
 			'desc'    => __( 'Enable or Disable development mode for this website. When this feature is on style.less as preprocessor will be used instead of style.css' ),
-			'std'     => 1,
+			'std'     => 0,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Yes',
@@ -93,7 +93,7 @@
 		$this->settings['hide_admin_bar'] = array(
 			'title'   => __( 'Hide Admin Toolbar' ),
 			'desc'    => __( 'Hide admin tool bar for logged-in user at front-end.' ),
-			'std'     => 0,
+			'std'     => 1,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Yes',
