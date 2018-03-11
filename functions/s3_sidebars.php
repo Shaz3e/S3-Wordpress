@@ -89,9 +89,9 @@ function dc_sidebar_params($dc_params) {
 			 */
 			if($dc_sidebar_id == 'content-top' || $dc_sidebar_id == 'content-bottom'){
 				if($dc_sidebar_widgets > 3){
-					$dc_params[0]['before_widget'] = '<div class="col-3">'.$dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-3">'.$dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets.'">'.$dc_params[0]['before_widget'];
 				}
 			}
 
@@ -108,72 +108,72 @@ function dc_sidebar_params($dc_params) {
 
 			if($dc_sidebar_id == 'top' || $dc_sidebar_id == 'top-grid' ){
 				if($dc_sidebar_widgets > s3_option('topSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('topSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('topSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// breadcrumb & breadcrumb-grid
 			if($dc_sidebar_id == 'breadcrumb' || $dc_sidebar_id == 'breadcrumb-grid' ){
 				if($dc_sidebar_widgets > s3_option('breadcrumbSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('breadcrumbSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('breadcrumbSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// slideshow & slideshow-grid
 			if($dc_sidebar_id == 'slideshow' || $dc_sidebar_id == 'slideshow-grid' ){
 				if($dc_sidebar_widgets > s3_option('slideshowSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('slideshowSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('slideshowSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// showcase & showcase-grid
 			if($dc_sidebar_id == 'showcase' || $dc_sidebar_id == 'showcase-grid' ){
 				if($dc_sidebar_widgets > s3_option('showcaseSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('showcaseSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('showcaseSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// feature & feature-grid
 			if($dc_sidebar_id == 'feature' || $dc_sidebar_id == 'feature-grid' ){
 				if($dc_sidebar_widgets > s3_option('featureSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('featureSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('featureSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// bottom-feature & bottom-feature-grid
 			if($dc_sidebar_id == 'bottom-feature' || $dc_sidebar_id == 'bottom-feature-grid' ){
 				if($dc_sidebar_widgets > s3_option('bottomFeatureSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('bottomFeatureSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('bottomFeatureSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// utility & utility-grid
 			if($dc_sidebar_id == 'utility' || $dc_sidebar_id == 'utility-grid' ){
 				if($dc_sidebar_widgets > s3_option('utilitySidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('utilitySidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('utilitySidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// scroller & scroller-grid
 			if($dc_sidebar_id == 'scroller' || $dc_sidebar_id == 'scroller-grid' ){
 				if($dc_sidebar_widgets > s3_option('scrollerSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('scrollerSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('scrollerSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
@@ -181,36 +181,36 @@ function dc_sidebar_params($dc_params) {
 			// extension & extension-grid
 			if($dc_sidebar_id == 'extension' || $dc_sidebar_id == 'extension-grid' ){
 				if($dc_sidebar_widgets > s3_option('extensionSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('extensionSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('extensionSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// bottom & bottom-grid
 			if($dc_sidebar_id == 'bottom' || $dc_sidebar_id == 'bottom-grid' ){
 				if($dc_sidebar_widgets > s3_option('bottomSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('bottomSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('bottomSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// footer & footer-grid
 			if($dc_sidebar_id == 'footer' || $dc_sidebar_id == 'footer-grid' ){
 				if($dc_sidebar_widgets > s3_option('footerSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('footerSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('footerSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 
 			// bottom-footer & bottom-footer-grid
 			if($dc_sidebar_id == 'bottom-footer' || $dc_sidebar_id == 'bottom-footer-grid' ){
 				if($dc_sidebar_widgets > s3_option('bottomFooterSidebarCount') ){
-					$dc_params[0]['before_widget'] = '<div class="col-' . s3_option('bottomFooterSidebarCount') . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . s3_option('bottomFooterSidebarCount') . '">' . $dc_params[0]['before_widget'];
 				}else{
-					$dc_params[0]['before_widget'] = '<div class="col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
+					$dc_params[0]['before_widget'] = '<div class="s3-col-' . $dc_sidebar_widgets . '">' . $dc_params[0]['before_widget'];
 				}
 			}
 		

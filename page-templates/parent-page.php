@@ -39,7 +39,7 @@ foreach( $s3pages as $page ){
 	if ( ! $content )
 	
 ?>
-	<div class="col-3">
+	<div class="s3-col-3">
     	<div class="block s3-child-pages">
         	<div class="s3-child-page-title">
             	<a href="<?php echo get_page_link( $page->ID ); ?>">

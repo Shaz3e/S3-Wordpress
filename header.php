@@ -138,7 +138,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			$params = s3_option('sidebar_column') + s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
 			
-			echo '<div class="grid'.  $paramGrid .'">';
+			echo '<div class="s3-grid'.  $paramGrid .'">';
 		
 		elseif(is_page_template('layouts/2-columns-left-sidebar.php') || is_page_template('layouts/2-columns-right-sidebar.php')):
 			/**
@@ -149,7 +149,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			$params = s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
 			
-			echo '<div class="grid'.  $paramGrid .'">';
+			echo '<div class="s3-grid'.  $paramGrid .'">';
 		
 		
 		elseif(is_page_template('layouts/full-width.php')):
@@ -158,7 +158,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			 * Full width no sidebar
 			 * @since S3 Framework 1.0
 			 */
-			echo '<div class="grid-12">';
+			echo '<div class="s3-grid-12">';
 			
 		else:
                         
@@ -174,7 +174,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			$grid = 12;
 			$params = s3_option('sidebar_column') + s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
-			echo '<div class="grid'.  $paramGrid .'">';
+			echo '<div class="s3-grid'.  $paramGrid .'">';
 			
         }elseif(is_active_sidebar('left-sidebar') && !is_active_sidebar('right-sidebar')){
 			/**
@@ -184,7 +184,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			$grid = 12;
 			$params = s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
-			echo '<div class="grid'.  $paramGrid .'">';
+			echo '<div class="s3-grid'.  $paramGrid .'">';
 			
         }elseif(!is_active_sidebar('left-sidebar') && is_active_sidebar('right-sidebar')){
 			/**
@@ -194,7 +194,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			$grid = 12;
 			$params = s3_option('sidebar_column');
 			$paramGrid = $params - $grid;
-			echo '<div class="grid'.  $paramGrid .'">';
+			echo '<div class="s3-grid'.  $paramGrid .'">';
 			
         }else{
 			
@@ -202,7 +202,7 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 			 * Full width no sidebar
 			 * @since S3 Framework 1.0
 			 */
-            echo '<div class="grid-12">';
+            echo '<div class="s3-grid-12">';
 			
         }
         

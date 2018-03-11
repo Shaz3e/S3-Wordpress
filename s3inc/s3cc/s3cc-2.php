@@ -11,7 +11,7 @@
     <?php if( s3_option('copyright')  == 1 || s3_option('credit') == 1): ?>
     
         <?php if( s3_option('s3Framework_logo')  == 1): ?>
-        <div class="grid-6 dc-copyright" id="dc-copyright">
+        <div class="s3-grid-6 dc-copyright" id="dc-copyright">
         	<div class="block">
             	<div class="dc-clear"></div>
                 <?php include("s3logo.php"); ?>
@@ -19,7 +19,7 @@
         </div>
 		<?php endif; ?>
     
-    	<div class="grid-6 dc-credits" id="dc-credits">
+    	<div class="s3-grid-6 dc-credits" id="dc-credits">
             <div class="block">
             <?php
 				include("copyright.php");
@@ -31,7 +31,7 @@
 	<?php else: ?>
     
         <?php if( s3_option('s3Framework_logo')  == 1): ?>
-        <div class="grid-12" style="text-align:center;">
+        <div class="s3-grid-12" style="text-align:center;">
         	<div class="block">
             	<div class="dc-clear"></div>
                 <?php include("s3logo.php"); ?>

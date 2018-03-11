@@ -16,7 +16,7 @@
 ?>
 
 <?php if(is_active_sidebar('left-sidebar')): ?>
-<aside class="grid-<?php echo s3_option('sidebar_column'); ?> dc-left-sidebar dc-clear">
+<aside class="s3-grid-<?php echo s3_option('sidebar_column'); ?> dc-left-sidebar dc-clear">
 	<div id="dc-left-sidebar">
     	<div class="dc-sidebar">
         	<?php dynamic_sidebar('left-sidebar'); ?>

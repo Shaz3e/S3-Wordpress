@@ -22,7 +22,7 @@ $this_page_id = $wp_query->post->ID;
 	
 	while (have_posts()) { the_post();?>
     
-	<div class="col-3">
+	<div class="s3-col-3">
     	<div class="block s3-child-pages">
         	<div class="s3-child-page-title">
             	<a href="<?php the_permalink(); ?>">

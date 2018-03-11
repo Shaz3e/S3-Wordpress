@@ -9,7 +9,7 @@
 <section class="DiligentCreators s3cc-<?php echo s3_option('s3cc_style'); ?> s3cc-fixed dc-clear" id="DiligentCreators">
 	<div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
     <?php if( s3_option('copyright')  == 1 || s3_option('credit') == 1): ?>
-    	<div class="grid-6 dc-copyright" id="dc-copyright">
+    	<div class="s3-grid-6 dc-copyright" id="dc-copyright">
             <div class="block">
             <?php
 				include("copyright.php");
@@ -19,7 +19,7 @@
         </div>
         
         <?php if( s3_option('s3Framework_logo')  == 1): ?>
-        <div class="grid-6 dc-credits" id="dc-credits">
+        <div class="s3-grid-6 dc-credits" id="dc-credits">
         	<div class="block">
             	<div class="dc-clear"></div>
                 <?php include("s3logo.php"); ?>
@@ -30,7 +30,7 @@
 	<?php else: ?>
     
         <?php if( s3_option('s3Framework_logo')  == 1): ?>
-        <div class="grid-12" style="text-align:center;">
+        <div class="s3-grid-12" style="text-align:center;">
         	<div class="block">
             	<div class="dc-clear"></div>
                 <?php include("s3logo.php"); ?>
