@@ -42,10 +42,10 @@
 		include_once("blocks/contentBottom.php");
 		
 		/**
-		 * is_page_template('layouts/3-columns.php') // <div class="grid-6">
-		 * is_page_template('layouts/2-columns-left-sidebar.php') // <div class="grid-9">
-		 * is_page_template('layouts/2-columns-right-sidebar.php') // <div class="grid-9">
-		 * is_page_template('layouts/full-width.php') // <div class="grid-12">
+		 * is_page_template('layouts/3-columns.php') // <div class="s3-grid-6">
+		 * is_page_template('layouts/2-columns-left-sidebar.php') // <div class="s3-grid-9">
+		 * is_page_template('layouts/2-columns-right-sidebar.php') // <div class="s3-grid-9">
+		 * is_page_template('layouts/full-width.php') // <div class="s3-grid-12">
 		 * </div> close grid div for 3 column (grid-6)| 2 column (grid-9) | full width page (grid-12)
 		 * @since S3 Framework 1.0
 		 */
