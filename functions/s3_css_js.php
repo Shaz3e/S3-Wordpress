@@ -33,17 +33,12 @@ function s3_css_js(){
 	 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1){
-			wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
+			wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array(), '5.0.8' );
 		}
 		
 		// Load Boostrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
-		}
-		
-		// Load Bootstrap Theme
-		if( s3_option('loadBootstrapTheme') == 1 ){
-			wp_enqueue_style( 'bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', array(), '3.3.7' );
+			wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0' );
 		}
 		
 		// Load animate.css
@@ -58,7 +53,9 @@ function s3_css_js(){
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7' );
+			wp_enqueue_script( 'jquery-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array(), '4.0' );
+			wp_enqueue_script( 'jquery-bootstrap-slim', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', array(), '3.2.1' );
+			wp_enqueue_script( 'jquery-bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), '1.12.9' );
 		}
 		
 		// jQuery FitVIDS
@@ -71,24 +68,14 @@ function s3_css_js(){
 		 * Load Files Locally
 		 */
 		
-		// Load Font Awesome
-		if( s3_option('loadFontAwesome') == 1 ){
-			wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.6.3' );
-		}
-		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7' );
-		}
-		
-		// Load Bootstrap Theme
-		if( s3_option('loadBootstrapTheme') == 1 ){
-			wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.css', array(), '3.3.7' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0' );
 		}
 		
 		// Load animate.css
 		if( s3_option('loadAnimateCSS') == 1 ){
-			wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), '3.5.1' );
+			wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), '3.6.0' );
 		}	
 		
 		// Add Javascripts
@@ -96,15 +83,19 @@ function s3_css_js(){
 			wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
 		}
 		
-		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.7' );
+			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4.0' );
+		}
+
+		// Load Font Awesome
+		if( s3_option('loadFontAwesome') == 1 ){
+			wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font-awesome/js/fontawesome-all.min.js', array(), '5.0.8' );
 		}
 		
 		// jQuery FitVIDS
 		if( s3_option('loadResponsiveVideo') == 1 ){
-			wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), '1.1.0' );
+			wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array(), '1.1' );
 		}
 	}
 
@@ -118,7 +109,6 @@ function s3_css_js(){
 		wp_enqueue_style( 's3-fonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0' );
 	}
 
-
 	// load S3 Framework Responsive Menu
 	if( s3_option('s3_main_menu') == 1) {
 		wp_enqueue_script( 's3-menu', get_template_directory_uri() . '/js/menu.js', array(), '1.0' );
@@ -127,6 +117,16 @@ function s3_css_js(){
 	// load user script before closing </body> tag
 	if( s3_option('search_box') == 1){
 		wp_enqueue_script( 's3-search', get_template_directory_uri() . '/js/search.js', array(), '1.0' );
+	}
+
+	// jQuery FitText
+	if( s3_option('loadResponsiveText') == 1 ){
+		wp_enqueue_script( 'jquery-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array(), '1.2' );
+	}
+
+	// jQuery lettering
+	if( s3_option('loadLettering') == 1 ){
+		wp_enqueue_script( 'jquery-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array(), '0.7.0' );
 	}
 
 	// load user script before closing </body> tag
