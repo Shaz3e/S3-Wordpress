@@ -2,7 +2,7 @@
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.0.0beta-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-2.1.0-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 ### [LIVE DEMO](http://demo.shaz3e.com/wordpress)
@@ -18,10 +18,12 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - LESS CSS auto-compilation
  - Flexible widgets for template customization
  - Full extensible framework architecture
- - Responsive elements with [Bootstrap](http://getbootstrap.com/).
- - Font Icons with [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
+ - Responsive elements with [Bootstrap v4.0](http://getbootstrap.com/).
+ - Font Icons with [Font Awesome v5.0.8](https://fontawesome.com).
  - Less compiler as [lessphp](http://leafo.net/lessphp/).
- - Responsive Video with [FitVids.js](https://github.com/davatron5000/FitVids.js).
+ - Responsive Video with [FitVids.js v1.1](http://fitvidsjs.com).
+ - Responsive Text with [FitText.js v1.2](http://fittext.js).
+ - A jQuery plugin for radical web typography with [Lettering.js v0.7.0](http://letteringjs.com)
 
 ### Features
  - 10+ Different Header Styles
@@ -60,7 +62,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
 
 ### Header Settings
  - Custom Site Logo
- - 14 different header styles
+ - 20 different header styles
  - Enable/Diable Search Option
  - Custom Social Links
  - Phone Number
@@ -91,10 +93,11 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
 
 ### Libraries
  - Hosted on CDN (external libraries option)
- - Use Bootstrap
- - Use Bootstrap Theme
- - Use Font Awesome
- - Use Responsive Video
+ - Use Bootstrap v4.0
+ - Use Font Awesome v5.0.8
+ - Use Responsive Video v1.1
+ - Use Responsive Text v1.2
+ - Use Lettering.js v0.7.0
 
 ### Reset to Defaults
  - Reset all setting to default with single click.
