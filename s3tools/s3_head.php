@@ -36,7 +36,7 @@ if( s3_option('development_mode') == 1): ?>
 <link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/colors/theme<?php echo s3_option('s3_themes'); ?>.less">
 <link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/styles/style<?php echo s3_option('s3_styles'); ?>.less">
 <?php if( s3_option('hosted_cdn') == 1): ?>
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
 <?php else: ?>
 <script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
 <?php endif; ?>
