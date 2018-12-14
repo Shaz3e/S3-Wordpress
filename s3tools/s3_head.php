@@ -33,17 +33,17 @@ if(s3_option('meta_generator')): ?>
 <?php
 // Less Development Mode 
 if( s3_option('development_mode') == 1): ?>
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/colors/theme<?php echo s3_option('s3_themes'); ?>.less">
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/styles/style<?php echo s3_option('s3_styles'); ?>.less">
-<?php if( s3_option('hosted_cdn') == 1): ?>
-<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
-<?php else: ?>
-<script type="text/javascript" src="<?php echo $dcTemplate; ?>/js/less.js"></script>
-<?php endif; ?>
-<script type="text/javascript">
-	less.env = "development";
-	less.watch();
-</script>
+	<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/colors/theme<?php echo s3_option('s3_themes'); ?>.less">
+	<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/themes/styles/style<?php echo s3_option('s3_styles'); ?>.less">
+	<?php if( s3_option('hosted_cdn') == 1): ?>
+		<script>less = { env: 'development'};</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+		<script>less.watch();</script>
+	<?php else: ?>
+		<script>less = { env: 'development'};</script>
+		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/less.js"></script>
+		<script>less.watch();</script>
+	<?php endif; ?>
 <?php endif; ?>
 
 <?php
