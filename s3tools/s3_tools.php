@@ -31,9 +31,21 @@ $dcTemplate = esc_url( get_template_directory_uri() ); //get_template_directory_
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <?php
-	/**
-	 * S3 Wordpress header
-	 * @since S3 Wordperss 1.0
-	 */
-	include(get_template_directory() . '/s3tools/s3_head.php');
-?>
+/**
+ * S3 Wordpress header
+ * @since S3 Wordperss 1.0
+ */
+include(get_template_directory() . '/s3tools/s3_head.php');
+
+/**
+ * Use this for pagiation to work
+ * No need to add $paged variable when creating custom query
+ * @since S3 Framework 1.6.2
+ */
+if ( get_query_var('paged') ) {
+    $paged = get_query_var('paged');
+} elseif ( get_query_var('page') ) {
+    $paged = get_query_var('page');
+} else {
+    $paged = 1;
+}
