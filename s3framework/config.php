@@ -13,7 +13,7 @@
 		$this->settings['s3_themes'] = array(
 			'title'   => __( 'Choose Color Theme' ),
 			'desc'    => __( 'You can choose your default color theme here' ),
-			'std'     => 1,
+			'std'     => 0,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Color 1',
@@ -32,7 +32,7 @@
 		$this->settings['s3_styles'] = array(
 			'title'   => __( 'Choose Style' ),
 			'desc'    => __( 'You can choose your default style here' ),
-			'std'     => 1,
+			'std'     => 0,
 			'type'    => 'select',
 			'choices' => array(
 							1 => 'Style 1',
@@ -55,6 +55,18 @@
 			'desc'    => __( 'Copy and Paste your analytics script heres.' ),
 			'std'     => '',
 			'type'    => 'textarea',
+			'section' => 'config'
+		);
+
+		$this->settings['LoadJSinFooter'] = array(
+			'title'   => __( 'Load all JS files in footer' ),
+			'desc'    => __( 'Enable or Disable to load all JS files in footer' ),
+			'std'     => 1,
+			'type'    => 'select',
+			'choices' => array(
+							1 => 'Enable',
+							0 => 'Disable',
+						 ),
 			'section' => 'config'
 		);
 		
