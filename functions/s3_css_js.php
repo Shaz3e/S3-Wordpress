@@ -43,7 +43,7 @@ function s3_css_js(){
 		
 		// Load animate.css
 		if( s3_option('loadAnimateCSS') == 1 ){
-			wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', array(), '3.5.2', s3_option('LoadJSinFooter') );
+			wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', array(), '3.5.2' );
 		}
 		
 		// Load jQuery

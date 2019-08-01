@@ -24,6 +24,9 @@ $s3_settings = get_option( 's3_options', $s3_options );
  * @since S3 Framework 1.0
  */
 
+function fluidContainer(){
+	echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' );
+}
 
 /**
  * Custom length for excerpt
