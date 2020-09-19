@@ -2,7 +2,7 @@
 ####Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.1.1-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-2.1.2-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg?branch=master)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 ### [LIVE DEMO](http://demo.shaz3e.com/wordpress)
@@ -18,8 +18,8 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - LESS CSS auto-compilation
  - Flexible widgets for template customization
  - Full extensible framework architecture
- - Responsive elements with [Bootstrap v4.1.3](http://getbootstrap.com/).
- - Font Icons with [Font Awesome v5.1.0](https://fontawesome.com).
+ - Responsive elements with [Bootstrap v5.4.1](http://getbootstrap.com/).
+ - Font Icons with [Font Awesome v5.14.1](https://fontawesome.com).
  - Less compiler as [lessphp](http://leafo.net/lessphp/).
  - Responsive Video with [FitVids.js v1.1](http://fitvidsjs.com).
  - Responsive Text with [FitText.js v1.2](http://fittext.js).
