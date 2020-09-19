@@ -33,29 +33,29 @@ function s3_css_js(){
 	 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1){
-			wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array(), '5.8.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.14.0/js/all.js', array(), '5.14.0', s3_option('LoadJSinFooter') );
 		}
 		
 		// Load Boostrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.1.3' );
+			wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array(), '4.5.2' );
 		}
 		
 		// Load animate.css
 		if( s3_option('loadAnimateCSS') == 1 ){
-			wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', array(), '3.5.2' );
+			wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1' );
 		}
 		
 		// Load jQuery
 		if( s3_option('loadJquery') == 1 ){
-			wp_enqueue_script( 'jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery.min', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), '3.5.1', s3_option('LoadJSinFooter') );
 		}
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), '4.1.3', s3_option('LoadJSinFooter') );
-			wp_enqueue_script( 'jquery-bootstrap-slim', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', array(), '3.3.1', s3_option('LoadJSinFooter') );
-			wp_enqueue_script( 'jquery-bootstrap-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), '1.14.7', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), '4.5.2', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap-slim', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), '3.5.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), '1.16.1', s3_option('LoadJSinFooter') );
 		}
 		
 		// jQuery FitVIDS
@@ -70,27 +70,27 @@ function s3_css_js(){
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.1.3' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.5.2' );
 		}
 		
 		// Load animate.css
 		if( s3_option('loadAnimateCSS') == 1 ){
-			wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), '3.6.0' );
+			wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css', array(), '4.1.1' );
 		}	
 		
 		// Add Javascripts
 		if( s3_option('loadJquery') == 1 ){
-			wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery.min', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.5.1', s3_option('LoadJSinFooter') );
 		}
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4.1.3', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4.5.2', s3_option('LoadJSinFooter') );
 		}
 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1 ){
-			wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font-awesome/js/all.js', array(), '5.8.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font-awesome/js/all.min.js', array(), '5.14.0', s3_option('LoadJSinFooter') );
 		}
 		
 		// jQuery FitVIDS
