@@ -33,7 +33,7 @@ function s3_css_js(){
 	 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1){
-			wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.14.0/js/all.js', array(), '5.14.0', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.15.1/js/all.js', array(), '5.15.1', s3_option('LoadJSinFooter') );
 		}
 		
 		// Load Boostrap
