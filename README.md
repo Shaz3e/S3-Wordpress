@@ -1,5 +1,5 @@
 ## S3 Framework
-####Create beautiful responsive Wordpress Themes more easier and faster.
+###Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
 [![Version](http://img.shields.io/badge/Version-2.1.2-green.svg)](http://www.shaz3e.com)
@@ -18,8 +18,8 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - LESS CSS auto-compilation
  - Flexible widgets for template customization
  - Full extensible framework architecture
- - Responsive elements with [Bootstrap v5.4.1](http://getbootstrap.com/).
- - Font Icons with [Font Awesome v5.14.1](https://fontawesome.com).
+ - Responsive elements with [Bootstrap v5.4.3](http://getbootstrap.com/).
+ - Font Icons with [Font Awesome v5.15.1](https://fontawesome.com).
  - Less compiler as [lessphp](http://leafo.net/lessphp/).
  - Responsive Video with [FitVids.js v1.1](http://fitvidsjs.com).
  - Responsive Text with [FitText.js v1.2](http://fittext.js).
