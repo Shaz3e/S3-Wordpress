@@ -20,7 +20,7 @@
  */
 $dcTemplate = esc_url( get_template_directory_uri() ); //get_template_directory_uri();
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
