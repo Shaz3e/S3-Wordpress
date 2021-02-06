@@ -98,6 +98,14 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 	 * no content-top/bottom are enabled in this layout
 	 */
 	if(is_page_template('layouts/pagebuilder.php')):
+	// Home page templates
+	elseif(
+		is_page_template('page-templates/home1.php') || 
+		is_page_template('page-templates/home2.php') || 
+		is_page_template('page-templates/home3.php') || 
+		is_page_template('page-templates/home4.php') || 
+		is_page_template('page-templates/home5.php') 
+	):
 	elseif(is_page_template('layouts/no-body.php')):
 		// this will not show main body
 	else:
