@@ -1,5 +1,5 @@
 <h4>S3 Responsive Template System</h4>
-<p>Get more help and find out more at <a href="http://www.shaz3e.com/?utm_source=<?php echo $_SERVER[HTTP_HOST];?>&utm_medium=S3WP&utm_campaign=WPDashboard">www.shaz3e.com</a></p>
+<p>Get more help and find out more at <a href="http://www.shaz3e.com/?utm_source=<?php echo $_SERVER['HTTP_HOST'];?>&utm_medium=S3WP&utm_campaign=WPDashboard">www.shaz3e.com</a></p>
 
 <h4>Key Features</h4>
 <ul>
