@@ -44,9 +44,9 @@
 							9 => 'Bottom 1',
 							10 => 'Bottom 2',
 							// Center Headers
-							11 => 'Center 1',
-							12 => 'Center 2',
-							13 => 'Center 3',
+							11 => 'Center 1 (On Top Phone,Email,Social,Search Center, Menu Right & CTA Right)',
+							12 => 'Center 2 (On Phone,Email,Social,Search Center, Menu Left & CTA Right)',
+							13 => 'Center 3 (On Phone,Email,Social,Search Center, Logo Center, Menu Left Bottom & CTA Right next to Logo)',
 							// Small Headers
 							14 => 'Small Header Right', // Alignment Right
 							15 => 'Small Header Left', // Alignment Left
