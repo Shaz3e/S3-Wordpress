@@ -1,5 +1,5 @@
 ## S3 Framework
-###Create beautiful responsive Wordpress Themes more easier and faster.
+Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
 [![Version](http://img.shields.io/badge/Version-2.1.3-green.svg)](http://www.shaz3e.com)
