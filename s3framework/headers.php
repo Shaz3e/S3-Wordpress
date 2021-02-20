@@ -69,7 +69,7 @@
 				
 		$this->settings['phone_text'] = array(
 			'title'   => __( 'Type your Phone No.' ),
-			'desc'    => __( 'Please type phone number here' ),
+			'desc'    => __( 'Please type phone number here and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'
@@ -77,7 +77,7 @@
 		
 		$this->settings['email_text'] = array(
 			'title'   => __( 'Type your email' ),
-			'desc'    => __( 'Please type your email address here' ),
+			'desc'    => __( 'Please type your email address here and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'
@@ -85,7 +85,7 @@
 				
 		$this->settings['calltoaction_text'] = array(
 			'title'   => __( 'Text for Call to Action' ),
-			'desc'    => __( 'Please write for call to action option' ),
+			'desc'    => __( 'Please write for call to action option and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'
