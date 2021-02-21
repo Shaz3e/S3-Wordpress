@@ -60,8 +60,8 @@
 		);
 		
 		$this->settings['social_icons'] = array(
-			'title'   => __( 'Enable Social Icons' ),
-			'desc'    => __( 'Please enable or disable social icons in header by default its disabled, Remember to use Font Awesome library. Example: <code>&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code>' ),
+			'title'   => __( 'Use Social Icons' ),
+			'desc'    => __( 'Please type to use social icons in header by default its disabled, you can use Font Awesome library. Example: <code>&lt;a href=&quot;&quot;&gt;&lt;i class=&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'
@@ -69,7 +69,7 @@
 				
 		$this->settings['phone_text'] = array(
 			'title'   => __( 'Type your Phone No.' ),
-			'desc'    => __( 'Please type phone number here and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
+			'desc'    => __( 'Please type phone number here or use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-mobile&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'
@@ -85,7 +85,7 @@
 				
 		$this->settings['calltoaction_text'] = array(
 			'title'   => __( 'Text for Call to Action' ),
-			'desc'    => __( 'Please write for call to action option and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
+			'desc'    => __( 'Please write for call to action option and use font awesome icon e.g. <code>&lt;i class=&quot;fas fa-arrow-circle-right&quot;&gt;&lt;/i&gt</code>, A link can be used for mail or any href e.g. <code>&lt;a href=&quot;mailto:email@email.com&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; email@email.com&lt;/a&gt;</code>' ),
 			'std'     => '',
 			'type'    => 'text',
 			'section' => 'headers'

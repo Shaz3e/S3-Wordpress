@@ -1,9 +1,9 @@
 <?php
-	/**
-	 * Header Styles
-	 * File Name: header-1.php
-	 * @since S3 Framework 4.0
-	 */
+    /**
+     * Header Styles
+     * File Name: header-1.php
+     * @since S3 Framework 4.0
+     */
 ?>
 <div class="dc-fixed-header">
     <section class="dc-header dc-header-<?php echo s3_option('header_style'); ?> dc-clear" id="dc-header">
@@ -11,17 +11,17 @@
             <div class="s3-grid-<?php echo s3_option('logo_column'); ?>">
                 <div class="block">
                     <div class="dc-logo">
-                    	<?php echo s3_logo(); ?>
+                        <?php echo s3_logo(); ?>
                     </div>
                 </div>
             </div><?php // .s3-grid-3 ?>
             
             <div class="s3-grid<?php echo s3_option('logo_column') - 12; ?>">
-            	<div class="block">
+                <div class="block">
                     <?php if( is_s3_headers() ): ?>
                     <div class="s3-header-<?php echo s3_option('header_style'); ?>">
-                        <div class="dc-header-boxes">
-    						<?php phone_text(); ?>
+                        <div class="dc-header-boxes dc-clear">
+                            <?php phone_text(); ?>
                             <?php email_text();?>
                             <?php social_icons();?>
                             <?php search_box();?>
@@ -32,7 +32,7 @@
                     <div class="dc-menu">
                         <?php s3_main_menu(); ?>
                     </div>
-				</div>
+                </div>
             </div>
         </div><?php // .row ?>
     </section>
