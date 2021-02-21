@@ -15,7 +15,7 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
 
 ### Key Features
  - Responsive Design supporting Phone, Tablets and Desktops
- - LESS CSS auto-compilation
+ - LESS CSS auto-compilation _supported php v7.4_
  - Flexible widgets for template customization
  - Full extensible framework architecture
  - Responsive elements with [Bootstrap v5.4.3](http://getbootstrap.com/).
