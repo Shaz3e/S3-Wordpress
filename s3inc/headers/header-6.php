@@ -41,7 +41,7 @@
             <div class="s3-grid<?php echo s3_option('logo_column') - 12; ?>">
             	<div class="block">
                     <?php calltoaction();?>
-                    <div class="dc-menu">
+                    <div class="dc-menu dc-clear">
                         <?php s3_main_menu(); ?>
                     </div>
 				</div>

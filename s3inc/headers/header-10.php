@@ -17,7 +17,7 @@
             </div><?php // .s3-grid-3 ?>
             
             <div class="s3-grid<?php echo s3_option('logo_column') - 12; ?>">
-            	<div class="block">
+            	<div class="block dc-clear">
                     <?php calltoaction();?>
                     <div class="dc-menu">
                         <?php s3_main_menu(); ?>
@@ -33,12 +33,12 @@
                 	<div class="block">
                         <div class="dc-header-boxes">
                         	<div class="s3-grid-6">
-    						<?php phone_text(); ?>
-                            <?php email_text();?>
+        						<?php phone_text(); ?>
+                                <?php email_text();?>
                             </div>
                             <div class="s3-grid-6">
-                            <?php search_box();?>
-                            <?php social_icons();?>
+                                <?php search_box();?>
+                                <?php social_icons();?>
                             </div>
                             <div class="dc-clear"></div>
                         </div>

@@ -39,7 +39,7 @@
             </div><?php // .s3-grid-3 ?>
 
             <div class="s3-grid<?php echo s3_option('logo_column') - 12; ?>">
-                <div class="block">
+                <div class="block dc-clear">
                     <?php calltoaction();?>
                 </div>
             </div>

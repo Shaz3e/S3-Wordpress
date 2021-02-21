@@ -33,7 +33,7 @@
         
         <div class="<?php echo( s3_option('fluidContainer') == 1 ? 'container-fluid' : 'row' ); ?>">
         	<div class="s3-col-1">
-                <div class="block">
+                <div class="block dc-clear">
                     <?php s3_main_menu(); ?>
                 </div>
             </div>
