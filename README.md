@@ -15,12 +15,12 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
 
 ### Key Features
  - Responsive Design supporting Phone, Tablets and Desktops
- - LESS CSS auto-compilation _supported php v7.4_
+ - LESS CSS auto-compilation
  - Flexible widgets for template customization
  - Full extensible framework architecture
  - Responsive elements with [Bootstrap v5.4.3](http://getbootstrap.com/).
  - Font Icons with [Font Awesome v5.15.1](https://fontawesome.com).
- - Less compiler as [lessphp](http://leafo.net/lessphp/).
+ - Less compiler as [lessphp](http://leafo.net/lessphp/). _supported php v7.4_
  - Responsive Video with [FitVids.js v1.1](http://fitvidsjs.com).
  - Responsive Text with [FitText.js v1.2](http://fittext.js).
  - A jQuery plugin for radical web typography with [Lettering.js v0.7.0](http://letteringjs.com)
