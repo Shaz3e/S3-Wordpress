@@ -39,6 +39,7 @@ class s3Options {
 		$this->sections['s3cc'] = __( 'CC Settings' );
 		$this->sections['layout'] = __( 'Layout Settings' );
 		$this->sections['library'] = __( 'External Libraries' );
+		$this->sections['WooCommerce'] = __( 'WooCommerce Settings' );
 		$this->sections['reset'] = __( 'Reset to Defaults' );
 		
 		add_action( 'admin_menu', array( &$this, 'add_pages' ) );
@@ -381,6 +382,7 @@ class s3Options {
 		include(TEMPLATEPATH  . "/s3framework/headers.php");
 		include(TEMPLATEPATH  . "/s3framework/s3cc.php");
 		include(TEMPLATEPATH  . "/s3framework/layout.php");
+		include(TEMPLATEPATH  . "/s3framework/WooCommerce.php");
 		include(TEMPLATEPATH  . "/s3framework/library.php");
 		
 		/* Reset

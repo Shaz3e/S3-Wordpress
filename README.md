@@ -1,8 +1,8 @@
 ## S3 Framework
 Create beautiful responsive Wordpress Themes more easier and faster.
 
-[![S3Framework](http://img.shields.io/badge/S3Framework-Stable-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-2.1.3-green.svg)](http://www.shaz3e.com)
+[![S3Framework](http://img.shields.io/badge/S3Framework-Beta-blue.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-3.0.0beta-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg?branch=master)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 ### [LIVE DEMO](http://demo.shaz3e.com/wordpress)
@@ -98,6 +98,24 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Use Responsive Video v1.1
  - Use Responsive Text v1.2
  - Use Lettering.js v0.7.0
+
+### WooCommerce Settings
+ - Enable WooCommerce Support
+ - Disable WooCommerce Style
+ - Disable WooCommerce Breadcrumb
+ - Change Delimiter in Breadcrumb
+ - Support Zoom Gallery
+ - Support Lightbox Gallery
+ - Support Slider Gallery
+ - Thumnail Image Width
+ - Single Image Width
+ - Product Grid
+   - Default Rows
+   - Minimum Rows
+   - Maximum Rows
+   - Default Columns
+   - Minimum Columns
+   - Maximum Columns
 
 ### Reset to Defaults
  - Reset all setting to default with single click.
