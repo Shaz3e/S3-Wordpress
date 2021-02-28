@@ -14,21 +14,6 @@
 || #################################################################### ||
 \*======================================================================*/
 
-// Less Development Mode 
-if( s3_option('development_mode') == 1): ?>
-
-<script type="text/javascript">
-	var querystring = '!watch';
-	$('a').each(function(){
-		var href = $(this).attr('href');
-		href += (href.match(/\?/) ? '&' : '#') + querystring;
-		$(this).attr('href', href);
-	});
-</script>
-
-<?php endif; ?>
-
-<?php
 /**
  * Fixed header on scroll up/down slide up/down
  * hide/show Header and Menu on scroll up/down

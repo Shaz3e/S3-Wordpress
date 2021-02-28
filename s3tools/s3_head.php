@@ -44,18 +44,7 @@ if( s3_option('development_mode') == 1): ?>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/less.js"></script>
 		<script>less.watch();</script>
 	<?php endif; ?>
-<?php endif; ?>
-
-<?php
-// Responsive Video
-if( s3_option('loadResponsiveVideo') == 1): ?>
-<script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-	$(".s3-video").fitVids();
-  });
-</script>
-<?php endif; ?>    
+<?php endif; ?>  
     
 <?php
 /**
