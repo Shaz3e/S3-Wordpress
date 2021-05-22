@@ -1,6 +1,7 @@
 $(function() {
 	$('.dcToggleNav a').on('click', function(e) {
 		e.preventDefault();
+
 		var body = $('body');
 		var nav = $('nav');
 		var menu = $('#dcToggleNav');
@@ -22,7 +23,19 @@ $(function() {
 		} else {
 			menu.addClass('dc-menu-show').removeClass('dcToggleNav');
 		}
-	
-		
 	});
+});
+
+
+window.addEventListener('click', function(e){  
+	var body = $('body');
+	var nav = $('nav');
+	var menu = $('#dcToggleNav'); 
+	if (document.getElementById('dcToggleNav').contains(e.target)){
+		
+	} else{
+		body.removeClass('dc-body-show');
+		nav.removeClass('dc-nav-show');
+		menu.removeClass('dc-menu-show').addClass('dcToggleNav');
+	}
 });
