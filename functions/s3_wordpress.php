@@ -65,7 +65,7 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
  *
  * @since S3 Framework 1.0
  */
-if($s3_settings['meta_generator']):
+if( s3_option('meta_generator') ):
 	function s3_meta_generator() {
 		
 		return '';
