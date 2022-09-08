@@ -93,14 +93,6 @@
 						 ),
 			'section' => 'config'
 		);
-		
-		$this->settings['meta_generator'] = array(
-			'title'   => __( 'Meta Generator' ),
-			'desc'    => __( 'Type your custom meta generator text here.' ),
-			'std'     => '',
-			'type'    => 'text',
-			'section' => 'config'
-		);
 
 		$this->settings['hide_admin_bar'] = array(
 			'title'   => __( 'Hide Admin Toolbar' ),

@@ -61,19 +61,6 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
 /**
- * Hide WP Meta Generator Version
- *
- * @since S3 Framework 1.0
- */
-if( s3_option('meta_generator') ):
-	function s3_meta_generator() {
-		
-		return '';
-	}
-	add_filter('the_generator', 's3_meta_generator');
-endif;
-
-/**
  * Hide admin tool bar for logged-in user front-end
  * disable this hook to show admin tool bar at top from theme options
  *
