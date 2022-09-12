@@ -8,5 +8,5 @@
  */
 ?>
 <div class="dc-clear"></div>
-<div class="s3-pagination"><?php S3_numeric_posts_nav( $the_query ); ?></div>
+<div class="s3-pagination"><?php s3_post_pagination(); ?></div>
 <div class="dc-clear"></div>
