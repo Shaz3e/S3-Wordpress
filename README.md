@@ -2,7 +2,7 @@
 Create beautiful responsive Wordpress Themes more easier and faster.
 
 [![S3Framework](http://img.shields.io/badge/S3Framework-Beta-blue.svg)](http://www.shaz3e.com)
-[![Version](http://img.shields.io/badge/Version-3.0.0beta-green.svg)](http://www.shaz3e.com)
+[![Version](http://img.shields.io/badge/Version-3.1.0-green.svg)](http://www.shaz3e.com)
 [![Build Status](https://travis-ci.org/Shaz3e/S3-Wordpress.svg?branch=master)](https://travis-ci.org/Shaz3e/S3-Wordpress)
 
 ### [LIVE DEMO](http://demo.shaz3e.com/wordpress)
@@ -18,8 +18,9 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - LESS CSS auto-compilation
  - Flexible widgets for template customization
  - Full extensible framework architecture
- - Responsive elements with [Bootstrap v5.4.3](http://getbootstrap.com/).
- - Font Icons with [Font Awesome v5.15.1](https://fontawesome.com).
+ - Responsive elements with [Bootstrap v5.2.1](http://getbootstrap.com/).
+ - Font Icons with [Font Awesome v6.2.0](https://fontawesome.com).
+ - Font Icons with [Animate.css v4.1.1](https://fontawesome.com).
  - Less compiler as [lessphp](http://leafo.net/lessphp/). _supported php v7.4_
  - Responsive Video with [FitVids.js v1.1](http://fitvidsjs.com).
  - Responsive Text with [FitText.js v1.2](http://fittext.js).
@@ -53,21 +54,37 @@ S3 is a sophisticated framework with the sole intention of being the best platfo
  - Choose from 8 Different Themes (Since 2.0)
  - Choose from Different Theme Styles (Since 2.0)
  - Google Analytics
+ - Load all JS files in footer
  - Enable / Disable development mode
- - Custom Meta Generator
+ - Fluid Layout
  - Show/Hide Admin Toolbar
  - Set Thumbnail - Width/Height/Crop (Since 2.0)
  - Excerpt Length (Since 2.0)
  - Change Read More (Since 2.0)
 
+### Typography
+ - Use Custom Font
+ - Use Google Font
+ - Choose Body Font
+ - Body Font Weight
+ - Choose Heading Font
+ - Heading Font Weight
+
 ### Header Settings
+ - Use Default Menu
  - Custom Site Logo
- - 20 different header styles
- - Enable/Diable Search Option
- - Custom Social Links
- - Phone Number
- - Email
+ - Change Header Style - Choose from 20 different styles
+ - Use Social Icons with FontAwesome
+ - Phone No. in Header
+ - Email in Header
  - Call to Action
+ - Enable/Disable Search Box
+ - Select Search Box Type
+ - Fixed Header and Menu
+ - Text & Background Color for Header
+ - Custom Header Height for Fixed Header
+ - Ease Speed for Fixed Header
+ - Break Point for Fixed Header
 
 ### CC Settings - Copyright & Credit Settings
  - Change Style - Choose from 3 different styles
