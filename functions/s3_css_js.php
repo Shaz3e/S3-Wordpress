@@ -33,12 +33,12 @@ function s3_css_js(){
 	 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1){
-			wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/releases/v5.15.13/js/all.min.js', array(), '5.15.13', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js', array(), '6.2.0', s3_option('LoadJSinFooter') );
 		}
 		
 		// Load Boostrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css', array(), '5.0.0' );
+			wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css', array(), '5.2.1' );
 		}
 		
 		// Load animate.css
@@ -53,9 +53,7 @@ function s3_css_js(){
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js', array(), '5.0.0', s3_option('LoadJSinFooter') );
-			//wp_enqueue_script( 'jquery-bootstrap-slim', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), '3.5.1', s3_option('LoadJSinFooter') );
-			//wp_enqueue_script( 'jquery-bootstrap-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), '1.16.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js', array(), '5.2.1', s3_option('LoadJSinFooter') );
 		}
 		
 		// jQuery FitVIDS
@@ -70,7 +68,7 @@ function s3_css_js(){
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.0.0' );
+			wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.2.1' );
 		}
 		
 		// Load animate.css
@@ -85,12 +83,12 @@ function s3_css_js(){
 		
 		// Load Bootstrap
 		if( s3_option('loadBootstrap') == 1 ){
-			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.0.0', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'jquery-bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.2.1', s3_option('LoadJSinFooter') );
 		}
 
 		// Load Font Awesome
 		if( s3_option('loadFontAwesome') == 1 ){
-			wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font-awesome/js/all.min.js', array(), '5.15.1', s3_option('LoadJSinFooter') );
+			wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/font-awesome/js/all.min.js', array(), '6.2.0', s3_option('LoadJSinFooter') );
 		}
 		
 		// jQuery FitVIDS
