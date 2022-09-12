@@ -86,26 +86,25 @@ set_post_thumbnail_size(
 /**
  * Numeric Bootstrap3 Pagination
  * Default pagination function for S3Framework
- * http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
- * http://getbootstrap.com/components/#pagination
+ * @link https://www.sktthemes.org/wordpress-plugins/wordpress-post-pagination-without-plugin/
  * 
  * @since S3 Framework 1.6.1
  * @updated S3 Framework 1.6.2
  */
-function S3_numeric_posts_nav() {
-    $pages = $query_wp->max_num_pages;
-    $big = 999999999; // need an unlikely integer
-    if ($pages > 1)
-    {
-        $page_current = max(1, get_query_var('paged'));
-        echo paginate_links(array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current' => $page_current,
-            'total' => $pages,
-        ));
-    }
-}
+
+if ( !function_exists( 's3_post_pagination' ) ) :
+   function s3_post_pagination() {
+     global $wp_query;
+     $pager = 999999999; // need an unlikely integer
+ 
+        echo paginate_links( array(
+             'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+             'format' => '?paged=%#%',
+             'current' => max( 1, get_query_var('paged') ),
+             'total' => $wp_query->max_num_pages
+        ) );
+   }
+endif;
 
 /**
  * WebP Image Support added
