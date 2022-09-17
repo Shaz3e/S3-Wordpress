@@ -1,5 +1,10 @@
 <?php
 /**
+ * Hide Header/Footer
+ */
+if ( !is_page_template('page-templates/template-page.php') ): ?>
+<?php
+/**
  * The template for displaying the footer
  *
  * Contains footer content and the closing div elements and other elements
@@ -124,12 +129,18 @@ endif;
 	 * Google Web Fonts
 	 * @since S3 Framework 2.0
 	 */
-	include(get_template_directory() . '/s3tools/s3_google_fonts.php');
+	include(get_template_directory() . '/s3tools/s3_google_fonts.php');?>
 
-	/**
-	 * WordPress Footer
-	 */
-	wp_footer();
-?>
+<?php
+
+/**
+ * Hide Header/Footer
+ */
+endif; // if ( !is_page_template('page-templates/template-page.php') ): 
+
+/**
+ * WordPress Footer
+ */
+wp_footer();?>
 </body>
 </html>

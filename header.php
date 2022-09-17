@@ -19,6 +19,12 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
 
 <body <?php body_class('dc-wrapper'); ?>>
 
+<?php
+/**
+ * Hide Header/Footer
+ */
+if ( !is_page_template('page-templates/template-page.php') ): ?>
+	
 <?php if(is_active_sidebar('top-left-panel')) :?>
     <div class="top-left-panel">
         <div id="top-left-panel">
@@ -251,3 +257,9 @@ include(get_template_directory() . '/s3tools/s3_tools.php');
  * if(is_page_template('layouts/no-body.php')):
  */
 endif;
+
+
+/**
+ * Hide Header/Footer
+ */
+endif; // if ( !is_page_template('page-templates/template-page.php') ): ?>
