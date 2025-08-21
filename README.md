@@ -1,3 +1,7 @@
+## 🚨 Status: Archived
+> ⚠️ This project is archived and is no longer maintained.  
+> You’re welcome to use or fork it, but no further updates will be provided.
+
 ## S3 Framework
 Create beautiful responsive Wordpress Themes more easier and faster.
 
